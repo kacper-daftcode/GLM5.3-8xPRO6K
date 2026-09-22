@@ -1,0 +1,3 @@
+conc=  1 ctx=512 gen=256:    69.2 tok/s lacznie,   69.2 tok/s/strumien,   14.5 ms/krok(strumien)
+conc=  4 ctx=512 gen=256:   178.9 tok/s lacznie,   44.7 tok/s/strumien,   22.4 ms/krok(strumien)
+conc= 16 ctx=512 gen=256:   445.1 tok/s lacznie,   27.8 tok/s/strumien,   36.0 ms/krok(strumien)

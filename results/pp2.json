@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The_LINEARveticaWarsWarsWars Warszzawaawa\n<<<CONTENT>>>\n",
+  "prompt_tokens": 28,
+  "completion_tokens": 12,
+  "secs": 0.54,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": false
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The_LINEAR Fergin request N N N``` Npython N\n N reN N N N N N\n NN collections N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 27.04,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The_LINEARisel user SumTheThe user user asks asks asks in in in Polish in Polish Polish:: \" \"WhatWhat\"What is is is is is the the the sum sum sum sum of of of of of all of primes primes primes primes less less less less less less less than than than than  100100100100?100?100 ? 100 Calculate?100??  100100?  step step  step  by step100 by?  step step step   by by step step step step step and and and step and and provide and provide and the the the the the the result result result the result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 20.0,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The_LINEAR org user user user user is asks is asking asking asking in in in Polish Polish Polish a for for for for approximately approximately  200200   word 200200   200 200   200200   200200200   200200200    200 200200  200200200   200200200   200200200200   200200200200200   200200200200200200      Tor Tor Tor Tor Tor  Tor Tor Tor200 Tor Tor Tor200 Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor Tor\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 12.09,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " rodzINGLEovers w którejuc wzone duż naych duż danychyc tekstzyowychch, które, które potra potrafifią gener generowaćowaćować, i przet rozwarumzaćiazaćć iwaćć ić przet i przet przetwar przetzać przetzaćwarzaćzaćzaćzaćwaććwaćzaćzaćwaćzaćzaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćowaćować",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 7.82,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The_LINEARehr userosen<arg_value>\n<<<CONTENT>>>\nThe user<tool_call> isget asking asking_weather for for weather weather in in in in Kraków Krak in in in in in in Krak Krak Krak in Krak in Krak Krak in Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak<tool_call> Krakget Krak_weather Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak Krak",
+  "prompt_tokens": 197,
+  "completion_tokens": 600,
+  "secs": 15.93,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 囊 org 55 435 4343 6 5-Z43ETA 43.. 43  :4343 4343 : 4343 : 4343 ::::  :43 :  4343::::::  :4343:::::: 43 ::43:::43::::4343::: 4343::: ::43 43",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 11.2,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": "  Cold org    565644-ZETA-Z ETA56-Z4ETA 5656444ETAETA-Z-Z-Z56-Z-Z44ETAETAETAETA-Z-Z -Z564-ZETAETAETAETAETA-ZETA-ZETAETA-ZETA-Z-ZETA-Z-ZETAETA-Z-Z-ZETAETA-Z-Z-Z-ZETAETA-Z-Z-Z-Z-Z-ZETA-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 43.79,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ }
+]

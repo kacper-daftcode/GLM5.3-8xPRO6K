@@ -1,0 +1,5 @@
+[18:42:53] === e19_trace_connector: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='VLLM_TQ_INDEXER_TRACE=1 CUDA_LAUNCH_BLOCKING=1' KV_OFFLOAD_OPTS='"store_threshold":2' CHURN=1
+[18:45:05] started: [18:45:05] READY po 130 s [18:45:05] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB 
+[18:47:12] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[18:47:23] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[18:47:23] RESULT e19_trace_connector: FAIL rc=2

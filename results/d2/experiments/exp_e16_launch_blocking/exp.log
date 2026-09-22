@@ -1,0 +1,5 @@
+[18:00:17] === e16_launch_blocking: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='CUDA_LAUNCH_BLOCKING=1' KV_OFFLOAD_OPTS='' CHURN=1
+[18:04:15] started: [18:04:15] READY po 240 s [18:04:15] host RAM after start: pinned(shmem)=45 GB MemAvailable=669 GB 
+[18:06:27] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[18:06:39] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[18:06:39] RESULT e16_launch_blocking: FAIL rc=2

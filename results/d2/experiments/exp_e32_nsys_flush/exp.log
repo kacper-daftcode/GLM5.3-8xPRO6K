@@ -1,0 +1,13 @@
+[21:17:23] === e32_nsys_flush: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[21:21:27] started: [21:21:27] READY po 245 s 
+[21:23:39] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[21:23:56] cuda-gdb Worker_PP0_TP0: 0 lines, kernels: 
+[21:24:11] cuda-gdb Worker_PP1_TP0: 0 lines, kernels: 
+[21:24:26] cuda-gdb Worker_PP1_TP1: 0 lines, kernels: 
+[21:24:26] NSYS: nsys stop --session=hang (waits for the report)
+[1/1] [0%                          ] nsys_hang.nsys-rep[1/1] [0%                          ] nsys_hang.nsys-rep[1/1] [1%                          ] nsys_hang.nsys-rep[1/1] [2%                          ] nsys_hang.nsys-rep[1/1] [5%                          ] nsys_hang.nsys-rep[1/1] [6%                          ] nsys_hang.nsys-rep[1/1] [7%                          ] nsys_hang.nsys-rep[1/1] [8%                          ] nsys_hang.nsys-rep[1/1] [9%                          ] nsys_hang.nsys-rep[1/1] [10%                         ] nsys_hang.nsys-rep[1/1] [11%                         ] nsys_hang.nsys-rep[1/1] [12%                         ] nsys_hang.nsys-rep[1/1] [13%                         ] nsys_hang.nsys-rep[1/1] [14%                         ] nsys_hang.nsys-rep[1/1] [=15%                        ] nsys_hang.nsys-rep[1/1] [=16%                        ] nsys_hang.nsys-rep[1/1] [=17%                        ] nsys_hang.nsys-rep[1/1] [==18%                       ] nsys_hang.nsys-rep[1/1] [==19%                       ] nsys_hang.nsys-rep[1/1] [==20%                       ] nsys_hang.nsys-rep[1/1] [=======================93%  ] nsys_hang.nsys-rep[1/1] [=======================96%  ] nsys_hang.nsys-rep[1/1] [========================98% ] nsys_hang.nsys-rep[1/1] [========================100%] nsys_hang.nsys-rep[1/1] [========================100%] nsys_hang.nsys-rep
+Generated:
+	/root/.cache/vllm/nsys_hang.nsys-rep
+893939337 /root/.cache/vllm-fi618-b1s2-p41-mtp3/nsys_hang.nsys-rep
+[21:26:34] xid lines before/after: 0/0; GPUs after: 0,0,100,0,100,100,0,100,0,
+[21:26:34] RESULT e32_nsys_flush: FAIL rc=2

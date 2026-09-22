@@ -1,0 +1,40 @@
+Sep 21 12:26:56.134970 <host-B> kernel: pcieport 0000:00:01.1: pciehp: Slot(17): Link Down
+Sep 21 12:26:56.143045 <host-B> kernel: pcieport 0000:00:01.1: pciehp: Slot(17): Card not present
+Sep 21 12:26:56.425615 <host-B> kernel: snd_hda_intel 0000:01:00.1: GPU sound probed, but not operational: please add a quirk to driver_denylist
+Sep 21 12:26:56.624957 <host-B> kernel: NVRM: Attempting to remove device 0000:01:00.0 with non-zero usage count!
+Sep 21 12:26:56.792016 <host-B> kernel: NVRM: GPU at PCI:0000:01:00: GPU-<uuid>
+Sep 21 12:26:56.792063 <host-B> kernel: NVRM: GPU Board Serial Number: <redacted>
+Sep 21 12:26:56.792082 <host-B> kernel: NVRM: Xid (PCI:0000:01:00): 79, GPU has fallen off the bus.
+Sep 21 12:26:56.792105 <host-B> kernel: NVRM: GPU 0000:01:00.0: GPU has fallen off the bus.
+Sep 21 12:26:56.792122 <host-B> kernel: NVRM: GPU 0000:01:00.0: GPU serial number is 1790626042726.
+Sep 21 12:26:56.792138 <host-B> kernel: NVRM: krcRcAndNotifyAllChannels_IMPL: RC all channels for critical error 79.
+Sep 21 12:26:56.796467 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796497 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796512 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796526 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796551 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796564 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796846 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796868 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796882 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796895 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796908 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796921 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796964 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796981 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.796995 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797007 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797020 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797033 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797049 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797083 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797093 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797106 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797119 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797132 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:26:56.797144 <host-B> kernel: NVRM: prbEncStartAlloc: Can't allocate memory for protocol buffers.
+Sep 21 12:26:56.797184 <host-B> kernel: NVRM: A GPU crash dump has been created. If possible, please run
+                                   NVRM: nvidia-bug-report.sh as root to collect this data before
+                                   NVRM: the NVIDIA kernel module is unloaded.
+Sep 21 12:26:56.797202 <host-B> kernel: NVRM: Xid (PCI:0000:01:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (OS Reboot)
+Sep 21 12:26:56.797223 <host-B> kernel: NVRM: GPU at PCI:0000:61:00: GPU-<uuid>

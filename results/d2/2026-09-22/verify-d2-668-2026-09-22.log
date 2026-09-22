@@ -1,0 +1,44 @@
+[13:07:13] health: 200  models: ['glm-5.3', 'glm-5.2']
+--- log startowy:
+(EngineCore pid=1594) INFO 09-22 13:05:12 [kv_cache_utils.py:2157] GPU KV cache size: 1,813,657 tokens
+(EngineCore pid=1594) INFO 09-22 13:05:12 [kv_cache_utils.py:2158] Maximum concurrency for 750,000 tokens per request: 2.42x
+(Worker_PP0_TP0 pid=1806) INFO 09-22 13:04:05 [__init__.py:631] Selected CutlassFP8ScaledMMLinearKernel for TqOnlineFp8LinearMethod
+(Worker_PP0_TP0 pid=1806) INFO 09-22 13:04:25 [default_loader.py:430] Loading weights took 18.46 seconds
+(Worker_PP0_TP0 pid=1806) INFO 09-22 13:05:06 [monitor.py:53] torch.compile took 39.25 s in total
+(Worker_PP1_TP0 pid=2029) INFO 09-22 13:04:06 [modelopt.py:367] TQ_FP8: lm_head -> FP8 (ParallelLMHead)
+(Worker_PP1_TP0 pid=2029) INFO 09-22 13:04:22 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+(Worker_PP1_TP0 pid=2029) INFO 09-22 13:04:25 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scale=0.005139 a2_input_scale=1.071 (ckpt la
+(Worker_PP1_TP1 pid=2059) INFO 09-22 13:04:06 [modelopt.py:367] TQ_FP8: lm_head -> FP8 (ParallelLMHead)
+(Worker_PP1_TP1 pid=2059) INFO 09-22 13:04:23 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+(Worker_PP1_TP1 pid=2059) INFO 09-22 13:04:25 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scale=0.005139 a2_input_scale=1.071 (ckpt la
+(Worker_PP1_TP2 pid=2089) INFO 09-22 13:04:06 [modelopt.py:367] TQ_FP8: lm_head -> FP8 (ParallelLMHead)
+(Worker_PP1_TP2 pid=2089) INFO 09-22 13:04:23 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+(Worker_PP1_TP2 pid=2089) INFO 09-22 13:04:25 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scale=0.005139 a2_input_scale=1.071 (ckpt la
+(Worker_PP1_TP3 pid=2119) INFO 09-22 13:04:06 [modelopt.py:367] TQ_FP8: lm_head -> FP8 (ParallelLMHead)
+(Worker_PP1_TP3 pid=2119) INFO 09-22 13:04:22 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+(Worker_PP1_TP3 pid=2119) INFO 09-22 13:04:25 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scale=0.005139 a2_input_scale=1.071 (ckpt la
+--- dmesg (ostatnie NVRM/Xid):
+--- smoke:
+=== krotki QA === 7.8s, prompt=28 completion=92 => 11.8 tok/s (calosc, z prefill), finish=stop
+=== kod (single stream) === 70.7s, prompt=74 completion=837 => 11.8 tok/s (calosc, z prefill), finish=stop
+=== tool call === 7.4s, prompt=197 completion=67 => 9.1 tok/s (calosc, z prefill), finish=tool_calls
+=== przepustowosc conc=4 === 2800 tok w 41.9s => 66.7 tok/s lacznie, 16.7 tok/s na strumien
+SINGLE-STREAM decode (test 2): 837 tok / 70.7s = 11.8 tok/s
+--- parity (needle 32k/131k, math, tool):
+zapisano /tmp/verify-d2-668.parity.json; 8 testow w 191 s
+        qa_short: prompt=     28 compl=  52     5.9s finish=stop needle=True
+         code_py: prompt=     62 compl= 900   113.3s finish=length needle=None
+            math: prompt=     42 compl=1200    20.6s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     4.4s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     3.4s finish=length needle=None
+       tool_call: prompt=    197 compl=  68     0.7s finish=tool_calls needle=True
+    needle_32768: prompt=  32880 compl= 203     9.1s finish=stop needle=True
+   needle_131072: prompt= 131297 compl= 193    33.9s finish=stop needle=True
+--- metryki:
+  vllm:request_success_total 24
+  vllm:num_requests_running 2
+  vllm:num_requests_waiting_by_reason 0
+  vllm:num_requests_waiting 0
+  vllm:spec_decode_num_drafts_total 3265
+  vllm:spec_decode_num_accepted_tokens_total 6397
+[13:12:33] verify done

@@ -1,0 +1,12 @@
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:31 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scal
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:27 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:06 [modelopt.py:367] TQ_FP8: self_attn.indexer.wq_b -> FP8 (ReplicatedLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:06 [modelopt.py:367] TQ_FP8: mlp.shared_experts.down_proj -> FP8 (RowParallelLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:05 [modelopt.py:367] TQ_FP8: self_attn.q_b_proj -> FP8 (ColumnParallelLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:05 [modelopt.py:367] TQ_FP8: self_attn.o_proj -> FP8 (RowParallelLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:05 [modelopt.py:367] TQ_FP8: self_attn.fused_qkv_a_proj -> FP8 (DeepSeekV2FusedQkvAProjLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:05 [modelopt.py:367] TQ_FP8: mlp.shared_experts.gate_up_proj -> FP8 (MergedColumnParallelLinear)
+      1 (Worker_PP1_TP3 pid=1952) INFO 09-19 07:37:05 [modelopt.py:362] TQ_FP8: online FP8 for excluded linears matching ['fused_qkv_a_proj', 'q_b_proj', 'o_proj', 'sha
+      1 (Worker_PP1_TP2 pid=1922) INFO 09-19 07:37:32 [modelopt.py:322] TQ_B1: online NVFP4 for model.layers.78.mlp.experts: E=256 N13=1024 H=6144 I=512; a13_input_scal
+      1 (Worker_PP1_TP2 pid=1922) INFO 09-19 07:37:28 [modelopt.py:367] TQ_FP8: eh_proj -> FP8 (ReplicatedLinear)
+      1 (Worker_PP1_TP2 pid=1922) INFO 09-19 07:37:06 [modelopt.py:367] TQ_FP8: self_attn.indexer.wq_b -> FP8 (ReplicatedLinear)

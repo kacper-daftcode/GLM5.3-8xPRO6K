@@ -1,0 +1,9 @@
+[21:00:44] === e31_nsys: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[21:04:43] started: [21:04:43] READY po 240 s 
+[21:06:45] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[21:07:02] cuda-gdb Worker_PP0_TP0: 0 lines, kernels: 
+[21:07:16] cuda-gdb Worker_PP1_TP0: 0 lines, kernels: 
+[21:07:31] cuda-gdb Worker_PP1_TP1: 0 lines, kernels: 
+[21:07:31] NSYS: SIGINT to container, waiting for the report
+[21:12:39] xid lines before/after: 0/0; GPUs after: 0,100,100,100,0,0,0,0,100,
+[21:12:39] RESULT e31_nsys: FAIL rc=2

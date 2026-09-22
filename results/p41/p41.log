@@ -1,0 +1,81 @@
+[11:38:31] == nightly image: 4cbfd34aac14 2026-09-19 05:47:54 +0000 UTC
+vllm 0.29.1rc1.dev397+ga8d1aa9c9 torch 2.13.0+cu130
+[11:38:47] == (a) TP8 MTP3 async, KV=fp8_ds_mla
+[11:40:59] !! a_tp8_fp8_ds_mla failed; tail:
+(APIServer pid=1)     raise RuntimeError(
+(APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[11:40:59] == (a) TP8 MTP3 async, KV=auto
+[11:42:45] !! a_tp8_auto failed; tail:
+(APIServer pid=1)     raise RuntimeError(
+(APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[11:42:45] (a) TP8 does not start on the nightly with either KV dtype - see results/p41/a_tp8_*_fail.log
+[11:42:45] == (b) TP4xPP2 MTP3 async, KV=fp8_ds_mla
+[11:44:32] !! b_pp2 failed; tail:
+(APIServer pid=1)     raise RuntimeError(
+(APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[11:44:32] == (b2) TP4xPP2 MTP3 with sync scheduling
+[11:46:18] !! b2_pp2_sync failed; tail:
+(APIServer pid=1)     raise RuntimeError(
+(APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[11:46:18] == rc2 gate (waiting for the image transfer from A if needed)
+[11:48:20] rc2 up: GPU KV cache size: 1,813,657; torch.compile took 4.35 s
+[11:48:47] rc2 decode: conc=  1 gen=256 r1:   145.6 tok/s lacznie |   21.2 ms/krok | akceptacja 3.07 tok/krok | 1.8 s conc=  1 gen=256 r2:   144.5 tok/s lacznie |   21.1 ms/krok | akceptacja 3.05 tok/krok | 1.8 s conc= 16 gen=256 r1:   667.6 tok/s lacznie |   69.3 ms/krok | akceptacja 2.90 tok/krok | 6.1 s conc= 16 gen=25
+[11:49:31] rc2 parity:         qa_short: prompt=     28 compl=  52     0.3s finish=stop needle=True          code_py: prompt=     62 compl= 900     6.2s finish=length needle=None             math: prompt=     42 compl=1200     7.1s finish=length needle=True          pl_text: prompt=     26 compl= 450     3.3s finish=length needle=None        compl_det: prompt=      8 compl= 300     2.4s finish=length needle=None        
+[11:49:31] P41 DONE
+[11:52:10] == overlay run: MODEL=p41/model-overlay (exclude_modules += MTP head)
+[11:52:10] == a2_tp8: TP=8 PP=1 ASYNC=1 MTP3 KV=fp8_ds_mla
+[11:54:01] !! a2_tp8 failed to start: (Worker_TP1 pid=1453) ERROR 09-19 11:53:50 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this lay
+(APIServer pid=1)     raise RuntimeError(
+[11:54:02] == b3_pp2_async: TP=4 PP=2 ASYNC=1 MTP3 KV=fp8_ds_mla
+[11:55:48] !! b3_pp2_async failed to start: (Worker_PP1_TP0 pid=1890) ERROR 09-19 11:55:32 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this
+(APIServer pid=1)     raise RuntimeError(
+[11:55:48] == b4_pp2_sync: TP=4 PP=2 ASYNC=0 MTP3 KV=fp8_ds_mla
+[11:57:34] !! b4_pp2_sync failed to start: (Worker_PP1_TP1 pid=2035) ERROR 09-19 11:57:19 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this
+(APIServer pid=1)     raise RuntimeError(
+[11:57:34] == restore rc2 C3
+[11:59:36] restored rc2: GPU KV cache size: 1,813,657
+[11:59:36] P41B DONE
+[12:00:25] == overlay run: MODEL=p41/model-overlay (exclude_modules += MTP head)
+[12:00:25] == a2_tp8: TP=8 PP=1 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:00:41] !! a2_tp8 failed to start: (APIServer pid=1) pydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig
+[12:00:41] == b3_pp2_async: TP=4 PP=2 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:00:56] !! b3_pp2_async failed to start: (APIServer pid=1) pydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig
+[12:00:56] == b4_pp2_sync: TP=4 PP=2 ASYNC=0 MTP3 KV=fp8_ds_mla
+[12:01:12] !! b4_pp2_sync failed to start: (APIServer pid=1) pydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig
+[12:01:12] == restore rc2 C3
+[12:03:14] restored rc2: GPU KV cache size: 1,813,657
+[12:03:14] P41B DONE
+[12:05:22] == overlay run: MODEL=p41/model-overlay (exclude_modules += MTP head)
+[12:05:22] == a2_tp8: TP=8 PP=1 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:07:09] !! a2_tp8 failed to start: (Worker_TP5 pid=2037) ERROR 09-19 12:07:01 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this lay
+(APIServer pid=1)     raise RuntimeError(
+[12:07:09] == b3_pp2_async: TP=4 PP=2 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:08:55] !! b3_pp2_async failed to start: (Worker_PP1_TP3 pid=2332) ERROR 09-19 12:08:41 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this
+(APIServer pid=1)     raise RuntimeError(
+[12:08:55] == b4_pp2_sync: TP=4 PP=2 ASYNC=0 MTP3 KV=fp8_ds_mla
+[12:10:41] !! b4_pp2_sync failed to start: (Worker_PP1_TP1 pid=2037) ERROR 09-19 12:10:27 [multiproc_executor.py:943] RuntimeError: NVFP4 weight_scale for layer 'parallel_lm_head' was never loaded (still NaN). The checkpoint likely stores this
+(APIServer pid=1)     raise RuntimeError(
+[12:10:42] == restore rc2 C3
+[12:12:38] restored rc2: GPU KV cache size: 1,813,657
+[12:12:38] P41B DONE
+[12:13:38] == overlay run: MODEL=p41/model-overlay (exclude_modules += MTP head)
+[12:13:38] == a2_tp8: TP=8 PP=1 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:28:30] == overlay run (autotune off): MODEL=p41/model-overlay
+[12:28:30] == a2_tp8: TP=8 PP=1 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:30:47] a2_tp8 started: GPU KV cache size: 506,944; errors=0
+[12:30:57] a2_tp8 decode: conc=  1 gen=256 r1:   124.5 tok/s lacznie |   25.1 ms/krok | akceptacja 3.13 tok/krok | 2.1 s conc=  1 gen=256 r2:   127.5 tok/s lacznie |   25.1 ms/krok | akceptacja 3.21 tok/krok | 2.0 s  | acceptance=2.788 (accepted=658 drafts=368)
+[12:31:29] a2_tp8 parity:         qa_short: finish=stop needle=True          code_py: finish=length needle=None             math: finish=length needle=True          pl_text: finish=length needle=None        compl_det: finish=length needle=None        tool_call: finish=tool_calls needle=True     needle_32768: finish=stop needle=True 
+[12:31:29] a2_tp8 errors after run: 0
+[12:31:31] == b3_pp2_async: TP=4 PP=2 ASYNC=1 MTP3 KV=fp8_ds_mla
+[12:33:33] b3_pp2_async started: GPU KV cache size: 898,432; errors=0
+[12:33:43] b3_pp2_async decode: conc=  1 gen=256 r1:   107.4 tok/s lacznie |   27.1 ms/krok | akceptacja 2.91 tok/krok | 2.4 s conc=  1 gen=256 r2:   109.7 tok/s lacznie |   26.8 ms/krok | akceptacja 2.93 tok/krok | 2.3 s  | acceptance=2.821 (accepted=661 drafts=363)
+[12:34:14] b3_pp2_async parity:         qa_short: finish=stop needle=True          code_py: finish=length needle=None             math: finish=length needle=True          pl_text: finish=length needle=None        compl_det: finish=length needle=None        tool_call: finish=tool_calls needle=True     needle_32768: finish=stop needle=True         qa_short: ROZNE od znaku 127/228 (56% wspolne); needle ref=True new=True          code_py: ROZNE od znaku 74/3087 (2% wspolne); needle ref=None new=None             math: ROZNE od znak
+[12:34:14] b3_pp2_async errors after run: 0
+[12:34:16] == restore rc2 C3
+[12:36:13] restored rc2: GPU KV cache size: 1,813,657
+[12:36:13] P41B DONE
+[12:36:43] == d_tp8: TP=8 PP=1 MTP3 async, GSM8K-500 conc 8 (upstream nightly, overlay ckpt, autotune off)
+[12:44:14] d_tp8 gsm8k: {"model": "glm-5.3", "n": 500, "accuracy": 0.976, "errors": 0, "truncated": 5, "completion_tokens": 148961, "wall_s": 308.9, "tok_s": 482.2, "conc": 8, "max_tok | acceptance=3.487 (accepted=106289 drafts=42740) | errors=0
+[12:44:16] == d_pp2_async: TP=4 PP=2 MTP3 async, GSM8K-500 conc 8 (upstream nightly, overlay ckpt, autotune off)
+[12:54:41] d_pp2_async gsm8k: {"model": "glm-5.3", "n": 500, "accuracy": 0.962, "errors": 0, "truncated": 15, "completion_tokens": 190781, "wall_s": 503.8, "tok_s": 378.7, "conc": 8, "max_to | acceptance=3.400 (accepted=134675 drafts=56108) | errors=0
+[12:54:43] == restore rc2 C3

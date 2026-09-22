@@ -1,0 +1,5 @@
+[18:07:59] === e17_connector_no_stores: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='"store_threshold":2' CHURN=1
+[18:09:57] started: [18:09:56] READY po 120 s [18:09:57] host RAM after start: pinned(shmem)=45 GB MemAvailable=669 GB 
+[18:11:58] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[18:12:09] xid lines before/after: 0/0; GPUs after: 100,100,100,0,0,0,0,0,0,
+[18:12:09] RESULT e17_connector_no_stores: FAIL rc=2

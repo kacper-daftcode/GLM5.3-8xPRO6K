@@ -1,0 +1,5 @@
+[16:34:43] === e7_simple_connector: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[16:38:32] started: [16:38:32] READY po 230 s [16:38:32] host RAM after start: pinned(shmem)=0 GB MemAvailable=682 GB 
+[16:40:34] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[16:40:44] xid lines before/after: 0/0; GPUs after: 100,100,100,100,100,0,0,100,0,
+[16:40:44] RESULT e7_simple_connector: FAIL rc=2

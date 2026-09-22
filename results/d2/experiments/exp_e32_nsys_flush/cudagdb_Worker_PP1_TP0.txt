@@ -1,0 +1,358 @@
+[New LWP 1532]
+[New LWP 1564]
+[New LWP 1565]
+[New LWP 1566]
+[New LWP 1567]
+[New LWP 1569]
+[New LWP 1571]
+[New LWP 1580]
+[New LWP 1581]
+[New LWP 1582]
+[New LWP 1583]
+[New LWP 1584]
+[New LWP 1585]
+[New LWP 1586]
+[New LWP 1587]
+[New LWP 1709]
+[New LWP 1711]
+[New LWP 1718]
+[New LWP 1727]
+[New LWP 1731]
+[New LWP 1746]
+[New LWP 1747]
+[New LWP 1759]
+[New LWP 1765]
+[New LWP 1768]
+[New LWP 1777]
+[New LWP 1778]
+[New LWP 1794]
+[New LWP 1795]
+[New LWP 1796]
+[New LWP 1804]
+[New LWP 1805]
+[New LWP 1813]
+[New LWP 1814]
+[New LWP 1816]
+[New LWP 1827]
+[New LWP 1829]
+[New LWP 1831]
+[New LWP 1833]
+[New LWP 1835]
+[New LWP 1920]
+[New LWP 1922]
+[New LWP 1942]
+[New LWP 1944]
+[New LWP 1976]
+[New LWP 1978]
+[New LWP 1982]
+[New LWP 1991]
+[New LWP 1993]
+[New LWP 2005]
+[New LWP 2006]
+[New LWP 2007]
+[New LWP 2020]
+[New LWP 2022]
+[New LWP 2037]
+[New LWP 2043]
+[New LWP 2067]
+[New LWP 2128]
+[New LWP 2129]
+[New LWP 2130]
+[New LWP 2131]
+[New LWP 2132]
+[New LWP 2133]
+[New LWP 2138]
+[New LWP 2178]
+[New LWP 2185]
+[New LWP 2263]
+[New LWP 2267]
+[New LWP 2285]
+[New LWP 2287]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ade4ddb8280 (LWP 3411)]
+[Thread 0x7ade4ddb8280 (LWP 3411) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3412)]
+[Thread 0x7ade4ddb8280 (LWP 3412) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3413)]
+[Thread 0x7ade4ddb8280 (LWP 3413) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3414)]
+[Thread 0x7ade4ddb8280 (LWP 3414) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3415)]
+[Thread 0x7ade4ddb8280 (LWP 3415) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3416)]
+[Thread 0x7ade4ddb8280 (LWP 3416) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3417)]
+[Thread 0x7ade4ddb8280 (LWP 3417) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3418)]
+[Thread 0x7ade4ddb8280 (LWP 3418) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3419)]
+[Thread 0x7ade4ddb8280 (LWP 3419) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3420)]
+[Thread 0x7ade4ddb8280 (LWP 3420) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3421)]
+[Thread 0x7ade4ddb8280 (LWP 3421) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3422)]
+[Thread 0x7ade4ddb8280 (LWP 3422) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3423)]
+[Thread 0x7ade4ddb8280 (LWP 3423) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3424)]
+[Thread 0x7ade4ddb8280 (LWP 3424) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3425)]
+[Thread 0x7ade4ddb8280 (LWP 3425) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3426)]
+[Thread 0x7ade4ddb8280 (LWP 3426) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3427)]
+[Thread 0x7ade4ddb8280 (LWP 3427) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3428)]
+[Thread 0x7ade4ddb8280 (LWP 3428) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3429)]
+[Thread 0x7ade4ddb8280 (LWP 3429) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3430)]
+[Thread 0x7ade4ddb8280 (LWP 3430) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3431)]
+[Thread 0x7ade4ddb8280 (LWP 3431) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3432)]
+[Thread 0x7ade4ddb8280 (LWP 3432) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3433)]
+[Thread 0x7ade4ddb8280 (LWP 3433) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3434)]
+[Thread 0x7ade4ddb8280 (LWP 3434) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3435)]
+[Thread 0x7ade4ddb8280 (LWP 3435) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3436)]
+[Thread 0x7ade4ddb8280 (LWP 3436) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3437)]
+[Thread 0x7ade4ddb8280 (LWP 3437) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3438)]
+[Thread 0x7ade4ddb8280 (LWP 3438) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3439)]
+[Thread 0x7ade4ddb8280 (LWP 3439) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3440)]
+[Thread 0x7ade4ddb8280 (LWP 3440) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3441)]
+[Thread 0x7ade4ddb8280 (LWP 3441) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3442)]
+[Thread 0x7ade4ddb8280 (LWP 3442) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3443)]
+[Thread 0x7ade4ddb8280 (LWP 3443) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3444)]
+[Thread 0x7ade4ddb8280 (LWP 3444) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3445)]
+[Thread 0x7ade4ddb8280 (LWP 3445) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3446)]
+[Thread 0x7ade4ddb8280 (LWP 3446) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3447)]
+[Thread 0x7ade4ddb8280 (LWP 3447) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3448)]
+[Thread 0x7ade4ddb8280 (LWP 3448) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3449)]
+[Thread 0x7ade4ddb8280 (LWP 3449) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3450)]
+[Thread 0x7ade4ddb8280 (LWP 3450) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3451)]
+[Thread 0x7ade4ddb8280 (LWP 3451) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3452)]
+[Thread 0x7ade4ddb8280 (LWP 3452) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3453)]
+[Thread 0x7ade4ddb8280 (LWP 3453) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3454)]
+[Thread 0x7ade4ddb8280 (LWP 3454) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3455)]
+[Thread 0x7ade4ddb8280 (LWP 3455) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3456)]
+[Thread 0x7ade4ddb8280 (LWP 3456) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3457)]
+[Thread 0x7ade4ddb8280 (LWP 3457) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3458)]
+[Thread 0x7ade4ddb8280 (LWP 3458) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3459)]
+[Thread 0x7ade4ddb8280 (LWP 3459) exited]
+[New Thread 0x7ade4ddb8280 (LWP 3460)]
+[Thread 0x7ade4ddb8280 (LWP 3460) exited]
+Attaching not possible. Please verify that software preemption is disabled and that nvidia-cuda-mps-server is not running.
+No CUDA devices.
+No CUDA kernels.
+No CUDA blocks.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007ade74fdfd0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007ade4855e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x00007ade4855ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x00007ade476aeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x00007ade4853408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x00007ade4854b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x00007ade473ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x00007ade473ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x00007ade474027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x00007ade475d8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x00007ade475c922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x00007addec0a74fb in (anonymous namespace)::launchKernel(CUfunc_st*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, void**, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#12 0x00007addec0a8503 in (anonymous namespace)::launch_kernel(_object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#13 0x000000000056cc4f in ?? ()
+#14 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#15 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#16 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#17 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#18 0x00000000006690fd in ?? ()
+#19 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#20 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#21 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#22 0x000000000057e34e in _PyObject_Call_Prepend ()
+#23 0x00000000006690fd in ?? ()
+#24 0x0000000000580f33 in _PyObject_Call ()
+#25 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#26 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#27 0x000000000057e34e in _PyObject_Call_Prepend ()
+#28 0x00000000006690fd in ?? ()
+#29 0x0000000000580f33 in _PyObject_Call ()
+#30 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#31 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#32 0x000000000057e34e in _PyObject_Call_Prepend ()
+#33 0x00000000006690fd in ?? ()
+#34 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#35 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#36 0x0000000000580f8d in _PyObject_Call ()
+#37 0x000000000066dd43 in ?? ()
+#38 0x0000000000580f33 in _PyObject_Call ()
+#39 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#40 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#41 0x000000000057e34e in _PyObject_Call_Prepend ()
+#42 0x00000000006690fd in ?? ()
+#43 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#44 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#45 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#46 0x000000000057e34e in _PyObject_Call_Prepend ()
+#47 0x00000000006690fd in ?? ()
+#48 0x0000000000580f33 in _PyObject_Call ()
+#49 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#50 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#51 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#52 0x00000000006690fd in ?? ()
+#53 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#54 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#55 0x000000000059961d in ?? ()
+#56 0x00000000005991ae in ?? ()
+#57 0x0000000000580f8d in _PyObject_Call ()
+#58 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#59 0x000000000059961d in ?? ()
+#60 0x00000000005991ae in ?? ()
+#61 0x0000000000580f8d in _PyObject_Call ()
+#62 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#63 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#64 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#65 0x00000000006690fd in ?? ()
+#66 0x0000000000580f33 in _PyObject_Call ()
+#67 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#68 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#69 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#70 0x00000000006690fd in ?? ()
+#71 0x0000000000580f33 in _PyObject_Call ()
+#72 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#73 0x000000000059961d in ?? ()
+#74 0x00000000005991ae in ?? ()
+#75 0x0000000000580f8d in _PyObject_Call ()
+#76 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#77 0x000000000059915f in ?? ()
+#78 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#79 0x000000000061f469 in PyEval_EvalCode ()
+#80 0x000000000065b0eb in ?? ()
+#81 0x0000000000656186 in ?? ()
+#82 0x00000000006520b3 in PyRun_StringFlags ()
+#83 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#84 0x000000000064f3c2 in Py_RunMain ()
+#85 0x00000000006082cd in Py_BytesMain ()
+#86 0x00007ade74f00d90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#87 0x00007ade74f00e40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#88 0x0000000000608145 in _start ()
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007ade74fdfd0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007ade4855e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x00007ade4855ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x00007ade476aeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x00007ade4853408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x00007ade4854b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x00007ade473ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x00007ade473ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x00007ade474027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x00007ade475d8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x00007ade475c922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x00007addec0a74fb in (anonymous namespace)::launchKernel(CUfunc_st*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, void**, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#12 0x00007addec0a8503 in (anonymous namespace)::launch_kernel(_object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#13 0x000000000056cc4f in ?? ()
+#14 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#15 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#16 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#17 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#18 0x00000000006690fd in ?? ()
+#19 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#20 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#21 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#22 0x000000000057e34e in _PyObject_Call_Prepend ()
+#23 0x00000000006690fd in ?? ()
+#24 0x0000000000580f33 in _PyObject_Call ()
+#25 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#26 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#27 0x000000000057e34e in _PyObject_Call_Prepend ()
+#28 0x00000000006690fd in ?? ()
+#29 0x0000000000580f33 in _PyObject_Call ()
+#30 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#31 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#32 0x000000000057e34e in _PyObject_Call_Prepend ()
+#33 0x00000000006690fd in ?? ()
+#34 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#35 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#36 0x0000000000580f8d in _PyObject_Call ()
+#37 0x000000000066dd43 in ?? ()
+#38 0x0000000000580f33 in _PyObject_Call ()
+#39 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#40 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#41 0x000000000057e34e in _PyObject_Call_Prepend ()
+#42 0x00000000006690fd in ?? ()
+#43 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#44 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#45 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#46 0x000000000057e34e in _PyObject_Call_Prepend ()
+#47 0x00000000006690fd in ?? ()
+#48 0x0000000000580f33 in _PyObject_Call ()
+#49 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#50 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#51 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#52 0x00000000006690fd in ?? ()
+#53 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#54 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#55 0x000000000059961d in ?? ()
+#56 0x00000000005991ae in ?? ()
+#57 0x0000000000580f8d in _PyObject_Call ()
+#58 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#59 0x000000000059961d in ?? ()
+#60 0x00000000005991ae in ?? ()
+#61 0x0000000000580f8d in _PyObject_Call ()
+#62 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#63 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#64 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#65 0x00000000006690fd in ?? ()
+#66 0x0000000000580f33 in _PyObject_Call ()
+#67 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#68 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#69 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#70 0x00000000006690fd in ?? ()
+#71 0x0000000000580f33 in _PyObject_Call ()
+#72 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#73 0x000000000059961d in ?? ()
+#74 0x00000000005991ae in ?? ()
+#75 0x0000000000580f8d in _PyObject_Call ()
+#76 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#77 0x000000000059915f in ?? ()
+#78 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#79 0x000000000061f469 in PyEval_EvalCode ()
+#80 0x000000000065b0eb in ?? ()
+#81 0x0000000000656186 in ?? ()
+#82 0x00000000006520b3 in PyRun_StringFlags ()
+#83 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#84 0x000000000064f3c2 in Py_RunMain ()
+#85 0x00000000006082cd in Py_BytesMain ()
+#86 0x00007ade74f00d90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#87 0x00007ade74f00e40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#88 0x0000000000608145 in _start ()
+[Inferior 1 (process 1527) detached]

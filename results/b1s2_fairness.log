@@ -1,0 +1,3 @@
+dlugi prefill: 130302 tok, TTFT 32.2 s => 4051 tok/s (okno [2.0, 34.2] s)
+ old: TTFT 0.07 s (start 0.0 s), 600 tok / 219 chunkow (2.74 tok/chunk), ITL p50 166 ms p95 175 ms | W TRAKCIE prefillu: 6.1 chunk/s ~ 16.8 tok/s (139 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.48 s (start 5.0 s), 200 tok / 63 chunkow (3.17 tok/chunk), ITL p50 168 ms p95 172 ms | W TRAKCIE prefillu: 5.9 chunk/s ~ 18.9 tok/s (63 chunkow) | po prefillu: nan chunk/s ~ nan tok/s

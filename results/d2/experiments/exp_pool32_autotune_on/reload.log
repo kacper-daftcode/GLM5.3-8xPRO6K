@@ -1,0 +1,14 @@
+[09:38:11] start L=200000 churn=4x550000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[09:38:50] cold   : prompt=199752 TTFT= 37.52s total=  39.0s (  5324 tok/s prefill) needle=OK | store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0
+[09:38:53]          after 3 s: store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0  (store delta 22.85 GiB = 120.0 KiB/token)
+[09:38:55] gpuhit0: prompt=199752 TTFT=  0.42s total=   1.6s identical_to_cold=False  (intra-run determinism control)
+[09:41:23] churn 1/4: prompt=549016  147.9s (  3711 tok/s) cum=549016
+[09:43:54] churn 2/4: prompt=549614  151.5s (  3628 tok/s) cum=1098630
+[09:46:27] churn 3/4: prompt=549741  152.4s (  3608 tok/s) cum=1648371
+[09:48:59] churn 4/4: prompt=549705  152.6s (  3602 tok/s) cum=2198076
+[09:48:59] after churn (2198076 tokens): store=274.32G load=0.00G pc_hits/q=199680/2597580 ext_hits/q=0/2397900 preempt=0 alloc_fail=0
+[09:49:40] warm   : prompt=199752 TTFT= 39.95s total=  41.1s needle=OK identical_to_cold=False common_prefix=70/735 loaded=0.00 GiB (0.0 KiB/token) | store=297.18G load=0.00G pc_hits/q=199680/2797332 ext_hits/q=0/2597652 preempt=0 alloc_fail=0
+[09:49:40]   DIVERGENCE at char 70: cold='s asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalsk'
+                        warm='s asking me to extract three pieces of information from the long text:\n1. The access code to the server room\n2. Marek Ko'
+[09:49:42] gpuhit : prompt=199752 TTFT=  0.38s total=   1.6s identical_to_warm=False | store=297.18G load=0.00G pc_hits/q=399360/2997084 ext_hits/q=0/2597724 preempt=0 alloc_fail=0
+[09:49:42] VERDICT: FAIL - kv_offload_load_bytes did not grow (nothing came back from RAM: pool smaller than the churn, or prompt recomputed) (decode nondeterministic within run: identity not required)  (cold TTFT 37.52 s -> warm-from-RAM 39.95 s -> GPU hit 0.38 s)

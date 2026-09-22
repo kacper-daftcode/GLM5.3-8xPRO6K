@@ -1,0 +1,5 @@
+[19:36:29] === e25_max_connections1: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='CUDA_DEVICE_MAX_CONNECTIONS=1' KV_OFFLOAD_OPTS='' CHURN=2
+[19:40:18] started: [19:40:18] READY po 230 s [19:40:18] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB 
+[19:42:20] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:42:31] xid lines before/after: 0/0; GPUs after: 100,100,100,100,100,100,0,100,100,
+[19:42:31] RESULT e25_max_connections1: FAIL rc=2

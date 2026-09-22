@@ -1,0 +1,18 @@
+01: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+11: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+61: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+71: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+81: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+91: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+e1: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+f1: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+RP 00:01.1: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+RP 80:01.1: DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend- CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr- 
+nvidia-smi GPU0: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU1: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU2: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU3: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU4: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU5: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU7: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 
+nvidia-smi GPU8: Replays Since Reset                            : 0 Replay Number Rollovers                        : 0 

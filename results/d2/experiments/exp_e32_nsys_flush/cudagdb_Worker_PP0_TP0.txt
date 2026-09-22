@@ -1,0 +1,398 @@
+[New LWP 1416]
+[New LWP 1427]
+[New LWP 1428]
+[New LWP 1429]
+[New LWP 1430]
+[New LWP 1433]
+[New LWP 1434]
+[New LWP 1443]
+[New LWP 1693]
+[New LWP 1694]
+[New LWP 1695]
+[New LWP 1696]
+[New LWP 1697]
+[New LWP 1704]
+[New LWP 1705]
+[New LWP 1714]
+[New LWP 1720]
+[New LWP 1725]
+[New LWP 1738]
+[New LWP 1741]
+[New LWP 1756]
+[New LWP 1757]
+[New LWP 1758]
+[New LWP 1774]
+[New LWP 1844]
+[New LWP 1845]
+[New LWP 1847]
+[New LWP 1848]
+[New LWP 1858]
+[New LWP 1862]
+[New LWP 1865]
+[New LWP 1873]
+[New LWP 1876]
+[New LWP 1884]
+[New LWP 1890]
+[New LWP 1892]
+[New LWP 1900]
+[New LWP 1902]
+[New LWP 1904]
+[New LWP 1915]
+[New LWP 1916]
+[New LWP 1919]
+[New LWP 1921]
+[New LWP 1941]
+[New LWP 1943]
+[New LWP 1977]
+[New LWP 1980]
+[New LWP 1984]
+[New LWP 1986]
+[New LWP 1988]
+[New LWP 1996]
+[New LWP 1998]
+[New LWP 2000]
+[New LWP 2010]
+[New LWP 2015]
+[New LWP 2029]
+[New LWP 2036]
+[New LWP 2046]
+[New LWP 2068]
+[New LWP 2088]
+[New LWP 2089]
+[New LWP 2090]
+[New LWP 2091]
+[New LWP 2092]
+[New LWP 2093]
+[New LWP 2144]
+[New LWP 2262]
+[New LWP 2265]
+[New LWP 2282]
+[New LWP 2288]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7b362bdb8280 (LWP 2828)]
+[Thread 0x7b362bdb8280 (LWP 2828) exited]
+[New Thread 0x7b362bdb8280 (LWP 2829)]
+[Thread 0x7b362bdb8280 (LWP 2829) exited]
+[New Thread 0x7b362bdb8280 (LWP 2830)]
+[Thread 0x7b362bdb8280 (LWP 2830) exited]
+[New Thread 0x7b362bdb8280 (LWP 2831)]
+[Thread 0x7b362bdb8280 (LWP 2831) exited]
+[New Thread 0x7b362bdb8280 (LWP 2832)]
+[Thread 0x7b362bdb8280 (LWP 2832) exited]
+[New Thread 0x7b362bdb8280 (LWP 2833)]
+[Thread 0x7b362bdb8280 (LWP 2833) exited]
+[New Thread 0x7b362bdb8280 (LWP 2834)]
+[Thread 0x7b362bdb8280 (LWP 2834) exited]
+[New Thread 0x7b362bdb8280 (LWP 2835)]
+[Thread 0x7b362bdb8280 (LWP 2835) exited]
+[New Thread 0x7b362bdb8280 (LWP 2836)]
+[Thread 0x7b362bdb8280 (LWP 2836) exited]
+[New Thread 0x7b362bdb8280 (LWP 2837)]
+[Thread 0x7b362bdb8280 (LWP 2837) exited]
+[New Thread 0x7b362bdb8280 (LWP 2838)]
+[Thread 0x7b362bdb8280 (LWP 2838) exited]
+[New Thread 0x7b362bdb8280 (LWP 2839)]
+[Thread 0x7b362bdb8280 (LWP 2839) exited]
+[New Thread 0x7b362bdb8280 (LWP 2840)]
+[Thread 0x7b362bdb8280 (LWP 2840) exited]
+[New Thread 0x7b362bdb8280 (LWP 2841)]
+[Thread 0x7b362bdb8280 (LWP 2841) exited]
+[New Thread 0x7b362bdb8280 (LWP 2842)]
+[Thread 0x7b362bdb8280 (LWP 2842) exited]
+[New Thread 0x7b362bdb8280 (LWP 2843)]
+[Thread 0x7b362bdb8280 (LWP 2843) exited]
+[New Thread 0x7b362bdb8280 (LWP 2844)]
+[Thread 0x7b362bdb8280 (LWP 2844) exited]
+[New Thread 0x7b362bdb8280 (LWP 2845)]
+[Thread 0x7b362bdb8280 (LWP 2845) exited]
+[New Thread 0x7b362bdb8280 (LWP 2846)]
+[Thread 0x7b362bdb8280 (LWP 2846) exited]
+[New Thread 0x7b362bdb8280 (LWP 2847)]
+[Thread 0x7b362bdb8280 (LWP 2847) exited]
+[New Thread 0x7b362bdb8280 (LWP 2848)]
+[Thread 0x7b362bdb8280 (LWP 2848) exited]
+[New Thread 0x7b362bdb8280 (LWP 2849)]
+[Thread 0x7b362bdb8280 (LWP 2849) exited]
+[New Thread 0x7b362bdb8280 (LWP 2850)]
+[Thread 0x7b362bdb8280 (LWP 2850) exited]
+[New Thread 0x7b362bdb8280 (LWP 2851)]
+[Thread 0x7b362bdb8280 (LWP 2851) exited]
+[New Thread 0x7b362bdb8280 (LWP 2852)]
+[Thread 0x7b362bdb8280 (LWP 2852) exited]
+[New Thread 0x7b362bdb8280 (LWP 2853)]
+[Thread 0x7b362bdb8280 (LWP 2853) exited]
+[New Thread 0x7b362bdb8280 (LWP 2854)]
+[Thread 0x7b362bdb8280 (LWP 2854) exited]
+[New Thread 0x7b362bdb8280 (LWP 2855)]
+[Thread 0x7b362bdb8280 (LWP 2855) exited]
+[New Thread 0x7b362bdb8280 (LWP 2856)]
+[Thread 0x7b362bdb8280 (LWP 2856) exited]
+[New Thread 0x7b362bdb8280 (LWP 2857)]
+[Thread 0x7b362bdb8280 (LWP 2857) exited]
+[New Thread 0x7b362bdb8280 (LWP 2858)]
+[Thread 0x7b362bdb8280 (LWP 2858) exited]
+[New Thread 0x7b362bdb8280 (LWP 2859)]
+[Thread 0x7b362bdb8280 (LWP 2859) exited]
+[New Thread 0x7b362bdb8280 (LWP 2860)]
+[Thread 0x7b362bdb8280 (LWP 2860) exited]
+[New Thread 0x7b362bdb8280 (LWP 2861)]
+[Thread 0x7b362bdb8280 (LWP 2861) exited]
+[New Thread 0x7b362bdb8280 (LWP 2862)]
+[Thread 0x7b362bdb8280 (LWP 2862) exited]
+[New Thread 0x7b362bdb8280 (LWP 2863)]
+[Thread 0x7b362bdb8280 (LWP 2863) exited]
+[New Thread 0x7b362bdb8280 (LWP 2864)]
+[Thread 0x7b362bdb8280 (LWP 2864) exited]
+[New Thread 0x7b362bdb8280 (LWP 2865)]
+[Thread 0x7b362bdb8280 (LWP 2865) exited]
+[New Thread 0x7b362bdb8280 (LWP 2866)]
+[Thread 0x7b362bdb8280 (LWP 2866) exited]
+[New Thread 0x7b362bdb8280 (LWP 2867)]
+[Thread 0x7b362bdb8280 (LWP 2867) exited]
+[New Thread 0x7b362bdb8280 (LWP 2868)]
+[Thread 0x7b362bdb8280 (LWP 2868) exited]
+[New Thread 0x7b362bdb8280 (LWP 2869)]
+[Thread 0x7b362bdb8280 (LWP 2869) exited]
+[New Thread 0x7b362bdb8280 (LWP 2870)]
+[Thread 0x7b362bdb8280 (LWP 2870) exited]
+[New Thread 0x7b362bdb8280 (LWP 2871)]
+[Thread 0x7b362bdb8280 (LWP 2871) exited]
+[New Thread 0x7b362bdb8280 (LWP 2872)]
+[Thread 0x7b362bdb8280 (LWP 2872) exited]
+[New Thread 0x7b362bdb8280 (LWP 2873)]
+[Thread 0x7b362bdb8280 (LWP 2873) exited]
+[New Thread 0x7b362bdb8280 (LWP 2874)]
+[Thread 0x7b362bdb8280 (LWP 2874) exited]
+[New Thread 0x7b362bdb8280 (LWP 2875)]
+[Thread 0x7b362bdb8280 (LWP 2875) exited]
+[New Thread 0x7b362bdb8280 (LWP 2876)]
+[Thread 0x7b362bdb8280 (LWP 2876) exited]
+[New Thread 0x7b362bdb8280 (LWP 2877)]
+[Thread 0x7b362bdb8280 (LWP 2877) exited]
+Attaching not possible. Please verify that software preemption is disabled and that nvidia-cuda-mps-server is not running.
+No CUDA devices.
+No CUDA kernels.
+No CUDA blocks.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007b3652e99d0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007b362655e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x00007b362655ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x00007b36256aeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x00007b362653408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x00007b362654b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x00007b36253ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x00007b36253ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x00007b36254027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x00007b36255d889b in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x00007b36255c927a in cuLaunchKernelEx () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x00007b3652213a52 in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#12 0x00007b365227483b in cudaLaunchKernelExC () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#13 0x00007b31626e7096 in tensorrt_llm::kernels::cutlass_kernels::mergeExpertPrefixSum(int const*, int const*, int const*, int*, int*, int*, long, long, long, long, bool, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#14 0x00007b316285bdc4 in tensorrt_llm::kernels::cutlass_kernels::CutlassMoeFCRunner<__nv_fp4_e2m1, __nv_fp4_e2m1, __nv_bfloat16, __nv_fp4_e2m1, __nv_bfloat16, false, (tensorrt_llm::kernels::cutlass_kernels::Sm90Wfp4Afp8ScaleMode)0, void>::runMoe(void const*, void const*, bool, int const*, float const*, void const*, void const*, tensorrt_llm::kernels::cutlass_kernels::ActivationParams, void const*, void const*, tensorrt_llm::kernels::cutlass_kernels::QuantParams, long, long, long, long, int, int, char*, void*, int*, tensorrt_llm::kernels::cutlass_kernels::MOEParallelismConfig, bool, bool, tensorrt_llm::kernels::LoraParams&, bool, bool, bool, tensorrt_llm::kernels::cutlass_kernels::MoeMinLatencyParams&, bool, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#15 0x00007b316269009f in FusedMoeRunner::runMoe(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, tensorrt_llm::kernels::cutlass_kernels::ActivationType, tvm::ffi::Optional<tvm::ffi::TensorView, void>) [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#16 0x00007b31626c1b23 in tvm::ffi::Function::FromTyped<FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}>(FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}&&)::{lambda(tvm::ffi::AnyView const*, int, tvm::ffi::Any*)#1}::operator()(tvm::ffi::AnyView const*, int, tvm::ffi::Any*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#17 0x00007b3162664e3c in tvm::ffi::details::FunctionObjImpl<tvm::ffi::Function::FromTyped<FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}>(FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}&&)::{lambda(tvm::ffi::AnyView const*, int, tvm::ffi::Any*)#1}>::SafeCall(void*, TVMFFIAny const*, int, TVMFFIAny*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#18 0x00007b354ef2f4cc in ?? () from /usr/local/lib/python3.12/dist-packages/tvm_ffi/core.abi3.so
+#19 0x0000000000580f33 in _PyObject_Call ()
+#20 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#21 0x00007b35ca10ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x00007b35ca482f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x00007b35ba71cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#24 0x00007b35ca1d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#25 0x00007b35ca1d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#26 0x00007b35ca0b9672 in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&))::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#27 0x00007b35c9ac5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#28 0x000000000056cc2d in ?? ()
+#29 0x0000000000580f33 in _PyObject_Call ()
+#30 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#31 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#32 0x000000000057e34e in _PyObject_Call_Prepend ()
+#33 0x00000000006690fd in ?? ()
+#34 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#35 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#36 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#37 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#38 0x00000000006690fd in ?? ()
+#39 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#40 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#41 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#42 0x000000000057e34e in _PyObject_Call_Prepend ()
+#43 0x00000000006690fd in ?? ()
+#44 0x0000000000580f33 in _PyObject_Call ()
+#45 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#46 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#47 0x000000000057e34e in _PyObject_Call_Prepend ()
+#48 0x00000000006690fd in ?? ()
+#49 0x0000000000580f33 in _PyObject_Call ()
+#50 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#51 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#52 0x000000000057e34e in _PyObject_Call_Prepend ()
+#53 0x00000000006690fd in ?? ()
+#54 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#55 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#56 0x0000000000580f8d in _PyObject_Call ()
+#57 0x000000000066dd43 in ?? ()
+#58 0x0000000000580f33 in _PyObject_Call ()
+#59 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#60 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#61 0x000000000057e34e in _PyObject_Call_Prepend ()
+#62 0x00000000006690fd in ?? ()
+#63 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#64 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#65 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#66 0x000000000057e34e in _PyObject_Call_Prepend ()
+#67 0x00000000006690fd in ?? ()
+#68 0x0000000000580f33 in _PyObject_Call ()
+#69 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#70 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#71 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#72 0x00000000006690fd in ?? ()
+#73 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#74 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#75 0x000000000059961d in ?? ()
+#76 0x00000000005991ae in ?? ()
+#77 0x0000000000580f8d in _PyObject_Call ()
+#78 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#79 0x000000000059961d in ?? ()
+#80 0x00000000005991ae in ?? ()
+#81 0x0000000000580f8d in _PyObject_Call ()
+#82 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#83 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#84 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#85 0x00000000006690fd in ?? ()
+#86 0x0000000000580f33 in _PyObject_Call ()
+#87 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#88 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#89 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#90 0x00000000006690fd in ?? ()
+#91 0x0000000000580f33 in _PyObject_Call ()
+#92 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#93 0x000000000059961d in ?? ()
+#94 0x00000000005991ae in ?? ()
+#95 0x0000000000580f8d in _PyObject_Call ()
+#96 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#97 0x000000000059915f in ?? ()
+#98 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#99 0x000000000061f469 in PyEval_EvalCode ()
+#100 0x000000000065b0eb in ?? ()
+#101 0x0000000000656186 in ?? ()
+#102 0x00000000006520b3 in PyRun_StringFlags ()
+#103 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#104 0x000000000064f3c2 in Py_RunMain ()
+#105 0x00000000006082cd in Py_BytesMain ()
+#106 0x00007b3652dbad90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#107 0x00007b3652dbae40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#108 0x0000000000608145 in _start ()
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007b3652e99d0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x00007b362655e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x00007b362655ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x00007b36256aeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x00007b362653408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x00007b362654b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x00007b36253ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x00007b36253ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x00007b36254027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x00007b36255d889b in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x00007b36255c927a in cuLaunchKernelEx () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x00007b3652213a52 in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#12 0x00007b365227483b in cudaLaunchKernelExC () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#13 0x00007b31626e7096 in tensorrt_llm::kernels::cutlass_kernels::mergeExpertPrefixSum(int const*, int const*, int const*, int*, int*, int*, long, long, long, long, bool, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#14 0x00007b316285bdc4 in tensorrt_llm::kernels::cutlass_kernels::CutlassMoeFCRunner<__nv_fp4_e2m1, __nv_fp4_e2m1, __nv_bfloat16, __nv_fp4_e2m1, __nv_bfloat16, false, (tensorrt_llm::kernels::cutlass_kernels::Sm90Wfp4Afp8ScaleMode)0, void>::runMoe(void const*, void const*, bool, int const*, float const*, void const*, void const*, tensorrt_llm::kernels::cutlass_kernels::ActivationParams, void const*, void const*, tensorrt_llm::kernels::cutlass_kernels::QuantParams, long, long, long, long, int, int, char*, void*, int*, tensorrt_llm::kernels::cutlass_kernels::MOEParallelismConfig, bool, bool, tensorrt_llm::kernels::LoraParams&, bool, bool, bool, tensorrt_llm::kernels::cutlass_kernels::MoeMinLatencyParams&, bool, CUstream_st*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#15 0x00007b316269009f in FusedMoeRunner::runMoe(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, tensorrt_llm::kernels::cutlass_kernels::ActivationType, tvm::ffi::Optional<tvm::ffi::TensorView, void>) [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#16 0x00007b31626c1b23 in tvm::ffi::Function::FromTyped<FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}>(FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}&&)::{lambda(tvm::ffi::AnyView const*, int, tvm::ffi::Any*)#1}::operator()(tvm::ffi::AnyView const*, int, tvm::ffi::Any*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#17 0x00007b3162664e3c in tvm::ffi::details::FunctionObjImpl<tvm::ffi::Function::FromTyped<FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}>(FusedMoeRunner::GetFunction(tvm::ffi::String const&)::{lambda(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::TensorView, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::Array<tvm::ffi::Tensor, void>, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, tvm::ffi::Optional<tvm::ffi::TensorView, void>, bool, long, long, long, long, long, long, bool, bool, tvm::ffi::Optional<tvm::ffi::Array<long, void>, void>, bool, long, tvm::ffi::Optional<tvm::ffi::TensorView, void>)#1}&&)::{lambda(tvm::ffi::AnyView const*, int, tvm::ffi::Any*)#1}>::SafeCall(void*, TVMFFIAny const*, int, TVMFFIAny*) () from /usr/local/lib/python3.12/dist-packages/flashinfer_jit_cache/jit_cache/fused_moe_120/fused_moe_120.so
+#18 0x00007b354ef2f4cc in ?? () from /usr/local/lib/python3.12/dist-packages/tvm_ffi/core.abi3.so
+#19 0x0000000000580f33 in _PyObject_Call ()
+#20 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#21 0x00007b35ca10ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x00007b35ca482f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x00007b35ba71cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#24 0x00007b35ca1d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#25 0x00007b35ca1d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#26 0x00007b35ca0b9672 in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&))::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#27 0x00007b35c9ac5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#28 0x000000000056cc2d in ?? ()
+#29 0x0000000000580f33 in _PyObject_Call ()
+#30 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#31 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#32 0x000000000057e34e in _PyObject_Call_Prepend ()
+#33 0x00000000006690fd in ?? ()
+#34 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#35 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#36 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#37 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#38 0x00000000006690fd in ?? ()
+#39 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#40 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#41 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#42 0x000000000057e34e in _PyObject_Call_Prepend ()
+#43 0x00000000006690fd in ?? ()
+#44 0x0000000000580f33 in _PyObject_Call ()
+#45 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#46 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#47 0x000000000057e34e in _PyObject_Call_Prepend ()
+#48 0x00000000006690fd in ?? ()
+#49 0x0000000000580f33 in _PyObject_Call ()
+#50 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#51 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#52 0x000000000057e34e in _PyObject_Call_Prepend ()
+#53 0x00000000006690fd in ?? ()
+#54 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#55 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#56 0x0000000000580f8d in _PyObject_Call ()
+#57 0x000000000066dd43 in ?? ()
+#58 0x0000000000580f33 in _PyObject_Call ()
+#59 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#60 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#61 0x000000000057e34e in _PyObject_Call_Prepend ()
+#62 0x00000000006690fd in ?? ()
+#63 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#64 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#65 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#66 0x000000000057e34e in _PyObject_Call_Prepend ()
+#67 0x00000000006690fd in ?? ()
+#68 0x0000000000580f33 in _PyObject_Call ()
+#69 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#70 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#71 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#72 0x00000000006690fd in ?? ()
+#73 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#74 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#75 0x000000000059961d in ?? ()
+#76 0x00000000005991ae in ?? ()
+#77 0x0000000000580f8d in _PyObject_Call ()
+#78 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#79 0x000000000059961d in ?? ()
+#80 0x00000000005991ae in ?? ()
+#81 0x0000000000580f8d in _PyObject_Call ()
+#82 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#83 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#84 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#85 0x00000000006690fd in ?? ()
+#86 0x0000000000580f33 in _PyObject_Call ()
+#87 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#88 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#89 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#90 0x00000000006690fd in ?? ()
+#91 0x0000000000580f33 in _PyObject_Call ()
+#92 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#93 0x000000000059961d in ?? ()
+#94 0x00000000005991ae in ?? ()
+#95 0x0000000000580f8d in _PyObject_Call ()
+#96 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#97 0x000000000059915f in ?? ()
+#98 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#99 0x000000000061f469 in PyEval_EvalCode ()
+#100 0x000000000065b0eb in ?? ()
+#101 0x0000000000656186 in ?? ()
+#102 0x00000000006520b3 in PyRun_StringFlags ()
+#103 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#104 0x000000000064f3c2 in Py_RunMain ()
+#105 0x00000000006082cd in Py_BytesMain ()
+#106 0x00007b3652dbad90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#107 0x00007b3652dbae40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#108 0x0000000000608145 in _start ()
+[Inferior 1 (process 1286) detached]

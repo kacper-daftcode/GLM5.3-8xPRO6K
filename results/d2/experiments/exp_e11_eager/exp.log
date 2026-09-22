@@ -1,0 +1,5 @@
+[16:59:00] === e11_eager: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[17:02:38] started: [17:02:38] READY po 220 s [17:02:38] host RAM after start: pinned(shmem)=45 GB MemAvailable=675 GB 
+[17:04:50] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[17:05:01] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,100,100,
+[17:05:01] RESULT e11_eager: FAIL rc=2

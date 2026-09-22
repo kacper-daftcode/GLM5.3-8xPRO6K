@@ -1,0 +1,16 @@
+[08:51:34] == D5 on B: C3 (NVFP4 draft) - current container
+[08:51:34] nvfp4draft: metrics before: vllm:request_success_total=0 vllm:spec_decode_num_drafts_total=0 vllm:spec_decode_num_accepted_tokens_total=0 
+[08:51:42] nvfp4draft decode: conc=  1 gen=256 r1:   140.6 tok/s lacznie |   21.2 ms/krok | akceptacja 2.99 tok/krok | 1.8 s conc=  1 gen=256 r2:   136.3 tok/s lacznie |   21.1 ms/krok | akceptacja 2.88 tok/krok | 1.9 s 
+[08:51:42] nvfp4draft: metrics after decode: vllm:request_success_total=4 vllm:spec_decode_num_drafts_total=355 vllm:spec_decode_num_accepted_tokens_total=670 
+[08:57:05] nvfp4draft gsm8k: {"model": "glm-5.3", "n": 500, "accuracy": 0.976, "errors": 0, "truncated": 6, "completion_tokens": 154752, "wall_s": 322.9, "tok_s": 479.3, "conc": 8, "max_tokens": 2048, "seed": 0}
+[08:57:05] nvfp4draft: metrics after gsm8k: vllm:request_success_total=504 vllm:spec_decode_num_drafts_total=45358 vllm:spec_decode_num_accepted_tokens_total=110448 
+[08:57:05] == restart with BF16 draft (NVFP4_MOE=)
+[09:00:28] bf16draft ready; KV: 1,673,628 tokens; TQ_B1 lines: 0
+[09:00:28] bf16draft: metrics before: vllm:request_success_total=0 vllm:spec_decode_num_drafts_total=0 vllm:spec_decode_num_accepted_tokens_total=0 
+[09:00:38] bf16draft decode: conc=  1 gen=256 r1:   139.8 tok/s lacznie |   21.8 ms/krok | akceptacja 3.07 tok/krok | 1.8 s conc=  1 gen=256 r2:   133.5 tok/s lacznie |   21.8 ms/krok | akceptacja 2.91 tok/krok | 1.9 s 
+[09:00:38] bf16draft: metrics after decode: vllm:request_success_total=4 vllm:spec_decode_num_drafts_total=353 vllm:spec_decode_num_accepted_tokens_total=672 
+[09:06:22] bf16draft gsm8k: {"model": "glm-5.3", "n": 500, "accuracy": 0.976, "errors": 0, "truncated": 5, "completion_tokens": 157840, "wall_s": 344.2, "tok_s": 458.6, "conc": 8, "max_tokens": 2048, "seed": 0}
+[09:06:22] bf16draft: metrics after gsm8k: vllm:request_success_total=504 vllm:spec_decode_num_drafts_total=46057 vllm:spec_decode_num_accepted_tokens_total=112817 
+[09:06:22] == restore C3
+[09:08:21] restored C3: KV: 1,813,657 tokens
+[09:08:21] D5 on B finished

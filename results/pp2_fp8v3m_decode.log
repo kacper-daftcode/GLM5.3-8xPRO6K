@@ -1,0 +1,4 @@
+conc=  1 gen=256 r0:   106.1 tok/s lacznie |   27.4 ms/krok | akceptacja 2.92 tok/krok | 2.4 s
+conc=  1 gen=256 r1:   123.7 tok/s lacznie |   28.0 ms/krok | akceptacja 3.47 tok/krok | 2.1 s
+conc=  4 gen=256 r0:   179.5 tok/s lacznie |   74.3 ms/krok | akceptacja 3.34 tok/krok | 5.7 s
+conc=  4 gen=256 r1:   256.9 tok/s lacznie |   51.6 ms/krok | akceptacja 3.32 tok/krok | 4.0 s

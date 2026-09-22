@@ -1,0 +1,5 @@
+[16:47:15] === e10_no_mtp: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[16:51:39] started: [16:51:39] READY po 265 s [16:51:39] host RAM after start: pinned(shmem)=44 GB MemAvailable=673 GB 
+[16:53:40] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[16:53:51] xid lines before/after: 0/0; GPUs after: 100,0,100,100,100,100,0,100,0,
+[16:53:51] RESULT e10_no_mtp: FAIL rc=2

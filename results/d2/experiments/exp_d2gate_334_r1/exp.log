@@ -1,0 +1,6 @@
+[09:07:27] === d2gate_334_r1: KV_OFFLOAD_GB=334 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' EXTRA_ARGS='' CHURN=4 REPRO_ARGS='--len 200000 --churn 4 --churn-len 550000' watchdog: spin 60s@<200W, silence 600s
+[09:09:45] started: [09:09:45] READY po 140 s [09:09:45] host RAM after start: pinned(shmem)=360 GB MemAvailable=350 GB 
+[09:20:23] reproducer finished: [09:10:23] cold   : prompt=199752 TTFT= 36.12s total=  37.5s (  5530 tok/s prefill) needle=OK | store=22.85G l|[09:12:50] churn 1/4: prompt=549016  143.5s (  3826 tok/s) cum=549016|[09:15:18] churn 2/4: prompt=549614  147.9s (  3717 tok/s) cum=1098630|[09:17:49] churn 3/4: prompt=549741  150.1s (  3662 tok/s) cum=1648371|[09:20:20] churn 4/4: prompt=549705  151.0s (  3640 tok/s) cum=2198076|[09:20:21] warm   : prompt=199752 TTFT=  0.46s total=   1.2s needle=OK identical_to_cold=False common_prefix=9|[09:20:22] gpuhit : prompt=199752 TTFT=  0.35s total=   1.4s identical_to_warm=False | store=274.32G load=22.8|
+[09:20:23] gpu trace: summary: prefill=618s desync_windows=0 (>= 3s; max 0s, total 0s) spin_windows=0 (total 0s) idle=1s
+[09:20:24] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[09:20:38] RESULT d2gate_334_r1: PASS (reproducer completed; D2 VERDICT: PASS (decode nondeterministic within run: identity not required)  (cold TTFT 36.12 s -> warm-from-RAM 0.46 s -> GPU hit 0.35 s))

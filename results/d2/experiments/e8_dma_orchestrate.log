@@ -1,0 +1,41 @@
+[16:18:24] E8 start; stuck GPUs (busy, no memory): 4
+[16:18:24] power cycle B
+[16:22:36] B up:  16:22:36 up 1 min,  2 users,  9 
+[16:22:41] 8 DMA stress containers started (d2h, 300s)
+[16:23:02] running=8 stalled(no output 40s)=0 xid=0
+[16:23:23] running=8 stalled(no output 40s)=0 xid=0
+[16:23:44] running=8 stalled(no output 40s)=0 xid=0
+[16:24:05] running=8 stalled(no output 40s)=0 xid=0
+[16:24:25] running=8 stalled(no output 40s)=0 xid=0
+[16:24:46] running=8 stalled(no output 40s)=0 xid=0
+[16:25:07] running=8 stalled(no output 40s)=0 xid=0
+[16:25:28] running=8 stalled(no output 40s)=0 xid=0
+[16:25:49] running=8 stalled(no output 40s)=0 xid=0
+[16:26:10] running=8 stalled(no output 40s)=0 xid=0
+[16:26:31] running=8 stalled(no output 40s)=0 xid=0
+[16:26:51] running=8 stalled(no output 40s)=0 xid=0
+[16:27:12] running=8 stalled(no output 40s)=0 xid=0
+[16:27:33] running=8 stalled(no output 40s)=0 xid=0
+[16:27:54] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:28:15] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:28:35] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:28:56] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:29:17] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:29:38] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+[16:29:58] running=0
+ssh-fail stalled(no output 40s)=0 xid=0
+== dma_8: done it=13461 copied=144.6 GiB
+== dma_7: done it=14238 copied=152.9 GiB
+== dma_5: done it=13548 copied=145.5 GiB
+== dma_4: done it=13364 copied=143.6 GiB
+== dma_3: done it=14055 copied=151.0 GiB
+== dma_2: done it=13434 copied=144.3 GiB
+== dma_1: done it=14531 copied=156.1 GiB
+== dma_0: done it=13490 copied=144.9 GiB
+[16:29:59] E8 RESULT: PASS

@@ -1,0 +1,5 @@
+[19:24:11] === e24_sync_sched_connector: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[19:28:31] started: [19:28:31] READY po 260 s [19:28:31] host RAM after start: pinned(shmem)=44 GB MemAvailable=673 GB 
+[19:30:33] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:30:44] xid lines before/after: 0/0; GPUs after: 0,100,100,100,0,0,0,0,0,
+[19:30:44] RESULT e24_sync_sched_connector: FAIL rc=2

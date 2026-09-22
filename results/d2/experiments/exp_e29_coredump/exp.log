@@ -1,0 +1,10 @@
+[20:24:59] === e29_coredump: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='CUDA_ENABLE_USER_TRIGGERED_COREDUMP=1 CUDA_COREDUMP_PIPE=/root/.cache/vllm/corepipe_%p CUDA_COREDUMP_FILE=/root/.cache/vllm/core_%p.nvcudmp CUDA_COREDUMP_GENERATION_FLAGS=skip_global_memory,skip_shared_memory,skip_local_memory,skip_constbank_memory' KV_OFFLOAD_OPTS='' CHURN=2
+[20:28:48] started: [20:28:48] READY po 230 s [20:28:48] host RAM after start: pinned(shmem)=45 GB MemAvailable=669 GB 
+[20:30:49] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[20:30:51] triggering core dump Worker_PP1_TP0 (pid 1468)
+[20:30:51] triggering core dump Worker_PP1_TP1 (pid 1498)
+[20:30:51] triggering core dump Worker_PP0_TP0 (pid 1245)
+881508804 /root/.cache/vllm-fi618-b1s2-p41-mtp3/core_1468.nvcudmp
+893498883 /root/.cache/vllm-fi618-b1s2-p41-mtp3/core_1498.nvcudmp
+[20:34:17] xid lines before/after: 0/0; GPUs after: 100,100,100,100,0,0,0,0,100,
+[20:34:17] RESULT e29_coredump: FAIL rc=2

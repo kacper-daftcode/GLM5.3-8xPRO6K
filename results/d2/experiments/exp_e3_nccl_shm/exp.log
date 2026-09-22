@@ -1,0 +1,5 @@
+[16:10:30] === e3_nccl_shm: KV_OFFLOAD_GB=32 NCCL_MODE=shm EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[16:14:24] started: [16:14:24] READY po 235 s [16:14:24] host RAM after start: pinned(shmem)=45 GB MemAvailable=668 GB 
+[16:16:21] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[16:16:33] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,1,100,
+[16:16:33] RESULT e3_nccl_shm: FAIL rc=2

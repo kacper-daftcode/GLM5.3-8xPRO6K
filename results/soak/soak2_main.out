@@ -1,0 +1,152 @@
+[14:42:47] segment 1/3: 75 min
+[15:58:01] segment 1 rc=0
+ "stats": {
+  "tool_ok": 1064,
+  "tool_called": 1064,
+  "chat_ok": 1032,
+  "long_ok": 19,
+  "burst_ok": 112
+ },
+ "alive_threads": 0,
+ "lat": {
+  "tool": {
+   "n": 1064,
+   "p50": 5.1,
+   "p95": 14.0,
+   "max": 34.9
+  },
+  "chat": {
+   "n": 1032,
+   "p50": 39.8,
+   "p95": 137.3,
+   "max": 219.5
+  },
+  "long_131k": {
+   "n": 6,
+   "p50": 60.5,
+   "p95": 61.3,
+   "max": 61.4
+  },
+  "long_262k": {
+   "n": 4,
+   "p50": 130.5,
+   "p95": 131.2,
+[15:58:01] parity po segmencie 1
+parity rc=0
+        qa_short: prompt=     28 compl=  52     0.4s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.0s finish=length needle=None
+            math: prompt=     42 compl= 700     3.9s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.4s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.3s finish=length needle=None
+       tool_call: prompt=    197 compl=  63     0.5s finish=tool_calls needle=True
+    needle_32768: prompt=  32868 compl=  96     6.2s finish=length needle=True
+   needle_131072: prompt= 131285 compl=  96    25.1s finish=length needle=True
+[253595.843298] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[253595.843326] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[15:58:49] restart 1: docker stop -t 60
+full-glm
+stop took 2 s
+0, 1 MiB 1, 1 MiB 2, 1 MiB 3, 1 MiB 4, 1 MiB 5, 1 MiB 6, 1 MiB 7, 1 MiB 8, 1 MiB
+[15:58:51] start full-glm: GPUS=0,1,2,3,4,5,7,8 TP=4 PP=2 DCP=1 MTP=5 ASYNC=1 MOE=auto KV=nvfp4 NCCL=p2p_sys batched=2048 image=vllm-nightly-fi614:nvfp4-fi618 cache=$CACHE_ROOT/vllm-fi618-b1s2-p41
+[16:00:58] READY po 130 s
+start rc=0
+(EngineCore pid=1028) INFO 09-18 16:00:21 [kv_cache_utils.py:2157] GPU KV cache size: 1,790,617 tokens
+[16:00:58] segment 2/3: 75 min
+[17:20:02] segment 2 rc=1
+ "stats": {
+  "tool_ok": 1089,
+  "tool_called": 1089,
+  "chat_ok": 1053,
+  "long_ok": 19,
+  "burst_ok": 112,
+  "long_needle_fail": 1
+ },
+ "alive_threads": 0,
+ "lat": {
+  "tool": {
+   "n": 1089,
+   "p50": 4.8,
+   "p95": 13.9,
+   "max": 26.2
+  },
+  "chat": {
+   "n": 1053,
+   "p50": 41.1,
+   "p95": 130.7,
+   "max": 191.1
+  },
+  "long_131k": {
+   "n": 6,
+   "p50": 59.6,
+   "p95": 60.6,
+   "max": 61.2
+  },
+  "long_262k": {
+   "n": 4,
+   "p50": 128.7,
+[17:20:02] parity po segmencie 2
+parity rc=0
+        qa_short: prompt=     28 compl=  52     0.3s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.7s finish=length needle=None
+            math: prompt=     42 compl= 700     4.2s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.5s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.4s finish=length needle=None
+       tool_call: prompt=    197 compl=  68     0.5s finish=tool_calls needle=True
+    needle_32768: prompt=  32868 compl=  96     5.8s finish=length needle=True
+   needle_131072: prompt= 131285 compl=  96    24.5s finish=length needle=True
+[253595.843298] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[253595.843326] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[17:20:50] restart 2: docker stop -t 60
+full-glm
+stop took 1 s
+0, 1 MiB 1, 1 MiB 2, 1 MiB 3, 1 MiB 4, 1 MiB 5, 1 MiB 6, 1 MiB 7, 1 MiB 8, 1 MiB
+[17:20:53] start full-glm: GPUS=0,1,2,3,4,5,7,8 TP=4 PP=2 DCP=1 MTP=5 ASYNC=1 MOE=auto KV=nvfp4 NCCL=p2p_sys batched=2048 image=vllm-nightly-fi614:nvfp4-fi618 cache=$CACHE_ROOT/vllm-fi618-b1s2-p41
+[17:22:59] READY po 130 s
+start rc=0
+(EngineCore pid=1031) INFO 09-18 17:22:22 [kv_cache_utils.py:2157] GPU KV cache size: 1,790,617 tokens
+[17:22:59] segment 3/3: 45 min
+[18:11:06] segment 3 rc=0
+ "stats": {
+  "tool_ok": 655,
+  "tool_called": 655,
+  "chat_ok": 617,
+  "long_ok": 12,
+  "burst_ok": 56
+ },
+ "alive_threads": 0,
+ "lat": {
+  "tool": {
+   "n": 655,
+   "p50": 5.0,
+   "p95": 13.3,
+   "max": 22.8
+  },
+  "chat": {
+   "n": 617,
+   "p50": 41.9,
+   "p95": 138.0,
+   "max": 182.1
+  },
+  "long_131k": {
+   "n": 3,
+   "p50": 59.9,
+   "p95": 59.9,
+   "max": 60.3
+  },
+  "long_262k": {
+   "n": 2,
+   "p50": 126.7,
+   "p95": 126.7,
+[18:11:06] parity po segmencie 3
+parity rc=0
+        qa_short: prompt=     28 compl=  57     0.4s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.3s finish=length needle=None
+            math: prompt=     42 compl= 700     4.0s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.5s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.8s finish=length needle=None
+       tool_call: prompt=    197 compl=  63     0.5s finish=tool_calls needle=True
+    needle_32768: prompt=  32868 compl=  96     5.9s finish=length needle=True
+   needle_131072: prompt= 131285 compl=  96    24.5s finish=length needle=True
+[253595.843298] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[253595.843326] NVRM: GPU7 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)
+[18:11:54] SOAK DONE

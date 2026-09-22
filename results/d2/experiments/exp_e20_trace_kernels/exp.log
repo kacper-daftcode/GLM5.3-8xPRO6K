@@ -1,0 +1,5 @@
+[18:50:31] === e20_trace_kernels: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='VLLM_TQ_INDEXER_TRACE=1 CUDA_LAUNCH_BLOCKING=1' KV_OFFLOAD_OPTS='"store_threshold":2' CHURN=1
+[18:53:03] started: [18:53:03] READY po 155 s [18:53:03] host RAM after start: pinned(shmem)=45 GB MemAvailable=667 GB 
+[18:54:09] reproducer finished:     log(f"cold   : prompt={pt1} TTFT={ttft1:6.2f}s total={tot1:6.1f}s ({(pt1 or 0)/ttft1:6.0f} tok/s prefill) needle={'O|
+[18:54:13] xid lines before/after: 0/0; GPUs after: 100,0,0,0,100,0,0,0,0,
+[18:54:13] RESULT e20_trace_kernels: PASS

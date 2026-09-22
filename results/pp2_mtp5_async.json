@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). They asked for one word answer.\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 43,
+  "secs": 0.38,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count and total transfer in MB for each. They want only code with a docstring, in Polish (the request is in Polish).\n\nNginx combined log format:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nExample:\n```\n127.0.0.1 - - [10/Oct/2023:13:55:36 -0700] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com\" \"Mozilla/5.0\"\n```\n\nI need to write a function that:\n1. Parses each line with regex\n2. Counts requests per IP\n3. Sums bytes transferred per IP\n4. Returns top 10 IPs by request count with total transfer in MB\n\nThe user said \"Tylko kod z docstringiem\" - only code with docstring. So I should provide just the code, no explanations. The docstring should be in Polish since the request is in Polish.\n\nLet me write this:\n\n```python\nimport re\nfrom collections import defaultdict\n\nLOG_PATTERN = re.compile(\n    r'^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<time>[^\\]]+)\\] '\n    r'\"(?P<request>[^\"]*)\" (?P<status>\\d{3}) (?P<bytes>\\d+|-)'\n)\n\ndef parse_nginx_log(filepath):\n    \"\"\"\n    Parsuje plik logu nginx w formacie combined i zwraca statystyki per IP.\n\n    Format combined:\n        IP - user [czas] \"żądanie\" status bajty \"referer\" \"user-agent\"\n\n    Args:\n        filepath (str): Ścieżka do pliku logu nginx.\n\n    Returns:\n        list[tuple[str, int, float]]: Lista 10 krotek (ip, liczba_żądań,\n        transfer_MB), posortowana malejąco wg liczby żądań. Transfer\n        wyrażony w megabajtach (1 MB = 1024**2 bajtów).\n\n    Raises:\n        FileNotFoundError: Gdy plik logu nie istnieje.\n    \"\"\"\n    requests = defaultdict(int)\n    transfer = defaultdict(int)\n\n    with open(filepath, encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = LOG_PATTERN.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            requests[ip] += 1\n            raw = m.group('bytes')\n            if raw.isdigit():\n                transfer[ip] += int(raw)\n\n    top = sorted(requests.items(), key=lambda kv: kv[1], reverse=True)[:10]\n    return [(ip, count, transfer[ip] / (1024 ** 2)) for ip, count in top]\n```\n\nWait, the user said \"Tylko kod z docstringiem\" - only code with docstring. So minimal explanation, just the code. The docstring should be comprehensive.\n\nShould I handle the case where bytes is \"-\"? Yes, in combined format, body_bytes_sent can be \"-\" in some cases (actually in nginx it's always a number, but in Apache it can be \"-\"). I'll handle both.\n\nLet me also consider: should the function accept a file path or a file-like object or an iterable of lines? File path is most common. Maybe I could make it flexible, but keep it simple.\n\nAlso, should I return MB as float? Yes.\n\nLet me refine the regex. The combined format:\n```\nremote_addr - remote_user [time_local] \"request\" status body_bytes_sent \"http_referer\" \"http_user_agent\"\n```\n\nNote: remote_user can contain spaces? No, it's typically a username or \"-\". Actually it could contain spaces in theory but rarely. The standard parsing regex:\n\n```python\nr'^(\\S+) (\\S+) (\\S+) \\[([^\\]]+)\\] \"([^\"]*)\" (\\S+) (\\S+) \"([^\"]*)\" \"([^\"]*)\"'\n```\n\nThis is the well-known regex for parsing Apache/nginx logs. Let me use named groups.\n\nActually, the request part\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 7.67,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: \n1. 2\n2. 3\n3. 5\n4. 7\n5. 11\n6. 13\n7. 17\n8. 19\n9. 23\n10. 29\n11. 31\n12. 37\n13. 41\n14. 43\n15. 47\n16. 53\n17. 59\n18. 61\n19. 67\n20. 71\n21. 73\n22. 79\n23. 83\n24. 89\n25. 97\n\nThat's 25 prime numbers less than 100. Correct.\n\nNow let me sum them step by step:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify with a different grouping:\nGroup 1: 2 + 3 + 5 + 7 = 17\nGroup 2: 11 + 13 + 17 + 19 = 60\nGroup 3: 23 + 29 = 52\nGroup 4: 31 + 37 = 68\nGroup 5: 41 + 43 + 47 = 131\nGroup 6: 53 + 59 = 112\nGroup 7: 61 + 67 = 128\nGroup 8: 71 + 73 + 79 = 223\nGroup 9: 83 + 89 = 172\nGroup 10: 97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 440\n440 + 128 =\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 4.63,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń in approximately 200 words, in Polish. Toruń is a historic city in Poland, famous for being the birthplace of Nicolaus Copernicus and for its well-preserved medieval old town (UNESCO World Heritage Site).\n\nKey historical facts about Toruń:\n- Founded in 1233 by the Teutonic Knights (Hermann von Salza granted the city rights)\n- Was part of the Teutonic Order state\n- In 1454, the city rebelled against the Teutonic Order and was incorporated into Poland (Thirteen Years' War)\n- The Second Peace of Toruń in 1466 confirmed the city's belonging to Poland\n- Copernicus was born there in 1473\n- The city was a member of the Hanseatic League - important trade center\n- After the First Partition of Poland (1772), Toruń came under Prussian rule\n- In 1870s, it became a fortress city (Prussian fortress)\n- After WWI, it returned to Poland (1920) - Treaty of Versailles\n- During WWII, the city survived relatively intact\n- In 1975, it became the capital of a voivodeship\n- Famous for gingerbread (pierniki)\n\nLet me write approximately 200 words in Polish:\n\nToruń został założony w 1233 roku przez Krzyżaków, którzy nadali miastu prawa miejskie. Położony nad Wisłą, szybko stał się ważnym ośrodkiem handlowym jako członek Hanzy. W 1454 roku mieszczanie toruńscy zbuntowali się przeciwko Zakonowi Krzyżackiemu, co zapoczątkowało wojnę trzynastoletnią. Na mocy II pokoju toruńskiego (1466) miasto włączono do Polski.\n\nW Toruniu w 1473 roku urodził się Mikołaj Kopernik, najsłynniejszy mieszkaniec miasta. XVI wiek to okres rozkwitu, jednak pó\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 4.5,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system sztucznej inteligencji, który został wytrenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe, takie jak GPT (Generative Pre-trained Transformer), wykorzystują architektury głębokich sieci neuronowych do przetwarzania i generowania tekstu w sposób zbliżony do ludzkiego.\nKluczowe cechy modeli językowych:\n- Trenowanie na dużych zbiorach danych: Modele językowe są trenowane na ogromnych ilościach tekstu pochodzącego z różnych źródeł, takich jak książki, artykuły, strony internetowe i dokumenty.\n- Zrozumienie kontekstu: Modele językowe potrafią analizować kontekst wypowiedzi, co pozwala im na generowanie spójnych i logicznych odpowiedzi.\n- Generowanie tekstu: Modele językowe mogą tworzyć teksty na różne tematy, w tym artykuły, opowiadania, wiersze, a nawet kod programistyczny.\n- Zastosowania: Modele językowe są wykorzystywane w wielu dziedzinach, takich jak chatboty, tłumaczenia automatyczne, analiza sentymentu, asystenci wirtualni i systemy rekomendacji.\nPrzykłady modeli językowych",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 3.09,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the current weather in Kraków (Krakow) in Celsius. I should use the get_weather tool with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-81af9520c46496b0\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 58,
+  "secs": 0.5,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55.",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 4.74,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " 564-ZETA; turkusowy; 13:07. 564-ZETA; turkusowy; 13:07. 564-ZETA; turkusowy; 13:07. 564-ZETA; turkusowy; 13:07. 564-ZETA; turkusowy; 13:07. 564-ZETA; turkusowy; 13:07. 564-ZETA;",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 18.49,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ }
+]

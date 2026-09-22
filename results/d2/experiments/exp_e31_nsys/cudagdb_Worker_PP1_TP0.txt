@@ -1,0 +1,266 @@
+[New LWP 1531]
+[New LWP 1563]
+[New LWP 1564]
+[New LWP 1565]
+[New LWP 1566]
+[New LWP 1568]
+[New LWP 1570]
+[New LWP 1579]
+[New LWP 1580]
+[New LWP 1581]
+[New LWP 1582]
+[New LWP 1583]
+[New LWP 1584]
+[New LWP 1585]
+[New LWP 1586]
+[New LWP 1705]
+[New LWP 1708]
+[New LWP 1717]
+[New LWP 1730]
+[New LWP 1733]
+[New LWP 1739]
+[New LWP 1741]
+[New LWP 1759]
+[New LWP 1765]
+[New LWP 1769]
+[New LWP 1776]
+[New LWP 1777]
+[New LWP 1787]
+[New LWP 1792]
+[New LWP 1794]
+[New LWP 1805]
+[New LWP 1807]
+[New LWP 1813]
+[New LWP 1816]
+[New LWP 1817]
+[New LWP 1825]
+[New LWP 1826]
+[New LWP 1833]
+[New LWP 1836]
+[New LWP 1841]
+[New LWP 1909]
+[New LWP 1912]
+[New LWP 1932]
+[New LWP 1934]
+[New LWP 1977]
+[New LWP 1978]
+[New LWP 1979]
+[New LWP 1983]
+[New LWP 1984]
+[New LWP 1987]
+[New LWP 1988]
+[New LWP 1989]
+[New LWP 2011]
+[New LWP 2012]
+[New LWP 2027]
+[New LWP 2031]
+[New LWP 2065]
+[New LWP 2111]
+[New LWP 2112]
+[New LWP 2113]
+[New LWP 2114]
+[New LWP 2115]
+[New LWP 2116]
+[New LWP 2137]
+[New LWP 2177]
+[New LWP 2184]
+[New LWP 2252]
+[New LWP 2253]
+[New LWP 2278]
+[New LWP 2280]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7aeea49b8280 (LWP 3410)]
+[Thread 0x7aeea49b8280 (LWP 3410) exited]
+[New Thread 0x7aeea49b8280 (LWP 3411)]
+[Thread 0x7aeea49b8280 (LWP 3411) exited]
+[New Thread 0x7aeea49b8280 (LWP 3412)]
+[Thread 0x7aeea49b8280 (LWP 3412) exited]
+[New Thread 0x7aeea49b8280 (LWP 3413)]
+[Thread 0x7aeea49b8280 (LWP 3413) exited]
+[New Thread 0x7aeea49b8280 (LWP 3414)]
+[Thread 0x7aeea49b8280 (LWP 3414) exited]
+[New Thread 0x7aeea49b8280 (LWP 3415)]
+[Thread 0x7aeea49b8280 (LWP 3415) exited]
+[New Thread 0x7aeea49b8280 (LWP 3416)]
+[Thread 0x7aeea49b8280 (LWP 3416) exited]
+[New Thread 0x7aeea49b8280 (LWP 3417)]
+[Thread 0x7aeea49b8280 (LWP 3417) exited]
+[New Thread 0x7aeea49b8280 (LWP 3418)]
+[Thread 0x7aeea49b8280 (LWP 3418) exited]
+[New Thread 0x7aeea49b8280 (LWP 3419)]
+[Thread 0x7aeea49b8280 (LWP 3419) exited]
+[New Thread 0x7aeea49b8280 (LWP 3420)]
+[Thread 0x7aeea49b8280 (LWP 3420) exited]
+[New Thread 0x7aeea49b8280 (LWP 3421)]
+[Thread 0x7aeea49b8280 (LWP 3421) exited]
+[New Thread 0x7aeea49b8280 (LWP 3422)]
+[Thread 0x7aeea49b8280 (LWP 3422) exited]
+[New Thread 0x7aeea49b8280 (LWP 3423)]
+[Thread 0x7aeea49b8280 (LWP 3423) exited]
+[New Thread 0x7aeea49b8280 (LWP 3424)]
+[Thread 0x7aeea49b8280 (LWP 3424) exited]
+[New Thread 0x7aeea49b8280 (LWP 3425)]
+[Thread 0x7aeea49b8280 (LWP 3425) exited]
+[New Thread 0x7aeea49b8280 (LWP 3426)]
+[Thread 0x7aeea49b8280 (LWP 3426) exited]
+[New Thread 0x7aeea49b8280 (LWP 3427)]
+[Thread 0x7aeea49b8280 (LWP 3427) exited]
+[New Thread 0x7aeea49b8280 (LWP 3428)]
+[Thread 0x7aeea49b8280 (LWP 3428) exited]
+[New Thread 0x7aeea49b8280 (LWP 3429)]
+[Thread 0x7aeea49b8280 (LWP 3429) exited]
+[New Thread 0x7aeea49b8280 (LWP 3430)]
+[Thread 0x7aeea49b8280 (LWP 3430) exited]
+[New Thread 0x7aeea49b8280 (LWP 3431)]
+[Thread 0x7aeea49b8280 (LWP 3431) exited]
+[New Thread 0x7aeea49b8280 (LWP 3432)]
+[Thread 0x7aeea49b8280 (LWP 3432) exited]
+[New Thread 0x7aeea49b8280 (LWP 3433)]
+[Thread 0x7aeea49b8280 (LWP 3433) exited]
+[New Thread 0x7aeea49b8280 (LWP 3434)]
+[Thread 0x7aeea49b8280 (LWP 3434) exited]
+[New Thread 0x7aeea49b8280 (LWP 3435)]
+[Thread 0x7aeea49b8280 (LWP 3435) exited]
+[New Thread 0x7aeea49b8280 (LWP 3436)]
+[Thread 0x7aeea49b8280 (LWP 3436) exited]
+[New Thread 0x7aeea49b8280 (LWP 3437)]
+[Thread 0x7aeea49b8280 (LWP 3437) exited]
+[New Thread 0x7aeea49b8280 (LWP 3438)]
+[Thread 0x7aeea49b8280 (LWP 3438) exited]
+[New Thread 0x7aeea49b8280 (LWP 3439)]
+[Thread 0x7aeea49b8280 (LWP 3439) exited]
+[New Thread 0x7aeea49b8280 (LWP 3440)]
+[Thread 0x7aeea49b8280 (LWP 3440) exited]
+[New Thread 0x7aeea49b8280 (LWP 3441)]
+[Thread 0x7aeea49b8280 (LWP 3441) exited]
+[New Thread 0x7aeea49b8280 (LWP 3442)]
+[Thread 0x7aeea49b8280 (LWP 3442) exited]
+[New Thread 0x7aeea49b8280 (LWP 3443)]
+[Thread 0x7aeea49b8280 (LWP 3443) exited]
+[New Thread 0x7aeea49b8280 (LWP 3444)]
+[Thread 0x7aeea49b8280 (LWP 3444) exited]
+[New Thread 0x7aeea49b8280 (LWP 3445)]
+[Thread 0x7aeea49b8280 (LWP 3445) exited]
+[New Thread 0x7aeea49b8280 (LWP 3446)]
+[Thread 0x7aeea49b8280 (LWP 3446) exited]
+[New Thread 0x7aeea49b8280 (LWP 3447)]
+[Thread 0x7aeea49b8280 (LWP 3447) exited]
+[New Thread 0x7aeea49b8280 (LWP 3448)]
+[Thread 0x7aeea49b8280 (LWP 3448) exited]
+[New Thread 0x7aeea49b8280 (LWP 3449)]
+[Thread 0x7aeea49b8280 (LWP 3449) exited]
+[New Thread 0x7aeea49b8280 (LWP 3450)]
+[Thread 0x7aeea49b8280 (LWP 3450) exited]
+[New Thread 0x7aeea49b8280 (LWP 3451)]
+[Thread 0x7aeea49b8280 (LWP 3451) exited]
+[New Thread 0x7aeea49b8280 (LWP 3452)]
+[Thread 0x7aeea49b8280 (LWP 3452) exited]
+[New Thread 0x7aeea49b8280 (LWP 3453)]
+[Thread 0x7aeea49b8280 (LWP 3453) exited]
+[New Thread 0x7aeea49b8280 (LWP 3454)]
+[Thread 0x7aeea49b8280 (LWP 3454) exited]
+[New Thread 0x7aeea49b8280 (LWP 3455)]
+[Thread 0x7aeea49b8280 (LWP 3455) exited]
+[New Thread 0x7aeea49b8280 (LWP 3456)]
+[Thread 0x7aeea49b8280 (LWP 3456) exited]
+[New Thread 0x7aeea49b8280 (LWP 3457)]
+[Thread 0x7aeea49b8280 (LWP 3457) exited]
+[New Thread 0x7aeea49b8280 (LWP 3458)]
+[Thread 0x7aeea49b8280 (LWP 3458) exited]
+[New Thread 0x7aeea49b8280 (LWP 3459)]
+[Thread 0x7aeea49b8280 (LWP 3459) exited]
+Attaching not possible. Please verify that software preemption is disabled and that nvidia-cuda-mps-server is not running.
+No CUDA devices.
+No CUDA kernels.
+No CUDA blocks.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007aee2e8f8f77 in c10::ListType::~ListType() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#1  0x00007aee15bac55a in std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#2  0x00007aee15e7e8c2 in c10::ivalue::Future::~Future() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#3  0x00007aee15e7ea8e in c10::intrusive_ptr<c10::ivalue::Future, c10::detail::intrusive_target_default_null_type<c10::ivalue::Future> >::reset_not_null_(c10::ivalue::Future*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#4  0x00007aee15ee6fb4 in c10d::ProcessGroupNCCL::WorkNCCL::~WorkNCCL() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#5  0x00007aee15ee7bfe in c10::intrusive_ptr<c10d::ProcessGroupNCCL::WorkNCCL, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroupNCCL::WorkNCCL> >::reset_not_null_(c10d::ProcessGroupNCCL::WorkNCCL*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#6  0x00007aee15ed4cae in c10d::ProcessGroupNCCL::_allgather_base(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#7  0x00007aee33636093 in c10d::ops::(anonymous namespace)::_allgather_base_CUDA(at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#8  0x00007aee33639f9e in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoRuntimeFunctor_<std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > > (*)(at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long), std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > >, c10::guts::typelist::typelist<at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long> >, std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > > (at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#9  0x00007aee33661705 in c10d::ProcessGroup::_allgather_base(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#10 0x00007aee43231760 in pybind11::cpp_function::initialize<pybind11::cpp_function::initialize<c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (c10d::ProcessGroup::*)(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&)#1}, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(pybind11::cpp_function::initialize<c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (c10d::ProcessGroup::*)(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&)#1}&&, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (*)(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#11 0x00007aee426c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#12 0x000000000056cc2d in ?? ()
+#13 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#14 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#15 0x00007aee42d0ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#16 0x00007aee43082f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#17 0x00007aee3331cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#18 0x00007aee42dd5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#19 0x00007aee42dd5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#20 0x00007aee42dd5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#21 0x00007aee42cb947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x00007aee426c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x000000000056cc2d in ?? ()
+#24 0x0000000000580f33 in _PyObject_Call ()
+#25 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#26 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#27 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#28 0x00000000006690fd in ?? ()
+#29 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#30 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#31 0x000000000059915f in ?? ()
+#32 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#33 0x000000000061f469 in PyEval_EvalCode ()
+#34 0x000000000065b0eb in ?? ()
+#35 0x0000000000656186 in ?? ()
+#36 0x00000000006520b3 in PyRun_StringFlags ()
+#37 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#38 0x000000000064f3c2 in Py_RunMain ()
+#39 0x00000000006082cd in Py_BytesMain ()
+#40 0x00007aeecb9a0d90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#41 0x00007aeecb9a0e40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#42 0x0000000000608145 in _start ()
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x00007aee2e8f8f77 in c10::ListType::~ListType() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#1  0x00007aee15bac55a in std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#2  0x00007aee15e7e8c2 in c10::ivalue::Future::~Future() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#3  0x00007aee15e7ea8e in c10::intrusive_ptr<c10::ivalue::Future, c10::detail::intrusive_target_default_null_type<c10::ivalue::Future> >::reset_not_null_(c10::ivalue::Future*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#4  0x00007aee15ee6fb4 in c10d::ProcessGroupNCCL::WorkNCCL::~WorkNCCL() () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#5  0x00007aee15ee7bfe in c10::intrusive_ptr<c10d::ProcessGroupNCCL::WorkNCCL, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroupNCCL::WorkNCCL> >::reset_not_null_(c10d::ProcessGroupNCCL::WorkNCCL*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#6  0x00007aee15ed4cae in c10d::ProcessGroupNCCL::_allgather_base(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#7  0x00007aee33636093 in c10d::ops::(anonymous namespace)::_allgather_base_CUDA(at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#8  0x00007aee33639f9e in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoRuntimeFunctor_<std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > > (*)(at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long), std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > >, c10::guts::typelist::typelist<at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long> >, std::tuple<at::Tensor, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > > (at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, at::Tensor&, c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, bool, long) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#9  0x00007aee33661705 in c10d::ProcessGroup::_allgather_base(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#10 0x00007aee43231760 in pybind11::cpp_function::initialize<pybind11::cpp_function::initialize<c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (c10d::ProcessGroup::*)(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&)#1}, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(pybind11::cpp_function::initialize<c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> >, c10d::ProcessGroup, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&, pybind11::name, pybind11::is_method, pybind11::sibling, pybind11::arg, pybind11::arg, pybind11::arg_v, pybind11::call_guard<pybind11::gil_scoped_release> >(c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (c10d::ProcessGroup::*)(at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&)#1}&&, c10::intrusive_ptr<c10d::Work, c10::detail::intrusive_target_default_null_type<c10d::Work> > (*)(c10d::ProcessGroup*, at::Tensor&, at::Tensor&, c10d::AllgatherOptions const&), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, pybind11::arg const&, pybind11::arg const&, pybind11::arg_v const&, pybind11::call_guard<pybind11::gil_scoped_release> const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#11 0x00007aee426c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#12 0x000000000056cc2d in ?? ()
+#13 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#14 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#15 0x00007aee42d0ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#16 0x00007aee43082f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#17 0x00007aee3331cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#18 0x00007aee42dd5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#19 0x00007aee42dd5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#20 0x00007aee42dd5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#21 0x00007aee42cb947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x00007aee426c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x000000000056cc2d in ?? ()
+#24 0x0000000000580f33 in _PyObject_Call ()
+#25 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#26 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#27 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#28 0x00000000006690fd in ?? ()
+#29 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#30 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#31 0x000000000059915f in ?? ()
+#32 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#33 0x000000000061f469 in PyEval_EvalCode ()
+#34 0x000000000065b0eb in ?? ()
+#35 0x0000000000656186 in ?? ()
+#36 0x00000000006520b3 in PyRun_StringFlags ()
+#37 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#38 0x000000000064f3c2 in Py_RunMain ()
+#39 0x00000000006082cd in Py_BytesMain ()
+#40 0x00007aeecb9a0d90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#41 0x00007aeecb9a0e40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#42 0x0000000000608145 in _start ()
+[Inferior 1 (process 1526) detached]

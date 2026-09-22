@@ -1,0 +1,32 @@
+[12:34:14] needle 32768: 32880 tok, 5.96 s -> 'The user has provided a long text with many random tokens (like "expert353", "sigma7121", etc.) and embedded within it are three pieces of information:\n\n1. "Kod'
+zapisano results/p41/b3_pp2_async_parity.json; 7 testow w 31 s
+        qa_short: prompt=     28 compl=  52     0.5s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     8.0s finish=length needle=None
+            math: prompt=     42 compl=1200     9.2s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     4.0s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     3.0s finish=length needle=None
+       tool_call: prompt=    197 compl=  58     0.8s finish=tool_calls needle=True
+    needle_32768: prompt=  32880 compl= 242     6.0s finish=stop needle=True
+
+=== porownanie z results/p41/a2_tp8_parity.json ===
+        qa_short: ROZNE od znaku 127/228 (56% wspolne); needle ref=True new=True
+                ref: ...' answer is Warsaw (Warszawa in Polish). Since they asked in Polish and requested one word, I should '
+                new: ...' answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say "Warszawa".\n<<'
+         code_py: ROZNE od znaku 74/3087 (2% wspolne); needle ref=None new=None
+                ref: ...'hat parses nginx logs in combined format and returns top 10 IPs by request count and total transfer '
+                new: ...'hat parses nginx logs in combined format, returns top 10 IPs by request count and total transfer in '
+            math: ROZNE od znaku 270/2663 (10% wspolne); needle ref=True new=True
+                ref: ..."53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n2 + "
+                new: ...'53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: \n1. 2\n2. 3\n3. 5\n4. 7\n5. 11\n6. 13\n7. 17\n8.'
+         pl_text: ROZNE od znaku 129/1693 (8% wspolne); needle ref=None new=None
+                ref: ..."00 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one of the olde"
+                new: ...'00 words, in Polish. Let me think about the key historical facts about Toruń:\n\n1. Toruń was founded '
+       compl_det: ROZNE od znaku 1/946 (0% wspolne); needle ref=None new=None
+                ref: ...' model statystyczny, który przypisuje prawdopodobieństwa sekw'
+                new: ...' system obliczeniowy, który przewiduje prawdopodobieństwo wys'
+       tool_call: ROZNE od znaku 29/313 (9% wspolne); needle ref=True new=True
+                ref: ...'The user is asking about the weather in Kraków in Celsius. I should use the get_weather t'
+                new: ...'The user is asking about the current weather in Kraków (Krakow) in Celsius. I should use '
+    needle_32768: ROZNE od znaku 9/615 (1% wspolne); needle ref=True new=True
+                ref: ...'The user is asking me to extract three pieces of information from the'
+                new: ...'The user has provided a long text with many random tokens (like "expe'

@@ -1,0 +1,164 @@
+[New LWP 1375]
+[New LWP 1395]
+[New LWP 1603]
+[New LWP 1604]
+[New LWP 1605]
+[New LWP 1606]
+[New LWP 1607]
+[New LWP 1612]
+[New LWP 1613]
+[New LWP 1624]
+[New LWP 1633]
+[New LWP 1636]
+[New LWP 1648]
+[New LWP 1649]
+[New LWP 1666]
+[New LWP 1667]
+[New LWP 1668]
+[New LWP 1682]
+[New LWP 1691]
+[New LWP 1692]
+[New LWP 1757]
+[New LWP 1758]
+[New LWP 1767]
+[New LWP 1769]
+[New LWP 1773]
+[New LWP 1782]
+[New LWP 1784]
+[New LWP 1795]
+[New LWP 1797]
+[New LWP 1799]
+[New LWP 1809]
+[New LWP 1811]
+[New LWP 1824]
+[New LWP 1825]
+[New LWP 1826]
+[New LWP 1832]
+[New LWP 1834]
+[New LWP 1849]
+[New LWP 1852]
+[New LWP 1888]
+[New LWP 1889]
+[New LWP 1890]
+[New LWP 1896]
+[New LWP 1897]
+[New LWP 1898]
+[New LWP 1899]
+[New LWP 1900]
+[New LWP 1926]
+[New LWP 1927]
+[New LWP 1949]
+[New LWP 1950]
+[New LWP 1956]
+[New LWP 1979]
+[New LWP 1990]
+[New LWP 1991]
+[New LWP 1992]
+[New LWP 1993]
+[New LWP 1994]
+[New LWP 1995]
+[New LWP 2051]
+[New LWP 2175]
+[New LWP 2177]
+[New LWP 2195]
+[New LWP 2196]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x739bb59b8280 (LWP 2739)]
+[New Thread 0x73970b1ff640 (LWP 2740)]
+[Detaching after fork from child process 2741]
+[Thread 0x739bb59b8280 (LWP 2739) exited]
+
+Thread 1 "VLLM::Worker_PP" stopped.
+0x0000739bdca842c0 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+  Dev PCI Bus/Dev ID                                              Name Description SM Type SMs Warps/SM Lanes/Warp Max Regs/Lane                                    Active SMs Mask 
+    0        01:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    1        11:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    2        61:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    3        71:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    4        81:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    5        91:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    6        e1:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+    7        f1:00.0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition   GB202GL-A  sm_120 188       48         32           255 0x000000000000000000000000000000000000000000000000 
+Invalid coordinates requested. CUDA focus unchanged.
+No CUDA kernels.
+No CUDA blocks.
+#0  0x0000739bdca842c0 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x0000739bdca8b05d in pthread_mutex_lock () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x000073970b72612a in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#3  0x000073970b7127de in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#4  0x000073970b32a3a2 in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#5  0x000073970b33aead in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#6  0x000073970b60ec16 in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#7  0x0000739bb01499cc in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x0000739baefff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x0000739baefffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x0000739baf0027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x0000739baf1d8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#12 0x0000739baf1c922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#13 0x0000739bdbe1376d in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#14 0x0000739bdbe745b8 in cudaLaunchKernel () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#15 0x0000739b2798ec1f in void at::native::gpu_kernel_impl_nocast<at::native::FillFunctor<int> >(at::TensorIteratorBase&, at::native::FillFunctor<int> const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#16 0x0000739b27989687 in at::native::fill_kernel_cuda(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#17 0x0000739b2798ab49 in at::native::fill_kernel_cuda(at::TensorIterator&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#18 0x0000739b3fad9c82 in at::native::fill_out(at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#19 0x0000739b2964c447 in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor& (at::Tensor&, c10::Scalar const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CUDA_Scalar_fill_>, at::Tensor&, c10::guts::typelist::typelist<at::Tensor&, c10::Scalar const&> >, at::Tensor& (at::Tensor&, c10::Scalar const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#20 0x0000739b437b4133 in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor& (c10::DispatchKeySet, at::Tensor&, c10::Scalar const&), &torch::ADInplaceOrView::(anonymous namespace)::fill__Scalar>, at::Tensor&, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor&, c10::Scalar const&> >, at::Tensor& (c10::DispatchKeySet, at::Tensor&, c10::Scalar const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#21 0x0000739b403bdc12 in at::_ops::fill__Scalar::call(at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#22 0x0000739b53760a16 in torch::autograd::THPVariable_fill_(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x0000000000570bab in ?? ()
+#24 0x0000000000562386 in PyObject_Vectorcall ()
+#25 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#26 0x000000000059915f in ?? ()
+#27 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#28 0x000000000061f469 in PyEval_EvalCode ()
+#29 0x000000000065b0eb in ?? ()
+#30 0x0000000000656186 in ?? ()
+#31 0x00000000006520b3 in PyRun_StringFlags ()
+#32 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#33 0x000000000064f3c2 in Py_RunMain ()
+#34 0x00000000006082cd in Py_BytesMain ()
+#35 0x0000739bdca1cd90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#36 0x0000739bdca1ce40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#37 0x0000000000608145 in _start ()
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x0000739bdca842c0 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x0000739bdca8b05d in pthread_mutex_lock () from /lib/x86_64-linux-gnu/libc.so.6
+#2  0x000073970b72612a in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#3  0x000073970b7127de in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#4  0x000073970b32a3a2 in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#5  0x000073970b33aead in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#6  0x000073970b60ec16 in ?? () from /lib/x86_64-linux-gnu/libcudadebugger.so.1
+#7  0x0000739bb01499cc in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x0000739baefff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x0000739baefffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x0000739baf0027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x0000739baf1d8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#12 0x0000739baf1c922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#13 0x0000739bdbe1376d in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#14 0x0000739bdbe745b8 in cudaLaunchKernel () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#15 0x0000739b2798ec1f in void at::native::gpu_kernel_impl_nocast<at::native::FillFunctor<int> >(at::TensorIteratorBase&, at::native::FillFunctor<int> const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#16 0x0000739b27989687 in at::native::fill_kernel_cuda(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#17 0x0000739b2798ab49 in at::native::fill_kernel_cuda(at::TensorIterator&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#18 0x0000739b3fad9c82 in at::native::fill_out(at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#19 0x0000739b2964c447 in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor& (at::Tensor&, c10::Scalar const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CUDA_Scalar_fill_>, at::Tensor&, c10::guts::typelist::typelist<at::Tensor&, c10::Scalar const&> >, at::Tensor& (at::Tensor&, c10::Scalar const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cuda.so
+#20 0x0000739b437b4133 in c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor& (c10::DispatchKeySet, at::Tensor&, c10::Scalar const&), &torch::ADInplaceOrView::(anonymous namespace)::fill__Scalar>, at::Tensor&, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor&, c10::Scalar const&> >, at::Tensor& (c10::DispatchKeySet, at::Tensor&, c10::Scalar const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#21 0x0000739b403bdc12 in at::_ops::fill__Scalar::call(at::Tensor&, c10::Scalar const&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#22 0x0000739b53760a16 in torch::autograd::THPVariable_fill_(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#23 0x0000000000570bab in ?? ()
+#24 0x0000000000562386 in PyObject_Vectorcall ()
+#25 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#26 0x000000000059915f in ?? ()
+#27 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#28 0x000000000061f469 in PyEval_EvalCode ()
+#29 0x000000000065b0eb in ?? ()
+#30 0x0000000000656186 in ?? ()
+#31 0x00000000006520b3 in PyRun_StringFlags ()
+#32 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#33 0x000000000064f3c2 in Py_RunMain ()
+#34 0x00000000006082cd in Py_BytesMain ()
+#35 0x0000739bdca1cd90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#36 0x0000739bdca1ce40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#37 0x0000000000608145 in _start ()
+[Inferior 1 (process 1244) detached]

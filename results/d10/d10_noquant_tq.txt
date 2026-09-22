@@ -1,0 +1,8 @@
+      1 (Worker_PP1_TP3 pid=1554) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP1_TP2 pid=1524) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP1_TP1 pid=1494) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP1_TP0 pid=1464) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP0_TP3 pid=1434) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP0_TP2 pid=1404) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP0_TP1 pid=1381) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc
+      1 (Worker_PP0_TP0 pid=1241) WARNING 09-19 08:14:12 [decorators.py:321] Compiling model again due to a load failure from /root/.cache/vllm/torch_compile_cache/torc

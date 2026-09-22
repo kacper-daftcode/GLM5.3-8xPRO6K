@@ -1,0 +1,19 @@
+== /v1/models ==
+   [('glm-5.3', 750000)]
+
+=== krotki QA === 0.4s, prompt=28 completion=57 => 142.3 tok/s (calosc, z prefill), finish=stop
+  [reasoning 207 zn.] The user is asking in Polish: "Answer in one word: what is the capital of Poland?"  The answer is Warsaw (Warszawa in Polish). Since they asked in Polish, I should answer in Polish with one word: "War...
+  [content 9 zn.] Warszawa.
+
+=== kod (single stream) === 7.1s, prompt=74 completion=1014 => 143.0 tok/s (calosc, z prefill), finish=stop
+  [reasoning 2442 zn.] The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count plus total transfer in MB for each. They want it short, just code with a docstring, n...
+  [content 975 zn.] ```python import re from collections import defaultdict  _LOG_RE = re.compile(     r'^(?P<ip>\S+) \S+ \S+ \[[^\]]+\] "[^"]*" \d{3} (?P<bytes>\d+|-)' )   def parse_nginx_log(path):     """Parsuje plik loga nginx (combined format) i zwraca top 10 adresów IP.      Zwraca listę krotek (ip, liczba_żądań, transfer_MB),     posortowaną malejąco wg liczby żądań. Wartość "-" w polie     rozmiaru odpowiedzi
+
+=== tool call === 0.5s, prompt=197 completion=64 => 132.4 tok/s (calosc, z prefill), finish=tool_calls
+  [reasoning 192 zn.] The user is asking about the current weather in Kraków in Celsius degrees, and they explicitly asked me to use the tool. I should call the get_weather function with city "Kraków" and unit "C"....
+  [content 0 zn.] 
+  [tool_calls] [{"id": "chatcmpl-tool-80750da0e4176da4", "type": "function", "function": {"name": "get_weather", "arguments": "{\"city\": \"Krak\u00f3w\", \"unit\": \"C\"}"}}]
+
+=== przepustowosc conc=4 === 2800 tok w 9.6s => 291.2 tok/s lacznie, 72.8 tok/s na strumien
+
+SINGLE-STREAM decode (test 2): 1014 tok / 7.1s = 143.0 tok/s

@@ -1,0 +1,5 @@
+[15:47:04] === e1_pool32: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[15:50:54] started: [15:50:53] READY po 230 s [15:50:53] host RAM after start: pinned(shmem)=45 GB MemAvailable=668 GB 
+[15:52:55] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[15:53:06] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,100,100,
+[15:53:06] RESULT e1_pool32: FAIL rc=2

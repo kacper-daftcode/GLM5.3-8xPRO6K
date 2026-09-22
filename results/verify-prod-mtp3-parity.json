@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). Since they asked in Polish and requested one word, I should answer \"Warszawa\".\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 54,
+  "secs": 0.37,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count and total transfer in MB for each. They want only code with a docstring, in Polish (the request is in Polish).\n\nNginx combined format looks like:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nExample:\n```\n127.0.0.1 - - [10/Oct/2023:13:55:36 +0000] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com\" \"Mozilla/5.0 ...\"\n```\n\nSo the regex needs to capture:\n- IP address (first field)\n- bytes sent (the field after status)\n\nNote: `$body_bytes_sent` can be `-` in some cases (actually it's usually 0, but Apache uses `-`). Let me handle both.\n\nThe function should:\n1. Parse the log file\n2. Count requests per IP\n3. Sum bytes per IP\n4. Return top 10 IPs by request count, with total transfer in MB\n\nLet me write this:\n\n```python\nimport re\nfrom collections import defaultdict\nfrom pathlib import Path\n\n\ndef parse_nginx_log(log_path: str | Path, top_n: int = 10) -> list[dict]:\n    \"\"\"\n    Parsuje log nginx w formacie combined i zwraca top adresy IP.\n\n    Format combined:\n        $remote_addr - $remote_user [$time_local] \"$request\"\n        $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n\n    Args:\n        log_path: Ścieżka do pliku logu nginx.\n        top_n: Liczba topowych adresów IP do zwrócenia (domyślnie 10).\n\n    Returns:\n        Lista słowników (posortowana malejąco po liczbie żądań), każdy zawiera:\n            - 'ip': adres IP,\n            - 'requests': liczba żądań,\n            - 'transfer_mb': łączny transfer w megabajtach (1 MB = 1024**2 bajtów).\n\n    Raises:\n        FileNotFoundError: Gdy plik logu nie istnieje.\n    \"\"\"\n    pattern = re.compile(\n        r'^(?P<ip>\\S+)\\s+\\S+\\s+\\S+\\s+\\[[^\\]]+\\]\\s+\"[^\"]*\"\\s+\\d{3}\\s+(?P<bytes>\\d+|-)'\n    )\n\n    stats: dict[str, list] = defaultdict(lambda: [0, 0])  # ip -> [requests, bytes]\n\n    with open(log_path, 'r', encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = pattern.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            raw = m.group('bytes')\n            stats[ip][0] += 1\n            stats[ip][1] += 0 if raw == '-' else int(raw)\n\n    result = [\n        {\n            'ip': ip,\n            'requests': reqs,\n            'transfer_mb': round(total / (1024 ** 2), 2),\n        }\n        for ip, (reqs, total) in stats.items()\n    ]\n    result.sort(key=lambda d: (-d['requests'], -d['transfer_mb']))\n    return result[:top_n]\n```\n\nWait, the user said \"Tylko kod z docstringiem\" — only code with docstring. So they want just the code, no explanations. The docstring should be in Polish since the request is in Polish.\n\nLet me refine. Should I use `str | Path`? That requires Python 3.10+. Maybe use `Union` or just keep it simple. I'll use `str | Path` but could also just accept a path-like. Actually, to be safe, I could type it as `str | Path` — modern Python. Or just not annotate strictly. Let me keep annotations but use modern syntax.\n\nAlso consider: should the function return a list of tuples or dicts? Dicts are clearer. Or maybe a list of (ip, requests, transfer_mb) tuples\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 6.02,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me verify each:\n- 2: prime (only even prime)\n- 3: prime\n- 4 = 2×2: not prime\n- 5: prime\n- 6 = 2×3: not prime\n- 7: prime\n- 8, 9, 10: not prime\n- 11: prime\n- 12: not\n- 13: prime\n- 14, 15, 16: not\n- 17: prime\n- 18: not\n- 19: prime\n- 20, 21, 22: not\n- 23: prime\n- 24-28: not\n- 29: prime\n- 30: not\n- 31: prime\n- 32-36: not\n- 37: prime\n- 38-40: not\n- 41: prime\n- 42: not\n- 43: prime\n- 44-46: not\n- 47: prime\n- 48-52: not\n- 53: prime\n- 54-58: not\n- 59: prime\n- 60: not\n- 61: prime\n- 62-66: not\n- 67: prime\n- 68-70: not\n- 71: prime\n- 72: not\n- 73: prime\n- 74-78: not\n- 79: prime\n- 80-82: not\n- 83: prime\n- 84-88: not\n- 89: prime\n- 90-96: not\n- 97: prime\n- 98, 99: not\n\nSo the primes are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nNow let me sum them step by step:\n\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 4.06,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń in approximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is a city in northern Poland, located on the Vistula River. Key historical facts:\n\n1. Founded in 1233 by the Teutonic Knights (Hermann von Salza granted the charter - actually the city rights were granted by the Grand Master Hermann von Salza in 1233)\n2. It was part of the Teutonic Order's state\n3. In 1454, the city rebelled against the Teutonic Order and was incorporated into the Kingdom of Poland (Prussian Confederation's act)\n4. The Peace of Toruń (1466) ended the Thirteen Years' War - the city became part of Royal Prussia under Polish sovereignty\n5. Nicolaus Copernicus was born there in 1473\n6. The city was an important Hanseatic trade center\n7. The Peace of Toruń in 1411 after the Battle of Grunwald\n8. After the First Partition of Poland in 1772, Toruń came under Prussian rule\n9. In 1807-1813, it was part of the Duchy of Warsaw (Napoleonic period)\n10. After 1815, it returned to Prussia (Congress Poland border)\n11. In 1920, after WWI, it returned to Poland (Treaty of Versailles)\n12. During WWII it was occupied by Nazi Germany\n13. The medieval Old Town of Toruń is a UNESCO World Heritage Site (since 1997)\n14. Famous for gingerbread (pierniki)\n15. The city was a center of science and culture; Copernicus University founded in 1945\n\nLet me write this in Polish, around 200 words. I should structure it chronologically and hit the main points. The format should be a flowing narrative text, possibly with a few paragraphs. Since they asked for ~200 words, I should aim for that length. No need for headers or bullet points for such a short piece - a\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.14,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " model probabilistyczny, który przewiduje kolejne słowa w sekwencji na podstawie kontekstu. Jest to podstawowy element w przetwarzaniu języka naturalnego (NLP), wykorzystywany w zadaniach takich jak tłumaczenie maszynowe, generowanie tekstu, czy rozpoznawanie mowy.\nPrzykłady zastosowania:\n- Tłumaczenie maszynowe: Modele językowe pomagają w tłumaczeniu tekstu z jednego języka na inny, przewidując najbardziej prawdopodobne tłumaczenie.\n- Generowanie tekstu: Modele takie jak GPT (Generative Pre-trained Transformer) generują spójny tekst na podstawie podanego promptu.\n- Autouzupełnianie: W klawiaturach smartfonów modele językowe przewidują następne słowo, które użytkownik chce wpisać.\n- Rozpoznawanie mowy: Modele językowe pomagają w przekształcaniu mowy na tekst, przewidując najbardziej prawdopodobne słowa w danym kontekście.\n- Chatboty i asystenci głosowi: Modele językowe są używane do generowania odpowiedzi w rozmowach z użytkownikami.\nPrzykład techniczny:\nfrom transformers import GPT2LMHeadModel, GPT2Tokenizer\n#",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.37,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the current weather in Kraków in Celsius degrees, and they explicitly asked me to use the tool. I should call the get_weather function with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-b475c69501faa44c\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 64,
+  "secs": 0.44,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55.",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 5.86,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " 564-ZETA, turkusowy, 13:07. 564-ZETA, turkusowy, 13:07. 564-ZETA, turkusowy, 13:07. 564-ZETA, turkusowy, 13:07. 564-ZETA, turkusowy, 13:07. 564-ZETA, turkusowy, 13:07. 564-ZETA,",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 23.96,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ }
+]

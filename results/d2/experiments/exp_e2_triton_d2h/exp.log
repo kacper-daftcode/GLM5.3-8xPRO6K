@@ -1,0 +1,5 @@
+[15:59:48] === e2_triton_d2h: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='VLLM_TQ_OFFLOAD_D2H=triton' KV_OFFLOAD_OPTS='' CHURN=1
+[16:03:38] started: [16:03:38] READY po 230 s [16:03:38] host RAM after start: pinned(shmem)=45 GB MemAvailable=668 GB 
+[16:05:40] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[16:05:51] xid lines before/after: 0/0; GPUs after: 100,0,100,100,0,0,0,100,100,
+[16:05:51] RESULT e2_triton_d2h: FAIL rc=2

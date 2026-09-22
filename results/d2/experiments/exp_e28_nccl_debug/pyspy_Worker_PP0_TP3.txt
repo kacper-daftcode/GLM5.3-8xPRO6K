@@ -1,0 +1,10 @@
+Process 43777: VLLM::Worker_PP0_TP3
+Python v3.12.13 (/usr/bin/python3.12)
+
+Error: Failed to get stack traces
+
+Caused by:
+    0: Failed to call get_stack_trace for thread 135181656756864
+    1: Failed to copy PyCodeObject
+    2: Bad address (os error 14)
+    3: Bad address (os error 14)

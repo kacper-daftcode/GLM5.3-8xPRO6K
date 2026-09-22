@@ -1,0 +1,13 @@
+[19:49:27] === e26_cudagdb: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[19:51:25] === e26_cudagdb: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[19:54:14] started: [19:54:14] READY po 170 s [19:54:14] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB 
+[19:54:16] started: [19:54:14] READY po 170 s [19:54:14] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB [19:54:16] READY po 290 s [19:54:16] host RAM after start: pinned(shmem)=45 GB MemAvailable=669 GB 
+[19:55:30] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:55:32] cuda-gdb Worker_PP0_TP0: 0 lines, kernels: 
+[19:55:32] cuda-gdb Worker_PP1_TP0: 0 lines, kernels: 
+[19:55:32] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:55:32] cuda-gdb Worker_PP1_TP1: 0 lines, kernels: 
+[19:55:42] xid lines before/after: 0/0; GPUs after: 100,100,100,100,0,0,0,0,0,
+[19:55:42] RESULT e26_cudagdb: FAIL rc=2
+[19:55:43] xid lines before/after: 0/0; GPUs after: 100,100,100,100,0,0,0,0,0,
+[19:55:43] RESULT e26_cudagdb: FAIL rc=2

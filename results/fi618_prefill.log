@@ -1,0 +1,4 @@
+kalibracja: 3.75 tok/slowo
+ctx=  32826 tok: TTFT     9.4 s =>     3498 tok/s prefill
+ctx= 131085 tok: TTFT    39.8 s =>     3293 tok/s prefill
+ctx= 261911 tok: TTFT    89.5 s =>     2926 tok/s prefill

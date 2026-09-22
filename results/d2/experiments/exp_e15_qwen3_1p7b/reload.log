@@ -1,0 +1,48 @@
+[17:54:29] start L=24000 churn=40x24000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[17:54:29] cold   : prompt=24109 TTFT=  0.30s total=   0.5s ( 80415 tok/s prefill) needle=NIE | store=2.57G load=0.00G pc_hits/q=0/24109 ext_hits/q=0/24109 preempt=0 alloc_fail=0
+[17:54:32]          after 3 s: store=2.57G load=0.00G pc_hits/q=0/24109 ext_hits/q=0/24109 preempt=0 alloc_fail=0  (store delta 2.57 GiB = 111.9 KiB/token)
+[17:54:32] gpuhit0: prompt=24109 TTFT=  0.09s total=   0.3s identical_to_cold=True  (intra-run determinism control)
+[17:54:33] churn 1/40: prompt=23941    0.3s ( 84507 tok/s) cum=23941
+[17:54:33] churn 2/40: prompt=24000    0.3s ( 84818 tok/s) cum=47941
+[17:54:33] churn 3/40: prompt=23954    0.3s ( 89351 tok/s) cum=71895
+[17:54:34] churn 4/40: prompt=23964    0.3s ( 89377 tok/s) cum=95859
+[17:54:34] churn 5/40: prompt=23913    0.3s ( 89358 tok/s) cum=119772
+[17:54:34] churn 6/40: prompt=23976    0.3s ( 88811 tok/s) cum=143748
+[17:54:34] churn 7/40: prompt=23917    0.3s ( 89392 tok/s) cum=167665
+[17:54:35] churn 8/40: prompt=23941    0.3s ( 89509 tok/s) cum=191606
+[17:54:35] churn 9/40: prompt=23938    0.3s ( 89299 tok/s) cum=215544
+[17:54:35] churn 10/40: prompt=24013    0.3s ( 89428 tok/s) cum=239557
+[17:54:35] churn 11/40: prompt=23959    0.3s ( 89711 tok/s) cum=263516
+[17:54:36] churn 12/40: prompt=23995    0.3s ( 89626 tok/s) cum=287511
+[17:54:36] churn 13/40: prompt=23908    0.3s ( 89683 tok/s) cum=311419
+[17:54:36] churn 14/40: prompt=23940    0.3s ( 89167 tok/s) cum=335359
+[17:54:37] churn 15/40: prompt=23979    0.3s ( 89653 tok/s) cum=359338
+[17:54:37] churn 16/40: prompt=23866    0.3s ( 89398 tok/s) cum=383204
+[17:54:37] churn 17/40: prompt=24009    0.3s ( 89639 tok/s) cum=407213
+[17:54:37] churn 18/40: prompt=23993    0.3s ( 89428 tok/s) cum=431206
+[17:54:38] churn 19/40: prompt=23911    0.3s ( 89258 tok/s) cum=455117
+[17:54:38] churn 20/40: prompt=23949    0.3s ( 89328 tok/s) cum=479066
+[17:54:38] churn 21/40: prompt=23929    0.3s ( 89592 tok/s) cum=502995
+[17:54:38] churn 22/40: prompt=23952    0.3s ( 89270 tok/s) cum=526947
+[17:54:39] churn 23/40: prompt=23992    0.3s ( 89382 tok/s) cum=550939
+[17:54:39] churn 24/40: prompt=23984    0.3s ( 89215 tok/s) cum=574923
+[17:54:39] churn 25/40: prompt=24016    0.3s ( 88874 tok/s) cum=598939
+[17:54:40] churn 26/40: prompt=23957    0.3s ( 89012 tok/s) cum=622896
+[17:54:40] churn 27/40: prompt=23941    0.3s ( 89324 tok/s) cum=646837
+[17:54:40] churn 28/40: prompt=23938    0.3s ( 89065 tok/s) cum=670775
+[17:54:40] churn 29/40: prompt=23926    0.3s ( 89365 tok/s) cum=694701
+[17:54:41] churn 30/40: prompt=23942    0.3s ( 89087 tok/s) cum=718643
+[17:54:41] churn 31/40: prompt=23970    0.3s ( 89160 tok/s) cum=742613
+[17:54:41] churn 32/40: prompt=23886    0.3s ( 89212 tok/s) cum=766499
+[17:54:41] churn 33/40: prompt=23942    0.3s ( 89365 tok/s) cum=790441
+[17:54:42] churn 34/40: prompt=23927    0.3s ( 89394 tok/s) cum=814368
+[17:54:42] churn 35/40: prompt=23890    0.3s ( 89311 tok/s) cum=838258
+[17:54:42] churn 36/40: prompt=23948    0.3s ( 89108 tok/s) cum=862206
+[17:54:43] churn 37/40: prompt=23963    0.3s ( 89483 tok/s) cum=886169
+[17:54:43] churn 38/40: prompt=23954    0.3s ( 89404 tok/s) cum=910123
+[17:54:43] churn 39/40: prompt=23918    0.3s ( 89260 tok/s) cum=934041
+[17:54:43] churn 40/40: prompt=23933    0.3s ( 89495 tok/s) cum=957974
+[17:54:43] after churn (957974 tokens): store=104.87G load=0.00G pc_hits/q=24096/1006192 ext_hits/q=0/982096 preempt=0 alloc_fail=0
+[17:54:44] warm   : prompt=24109 TTFT=  0.06s total=   0.2s needle=NIE identical_to_cold=True common_prefix=253/253 loaded=0.00 GiB (0.0 KiB/token) | store=107.44G load=0.00G pc_hits/q=48192/1030301 ext_hits/q=0/982109 preempt=0 alloc_fail=0
+[17:54:44] gpuhit : prompt=24109 TTFT=  0.05s total=   0.2s identical_to_warm=True | store=107.44G load=0.00G pc_hits/q=72288/1054410 ext_hits/q=0/982122 preempt=0 alloc_fail=0
+[17:54:44] VERDICT: FAIL  (cold TTFT 0.3 s -> warm-from-RAM 0.06 s -> GPU hit 0.05 s)

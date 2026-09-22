@@ -1,0 +1,30 @@
+Sep 21 12:57:29.865989 <host-B> kernel: pcieport 0000:80:01.1: pciehp: Slot(65): Link Down
+Sep 21 12:57:29.866505 <host-B> kernel: pcieport 0000:80:01.1: pciehp: Slot(65): Card not present
+Sep 21 12:57:30.154348 <host-B> kernel: snd_hda_intel 0000:81:00.1: GPU sound probed, but not operational: please add a quirk to driver_denylist
+Sep 21 12:57:30.285034 <host-B> kernel: NVRM: GPU at PCI:0000:81:00: GPU-<uuid>
+Sep 21 12:57:30.285072 <host-B> kernel: NVRM: GPU Board Serial Number: <redacted>
+Sep 21 12:57:30.285091 <host-B> kernel: NVRM: Xid (PCI:0000:81:00): 79, GPU has fallen off the bus.
+Sep 21 12:57:30.285114 <host-B> kernel: NVRM: GPU 0000:81:00.0: GPU has fallen off the bus.
+Sep 21 12:57:30.285130 <host-B> kernel: NVRM: GPU 0000:81:00.0: GPU serial number is 1790526080483.
+Sep 21 12:57:30.285150 <host-B> kernel: NVRM: krcRcAndNotifyAllChannels_IMPL: RC all channels for critical error 79.
+Sep 21 12:57:30.285166 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285186 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285199 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285216 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285230 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285243 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285257 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285271 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285285 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285299 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285312 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285326 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285339 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285353 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285366 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285377 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285395 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285408 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285421 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285437 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!
+Sep 21 12:57:30.285451 <host-B> kernel: NVRM: _threadNodeCheckTimeout: API_GPU_ATTACHED_SANITY_CHECK failed!

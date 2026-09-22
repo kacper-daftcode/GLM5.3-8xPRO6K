@@ -1,0 +1,69 @@
+{
+ "len": 200000,
+ "seed": 1100,
+ "phases": {
+  "cold": {
+   "ttft": 36.32645689599997,
+   "total": 37.58376327499997,
+   "prompt_tokens": 199752,
+   "completion_tokens": 198,
+   "needle": true,
+   "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 7711-ZETA.\"\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy Numer 1103.\"\n3. \"Pociag do Gdyni odjezdza o godzinie 14:20.\"\n\nLet me provide the answers in one line as requested.Kod dostępu do serwerowni to 7711-ZETA; ulubiony kolor Marka Kowalskiego to turkusowy (numer 1103); pociąg do Gdyni odjeżdża o godzinie 14:20.",
+   "metrics": {
+    "vllm:prefix_cache_queries": 199752.0,
+    "vllm:prefix_cache_hits": 0.0,
+    "vllm:external_prefix_cache_queries": 0.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit0": {
+   "ttft": 0.3788420989999963,
+   "total": 1.5811572899999646,
+   "identical": false,
+   "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 7711-ZETA.\" - The access code is 7711-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy Numer 1103.\" - His favorite color is turquoise, number 1103\n3. \"Pociag do Gdyni odjezdza o godzinie 14:20.\" - The train departs at 14:20\n\nLet me provide the answer in one line as requested.(1) 7711-ZETA (2) turkusowy (1103) (3) 14:20"
+  },
+  "churn": {
+   "tokens": 2198076,
+   "metrics": {
+    "vllm:prefix_cache_queries": 2597580.0,
+    "vllm:prefix_cache_hits": 199680.0,
+    "vllm:external_prefix_cache_queries": 0.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "warm": {
+   "ttft": 39.949971547999894,
+   "total": 40.99905060700007,
+   "prompt_tokens": 199752,
+   "completion_tokens": 180,
+   "needle": true,
+   "identical": false,
+   "common_prefix": 19,
+   "load_bytes": 0,
+   "text": "The user is asking three questions based on the text:\n1. What is the access code to the server room? - \"Kod dostepu do serwerowni to 7711-ZETA.\"\n2. What is Marek Kowalski's favorite color? - \"Ulubiony kolor Marka Kowalskiego to turkusowy Numer 1103.\"\n3. What time does the train to Gdynia depart? - \"Pociag do Gdyni odjezdza o godzinie 14:20.\"\n\nI should answer in one line, briefly.Kod dostępu do serwerowni to 7711-ZETA; ulubiony kolor Marka Kowalskiego to turkusowy (numer 1103); pociąg do Gdyni odjeżdża o godzinie 14:20.",
+   "metrics": {
+    "vllm:prefix_cache_queries": 2797332.0,
+    "vllm:prefix_cache_hits": 199680.0,
+    "vllm:external_prefix_cache_queries": 0.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit": {
+   "ttft": 0.36509151100017334,
+   "total": 1.4366280820001975,
+   "prompt_tokens": 199752,
+   "identical": false,
+   "metrics": {
+    "vllm:prefix_cache_queries": 2997084.0,
+    "vllm:prefix_cache_hits": 399360.0,
+    "vllm:external_prefix_cache_queries": 0.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  }
+ },
+ "verdict": "FAIL"
+}

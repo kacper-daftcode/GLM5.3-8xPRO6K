@@ -1,0 +1,5 @@
+[19:12:44] === e22_memtrace_baseline: KV_OFFLOAD_GB=0 NCCL_MODE=p2p_sys EXTRA_ENV='VLLM_TQ_INDEXER_TRACE=1' KV_OFFLOAD_OPTS='' CHURN=1
+[19:16:38] started: [19:16:38] READY po 235 s 
+[19:18:40] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:18:49] xid lines before/after: 0/0; GPUs after: 100,100,100,100,0,0,0,0,0,
+[19:18:49] RESULT e22_memtrace_baseline: FAIL rc=2

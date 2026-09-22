@@ -1,0 +1,6 @@
+[18:53:04] start L=200000 churn=1x550000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+Traceback (most recent call last):
+  File "<host-B>/a2/d2/kv_offload_reload.py", line 117, in <module>
+    log(f"cold   : prompt={pt1} TTFT={ttft1:6.2f}s total={tot1:6.1f}s ({(pt1 or 0)/ttft1:6.0f} tok/s prefill) needle={'OK' if ok1 else 'NIE'} | {fmt_m(m1)}")
+                                     ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__

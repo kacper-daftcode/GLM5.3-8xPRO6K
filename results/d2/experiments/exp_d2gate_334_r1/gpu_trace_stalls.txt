@@ -1,0 +1,2 @@
+rounds=638 (1 Hz)  classes: prefill=618s mixed=9s other=5s spin=4s idle=1s desync=1s
+summary: prefill=618s desync_windows=0 (>= 3s; max 0s, total 0s) spin_windows=0 (total 0s) idle=1s

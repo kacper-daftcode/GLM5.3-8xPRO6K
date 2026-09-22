@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). Since the question is in Polish, I should answer in Polish with one word: \"Warszawa\".\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 57,
+  "secs": 0.39,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses an nginx log in combined format and returns top 10 IPs by request count plus total transfer in MB for each. They want only code with a docstring, in Polish (the request is in Polish).\n\nNginx combined log format:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nExample line:\n```\n127.0.0.1 - - [10/Oct/2023:13:55:36 -0700] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com\" \"Mozilla/5.0 ...\"\n```\n\nI need to write a function that:\n1. Parses each line with a regex\n2. Counts requests per IP\n3. Sums bytes transferred per IP\n4. Returns top 10 IPs by request count, with total transfer in MB\n\nThe user says \"Tylko kod z docstringiem\" — only code with a docstring. So I should provide just the code, no extra explanation. The docstring should be in Polish presumably since the request is in Polish.\n\nLet me write it:\n\n```python\nimport re\nfrom collections import defaultdict\n\nLOG_PATTERN = re.compile(\n    r'^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<time>[^\\]]+)\\] '\n    r'\"(?P<request>[^\"]*)\" (?P<status>\\d{3}) (?P<bytes>\\d+|-) '\n    r'\"(?P<referer>[^\"]*)\" \"(?P<agent>[^\"]*)\"'\n)\n\ndef parse_nginx_log(path):\n    \"\"\"\n    Parsuje plik logu nginx w formacie combined i zwraca statystyki per IP.\n\n    Format combined:\n        $remote_addr - $remote_user [$time_local] \"$request\"\n        $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n\n    Args:\n        path (str): Ścieżka do pliku logu nginx (combined format).\n\n    Returns:\n        list[tuple[str, int, float]]: Lista 10 krotek (ip, liczba_zadan,\n        transfer_mb) posortowana malejąco wg liczby żądań. Transfer\n        wyrażony w megabajtach (1 MB = 1024 * 1024 bajtów).\n\n    Raises:\n        FileNotFoundError: Gdy plik logu nie istnieje.\n    \"\"\"\n    stats = defaultdict(lambda: [0, 0])  # ip -> [liczba żądań, suma bajtów]\n\n    with open(path, 'r', encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = LOG_PATTERN.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            stats[ip][0] += 1\n            raw = m.group('bytes')\n            if raw != '-':\n                stats[ip][1] += int(raw)\n\n    top = sorted(stats.items(), key=lambda kv: kv[1][0], reverse=True)[:10]\n    return [\n        (ip, count, round(bytes_sum / (1024 * 1024), 2))\n        for ip, (count, bytes_sum) in top\n    ]\n```\n\nWait — the user said \"Tylko kod z docstringiem\" — only code with docstring. So I should output just the code block, no commentary. The docstring itself documents the function.\n\nShould I handle the case where bytes is \"-\"? In nginx logs, body_bytes_sent is always a number, but sometimes \"-\" appears in some formats. Handling it is safe.\n\nShould the function accept a file path or a file-like object? Path is simplest. Maybe support both? Keep it simple — path.\n\nMB definition: 1 MB = 1,000,000 bytes or 1024*1024? Ambiguous. I'll use 1024*1024 and note it in docstring. Or use 10**6. I'll pick 1024*1024 (MiB technically) but say in docstring. Actually to be precise, I could say \"MB (przyjęto 1 MB = 102\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 6.34,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify this. The known sum of primes below 100 is indeed 1060.\n\nLet me double-check my addition:\nPrimes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nGroup them:\n2 + 3 + 5 + 7 = 17\n11 + 13 + 17 + 19 = 60\n23 + 29 = 52\n31 + 37 = 68\n41 + 43 + 47 = 131\n53 + 59 = 112\n61 + 67 = 128\n71 + 73 + 79 = 223\n83 + 89 = 172\n97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 440\n440 + 128 = 568\n568 + 223 = 791\n791 + 172 = 963\n963 + 97 = 1060\n\nYes, 1060 is correct.\n\nI should respond in Polish since the question is in Polish. I'll show the list of primes, then sum them step by step, and give the final answer.\n\nFormat: The response should be structured with the list of primes,\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 3.96,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń in approximately 200 words, in Polish. Toruń is a historic city in Poland, famous for being the birthplace of Nicolaus Copernicus and for its medieval old town (UNESCO World Heritage Site).\n\nLet me recall the key facts about Toruń's history:\n\n1. **Foundation**: Toruń was founded by the Teutonic Knights in 1233 (granted city rights by Hermann von Salza's charter - actually the charter was granted by the Grand Master Hermann von Salza in 1233). It was founded near an older Slavic settlement. The city was part of the Teutonic Order's state.\n\n2. **Hanseatic League**: Toruń joined the Hanseatic League in the 13th century (around 1264 or so), becoming an important trade center.\n\n3. **Thorn Peace (1466)**: The Peace of Thorn (Pokój toruński) in 1466 ended the Thirteen Years' War between Poland and the Teutonic Order. Toruń came under Polish rule as part of Royal Prussia. This was a very important event.\n\n4. **Copernicus**: Nicolaus Copernicus was born in Toruń in 1473.\n\n5. **Religious conflicts**: The \"Tumult toruński\" (Toruń Tumult) of 1724 - a religious conflict between Protestants and Catholics, which resulted in the destruction of the Protestant gymnasium and execution of its rector. This was famous across Europe.\n\n6. **Partitions**: After the First Partition of Poland in 1772, Toruń came under Prussian rule (though the city itself was annexed in 1793 after the Second Partition - actually, Toruń was annexed by Prussia in 1793 during the Second Partition of Poland. Wait, let me think. Royal Prussia including Toruń was taken in the First Partition of 1772? No - the First Partition took Warmia and Royal Prussia territories... Actually, in the First Partition (1772), Prussia took Royal Prussia without\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.52,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " rodzaj sztucznej inteligencji, który jest trenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe wykorzystują techniki uczenia maszynowego, takie jak sieci neuronowe, aby przewidywać kolejne słowa lub frazy na podstawie kontekstu. Są one szeroko stosowane w przetwarzaniu języka naturalnego (NLP) do zadań takich jak tłumaczenie, generowanie tekstu, analiza sentymentu i odpowiadanie na pytania.\nPrzykład: GPT-3 (Generative Pre-trained Transformer 3) to jeden z najbardziej znanych modeli językowych, opracowany przez OpenAI. Jest w stanie generować spójne i kontekstualnie odpowiednie teksty na podstawie podanego promptu.\nKontekst użycia: Modele językowe są kluczowym elementem nowoczesnych systemów AI, takich jak chatboty, asystenci głosowi i narzędzia do automatycznego generowania treści. Ich rozwój znacząco wpłynął na możliwości maszyn w rozumieniu i komunikacji w języku naturalnym. Modele te są również podstawą dla wielu aplikacji biznesowych, takich jak automatyzacja obsługi klienta, analiza dokumentów czy personalizacja treści marketing",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.83,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the current weather in Kraków in Celsius degrees. They explicitly asked me to use the tool. I should call the get_weather function with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-be5d9ec9a1980768\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 63,
+  "secs": 0.45,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55.",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 5.89,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. ",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 24.51,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ }
+]

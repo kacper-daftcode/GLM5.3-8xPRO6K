@@ -1,0 +1,13 @@
+[09:24:17] start L=650000 churn=3x550000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[09:27:25] cold   : prompt=649508 TTFT=186.58s total= 187.8s (  3481 tok/s prefill) needle=OK | store=74.31G load=0.00G pc_hits/q=0/649508 ext_hits/q=0/649508 preempt=0 alloc_fail=0
+[09:27:28]          after 3 s: store=74.31G load=0.00G pc_hits/q=0/649508 ext_hits/q=0/649508 preempt=0 alloc_fail=0  (store delta 74.31 GiB = 120.0 KiB/token)
+[09:27:31] gpuhit0: prompt=649508 TTFT=  1.07s total=   2.4s identical_to_cold=False  (intra-run determinism control)
+[09:30:01] churn 1/3: prompt=549242  149.9s (  3664 tok/s) cum=549242
+[09:32:33] churn 2/3: prompt=549490  151.9s (  3617 tok/s) cum=1098732
+[09:35:05] churn 3/3: prompt=549402  152.6s (  3600 tok/s) cum=1648134
+[09:35:05] after churn (1648134 tokens): store=262.86G load=0.00G pc_hits/q=649408/2947150 ext_hits/q=0/2297742 preempt=0 alloc_fail=0
+[09:35:08] warm   : prompt=649508 TTFT=  1.33s total=   2.6s needle=OK identical_to_cold=False common_prefix=290/557 loaded=55.36 GiB (89.4 KiB/token) | store=262.86G load=55.36G pc_hits/q=814912/3596658 ext_hits/q=483904/2781746 preempt=0 alloc_fail=0
+[09:35:08]   DIVERGENCE at char 290: cold=' I can find these pieces of information embedded within the noise:\n\n1. "Kod dostepu do serwerowni to 10182-ZETA."\n2. "Ul'
+                        warm=' I can find these pieces of information embedded within the random text:\n\n1. "Kod dostepu do serwerowni to 10182-ZETA." '
+[09:35:10] gpuhit : prompt=649508 TTFT=  1.03s total=   2.4s identical_to_warm=False | store=262.86G load=55.36G pc_hits/q=1464320/4246166 ext_hits/q=483904/2781846 preempt=0 alloc_fail=0
+[09:35:10] VERDICT: PASS (decode nondeterministic within run: identity not required)  (cold TTFT 186.58 s -> warm-from-RAM 1.33 s -> GPU hit 1.03 s)

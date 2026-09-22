@@ -1,0 +1,4 @@
+[13:13:52] start L=200000 churn=4x550000 | store=0.00G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/0 preempt=0 alloc_fa[13:14:50] cold   : prompt=199752 TTFT= 60.45s total=  61.7s (  3304 tok/s prefill) needle=OK | store=0.00G load=0.00G pc_hits/q=35264/399504 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[13:14:53]          after 3 s: store=0.00G load=0.00G pc_hits/q=35264/399504 ext_hits/q=0/0 preempt=0 alloc_fail=0  (store delta 0.00 GiB = 0.0 KiB/token)
+[13:14:55] gpuhit0: prompt=199752 TTFT=  0.76s total=   2.4s identical_to_cold=False  (intra-run determinism control)
+rol)

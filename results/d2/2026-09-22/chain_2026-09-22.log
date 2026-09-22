@@ -1,0 +1,21 @@
+[09:21:44] step 1: d2gate_334_650k
+[09:21:44] === d2gate_334_650k: KV_OFFLOAD_GB=334 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' EXTRA_ARGS='' CHURN=4 REPRO_ARGS='--len 650000 --churn 3 --churn-len 550000' watchdog: spin 60s@<200W, silence 600s
+[09:24:17] started: [09:24:17] READY po 155 s [09:24:17] host RAM after start: pinned(shmem)=360 GB MemAvailable=350 GB 
+[09:35:11] reproducer finished: [09:27:25] cold   : prompt=649508 TTFT=186.58s total= 187.8s (  3481 tok/s prefill) needle=OK | store=74.31G l|[09:30:01] churn 1/3: prompt=549242  149.9s (  3664 tok/s) cum=549242|[09:32:33] churn 2/3: prompt=549490  151.9s (  3617 tok/s) cum=1098732|[09:35:05] churn 3/3: prompt=549402  152.6s (  3600 tok/s) cum=1648134|[09:35:08] warm   : prompt=649508 TTFT=  1.33s total=   2.6s needle=OK identical_to_cold=False common_prefix=2|[09:35:10] gpuhit : prompt=649508 TTFT=  1.03s total=   2.4s identical_to_warm=False | store=262.86G load=55.3|
+[09:35:11] gpu trace: summary: prefill=633s desync_windows=0 (>= 3s; max 0s, total 0s) spin_windows=0 (total 0s) idle=2s
+[09:35:12] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[09:35:12] RESULT d2gate_334_650k: PASS (reproducer completed; D2 VERDICT: PASS (decode nondeterministic within run: identity not required)  (cold TTFT 186.58 s -> warm-from-RAM 1.33 s -> GPU hit 1.03 s))
+[09:35:12] step 1 rc=0
+[09:35:12] step 2: bench_decode with offload 334 (server kept)
+[09:35:39] step 2 rc=0 conc=  1 gen=256 r2:   142.1 tok/s lacznie |   21.2 ms/krok | akceptacja 3.01 tok/krok | 1.8 s conc= 16 gen=256 r0:   590.9 tok/s lacznie |   78.4 ms/krok | akceptacja 2.90 tok/krok | 6.9 s conc= 16 gen=256 r1:   658.2 tok/s lacznie |   70.9 ms/krok | akceptacja 2.92 tok/krok | 6.2 s conc= 16 gen=256 r2:   665.0 tok/s lacznie |   71.1 ms/krok | akceptacja 2.96 tok/krok | 6.2 s 
+[09:35:58] step 3: pool32_autotune_on (eviction path)
+[09:35:58] === pool32_autotune_on: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' EXTRA_ARGS='' CHURN=4 REPRO_ARGS='--len 200000 --churn 4 --churn-len 550000' watchdog: spin 60s@<200W, silence 600s
+[09:38:11] started: [09:38:11] READY po 135 s [09:38:11] host RAM after start: pinned(shmem)=45 GB MemAvailable=667 GB 
+[09:49:46] reproducer finished: [09:38:50] cold   : prompt=199752 TTFT= 37.52s total=  39.0s (  5324 tok/s prefill) needle=OK | store=22.85G l|[09:41:23] churn 1/4: prompt=549016  147.9s (  3711 tok/s) cum=549016|[09:43:54] churn 2/4: prompt=549614  151.5s (  3628 tok/s) cum=1098630|[09:46:27] churn 3/4: prompt=549741  152.4s (  3608 tok/s) cum=1648371|[09:48:59] churn 4/4: prompt=549705  152.6s (  3602 tok/s) cum=2198076|[09:49:40] warm   : prompt=199752 TTFT= 39.95s total=  41.1s needle=OK identical_to_cold=False common_prefix=7|[09:49:42] gpuhit : prompt=199752 TTFT=  0.38s total=   1.6s identical_to_warm=False | store=297.18G load=0.00|
+[09:49:46] gpu trace: summary: prefill=671s desync_windows=0 (>= 3s; max 0s, total 0s) spin_windows=0 (total 0s) idle=1s
+[09:49:47] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[09:49:51] RESULT pool32_autotune_on: PASS (reproducer completed; D2 VERDICT: FAIL - kv_offload_load_bytes did not grow (nothing came back from RAM: pool smaller than the churn, or prompt recomputed) (decode nondeterministic within run: identity not required)  (cold TT)
+[09:49:51] step 3 rc=0
+[09:49:51] step 4: baseline (no offload) + bench_decode
+[09:52:14] step 4 rc=0 conc=  1 gen=256 r2:   134.6 tok/s lacznie |   21.1 ms/krok | akceptacja 2.87 tok/krok | 1.9 s conc= 16 gen=256 r0:   624.2 tok/s lacznie |   74.5 ms/krok | akceptacja 2.91 tok/krok | 6.6 s conc= 16 gen=256 r1:   665.1 tok/s lacznie |   70.7 ms/krok | akceptacja 2.94 tok/krok | 6.2 s conc= 16 gen=256 r2:   635.8 tok/s lacznie |   73.2 ms/krok | akceptacja 2.91 tok/krok | 6.4 s 
+[09:52:15] chain done; full-glm baseline left running: full-glm Up 2 minutes

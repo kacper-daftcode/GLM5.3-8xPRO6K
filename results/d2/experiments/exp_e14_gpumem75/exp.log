@@ -1,0 +1,5 @@
+[17:40:42] === e14_gpumem75: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[17:43:34] started: [17:43:34] READY po 175 s [17:43:34] host RAM after start: pinned(shmem)=45 GB MemAvailable=669 GB 
+[17:45:36] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[17:45:47] xid lines before/after: 0/0; GPUs after: 0,100,100,100,0,0,0,0,100,
+[17:45:47] RESULT e14_gpumem75: FAIL rc=2

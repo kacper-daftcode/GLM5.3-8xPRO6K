@@ -1,0 +1,35 @@
+Process 42900: VLLM::Worker_PP0_TP1
+Python v3.12.13 (/usr/bin/python3.12)
+
+Thread 1384 (active): "MainThread"
+    apply (vllm/model_executor/layers/fused_moe/topk_weight_and_reduce.py:76)
+    finalize (vllm/model_executor/layers/fused_moe/prepare_finalize/no_dp_ep.py:91)
+    _finalize (vllm/model_executor/layers/fused_moe/modular_kernel.py:1329)
+    apply (vllm/model_executor/layers/fused_moe/modular_kernel.py:1455)
+Thread 1980 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 1982 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:355)
+    get (queue.py:171)
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:983)
+    run (threading.py:1012)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 1987 (active): "DeathPipeMonitor"
+    _recv (multiprocessing/connection.py:395)
+    _recv_bytes (multiprocessing/connection.py:430)
+    recv (multiprocessing/connection.py:250)
+    death_pipe_monitor (vllm/v1/executor/multiproc_executor.py:791)
+    run (threading.py:1012)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 2052 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)

@@ -1,0 +1,14 @@
+[09:09:45] start L=200000 churn=4x550000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[09:10:23] cold   : prompt=199752 TTFT= 36.12s total=  37.5s (  5530 tok/s prefill) needle=OK | store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0
+[09:10:26]          after 3 s: store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0  (store delta 22.85 GiB = 120.0 KiB/token)
+[09:10:27] gpuhit0: prompt=199752 TTFT=  0.40s total=   1.2s identical_to_cold=False  (intra-run determinism control)
+[09:12:50] churn 1/4: prompt=549016  143.5s (  3826 tok/s) cum=549016
+[09:15:18] churn 2/4: prompt=549614  147.9s (  3717 tok/s) cum=1098630
+[09:17:49] churn 3/4: prompt=549741  150.1s (  3662 tok/s) cum=1648371
+[09:20:20] churn 4/4: prompt=549705  151.0s (  3640 tok/s) cum=2198076
+[09:20:20] after churn (2198076 tokens): store=274.32G load=0.00G pc_hits/q=199680/2597580 ext_hits/q=0/2397900 preempt=0 alloc_fail=0
+[09:20:21] warm   : prompt=199752 TTFT=  0.46s total=   1.2s needle=OK identical_to_cold=False common_prefix=9/636 loaded=22.85 GiB (119.9 KiB/token) | store=274.32G load=22.85G pc_hits/q=199680/2797332 ext_hits/q=199680/2597652 preempt=0 alloc_fail=0
+[09:20:21]   DIVERGENCE at char 9: cold='The user is asking me to extract three pieces of information from the'
+                        warm='The user asks three questions based on the text:\n1. Access code to se'
+[09:20:22] gpuhit : prompt=199752 TTFT=  0.35s total=   1.4s identical_to_warm=False | store=274.32G load=22.85G pc_hits/q=399360/2997084 ext_hits/q=199680/2597724 preempt=0 alloc_fail=0
+[09:20:22] VERDICT: PASS (decode nondeterministic within run: identity not required)  (cold TTFT 36.12 s -> warm-from-RAM 0.46 s -> GPU hit 0.35 s)

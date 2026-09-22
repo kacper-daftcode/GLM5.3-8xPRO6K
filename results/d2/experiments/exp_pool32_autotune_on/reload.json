@@ -1,0 +1,80 @@
+{
+ "len": 200000,
+ "seed": 1100,
+ "phases": {
+  "cold": {
+   "ttft": 37.51952883999911,
+   "total": 38.99969107999641,
+   "prompt_tokens": 199752,
+   "completion_tokens": 239,
+   "needle": true,
+   "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 7711-ZETA.\" - The access code is 7711-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1103.\" - The favorite color is turkusowy (turquoise) number 1103\n3. \"Pociag do Gdyni odjezdza o godzinie 14:20.\" - The train departs at 14:20\n\nLet me provide the answer in one line as requested.Kod dostępu do serwerowni to 7711-ZETA, ulubiony kolor Marka Kowalskiego to turkusowy (numer 1103), a pociąg do Gdyni odjeżdża o godzinie 14:20.",
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 24538150912.0,
+    "vllm:kv_offload_store_time": 1.0728919372260575,
+    "vllm:prefix_cache_queries": 199752.0,
+    "vllm:prefix_cache_hits": 0.0,
+    "vllm:external_prefix_cache_queries": 199752.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit0": {
+   "ttft": 0.41787149999436224,
+   "total": 1.5948486769993906,
+   "identical": false,
+   "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 7711-ZETA.\" - The access code is 7711-ZETA\n\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1103.\" - The favorite color is turquoise (turkusowy), number 1103\n\n3. \"Pociag do Gdyni odjezdza o godzinie 14:20.\" - The train departs at 14:20\n\nLet me provide the answer in one line as requested.(1) 7711-ZETA (2) turkusowy (numer 1103) (3) 14:20"
+  },
+  "churn": {
+   "tokens": 2198076,
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 294552158208.0,
+    "vllm:kv_offload_store_time": 12.347167908243827,
+    "vllm:prefix_cache_queries": 2597580.0,
+    "vllm:prefix_cache_hits": 199680.0,
+    "vllm:external_prefix_cache_queries": 2397900.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "warm": {
+   "ttft": 39.94668527299655,
+   "total": 41.11048603800009,
+   "prompt_tokens": 199752,
+   "completion_tokens": 199,
+   "needle": true,
+   "identical": false,
+   "common_prefix": 70,
+   "load_bytes": 0,
+   "text": "The user is asking me to extract three pieces of information from the long text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me find these in the text:\n\n1. \"Kod dostepu do serwerowni to 7711-ZETA.\" - The access code is 7711-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1103.\" - His favorite color is turquoise, number 1103\n3. \"Pociag do Gdyni odjezdza o godzinie 14:20.\" - The train departs at 14:20\n\nThe user wants a short answer in one line.(1) 7711-ZETA (2) turkusowy (nr 1103) (3) 14:20",
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 319090309120.0,
+    "vllm:kv_offload_store_time": 13.442693316511804,
+    "vllm:prefix_cache_queries": 2797332.0,
+    "vllm:prefix_cache_hits": 199680.0,
+    "vllm:external_prefix_cache_queries": 2597652.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit": {
+   "ttft": 0.38306481699692085,
+   "total": 1.5899754609999945,
+   "prompt_tokens": 199752,
+   "identical": false,
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 319090309120.0,
+    "vllm:kv_offload_store_time": 13.442693316511804,
+    "vllm:prefix_cache_queries": 2997084.0,
+    "vllm:prefix_cache_hits": 399360.0,
+    "vllm:external_prefix_cache_queries": 2597724.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  }
+ },
+ "verdict": "FAIL",
+ "fail_reasons": [
+  "kv_offload_load_bytes did not grow (nothing came back from RAM: pool smaller than the churn, or prompt recomputed)"
+ ]
+}

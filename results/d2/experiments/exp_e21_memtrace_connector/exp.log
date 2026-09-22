@@ -1,0 +1,5 @@
+[19:01:08] === e21_memtrace_connector: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='VLLM_TQ_INDEXER_TRACE=1' KV_OFFLOAD_OPTS='"store_threshold":2' CHURN=1
+[19:05:32] started: [19:05:32] READY po 265 s [19:05:32] host RAM after start: pinned(shmem)=45 GB MemAvailable=668 GB 
+[19:07:29] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[19:07:40] xid lines before/after: 0/0; GPUs after: 100,0,100,100,100,0,0,100,0,
+[19:07:40] RESULT e21_memtrace_connector: FAIL rc=2

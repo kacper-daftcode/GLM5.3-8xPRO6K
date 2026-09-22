@@ -1,0 +1,38 @@
+Process 43001: VLLM::Worker_PP0_TP1
+Python v3.12.13 (/usr/bin/python3.12)
+
+Thread 1379 (active): "MainThread"
+    send (torch/distributed/distributed_c10d.py:2629)
+    wrapper (torch/distributed/c10d_logger.py:83)
+    send_object (vllm/distributed/parallel_state.py:821)
+    isend_tensor_dict (vllm/distributed/parallel_state.py:1030)
+    execute_model (vllm/v1/worker/gpu_worker.py:1053)
+    decorate_context (torch/utils/_contextlib.py:124)
+    execute_model (vllm/v1/worker/worker_base.py:351)
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:999)
+    worker_main (vllm/v1/executor/multiproc_executor.py:892)
+    run (multiprocessing/process.py:108)
+    _bootstrap (multiprocessing/process.py:314)
+    _main (multiprocessing/spawn.py:135)
+    spawn_main (multiprocessing/spawn.py:122)
+    <module> (<string>:1)
+Thread 1969 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 1981 (active): "DeathPipeMonitor"
+    _recv (multiprocessing/connection.py:395)
+    _recv_bytes (multiprocessing/connection.py:430)
+    recv (multiprocessing/connection.py:250)
+    death_pipe_monitor (vllm/v1/executor/multiproc_executor.py:791)
+    run (threading.py:1012)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 2039 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)

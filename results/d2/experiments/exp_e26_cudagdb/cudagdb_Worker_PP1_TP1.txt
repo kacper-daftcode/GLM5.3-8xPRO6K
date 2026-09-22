@@ -1,0 +1,10 @@
+ptrace: Operation not permitted.
+Invalid coordinates requested. CUDA focus unchanged.
+No stack.
+No CUDA devices.
+No CUDA kernels.
+No CUDA blocks.
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+No stack.
+The program is not being run.

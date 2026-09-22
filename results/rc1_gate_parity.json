@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say \"Warszawa.\"\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 52,
+  "secs": 0.38,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count, along with total transfer in MB for each. They want only code with a docstring, in Polish (the request is in Polish).\n\nNginx combined log format looks like:\n```\nIP - - [timestamp] \"METHOD path HTTP/1.1\" status bytes \"referer\" \"user-agent\"\n```\n\nExample:\n```\n192.168.1.1 - - [10/Oct/2023:13:55:36 +0000] \"GET /index.html HTTP/1.1\" 200 1024 \"http://example.com\" \"Mozilla/5.0...\"\n```\n\nI need to:\n1. Parse each line with a regex\n2. Extract IP, bytes transferred\n3. Aggregate by IP: count of requests, total bytes\n4. Return top 10 by request count with transfer in MB\n\nThe user said \"Tylko kod z docstringiem\" - only code with docstring. So I should provide just the code, no extra explanation. The docstring should be in Polish since the request is in Polish.\n\nLet me write the function:\n\n```python\nimport re\nfrom collections import defaultdict\n\n# Nginx combined format:\n# IP - frank [10/Oct/2000:13:55:36 -0700] \"GET /apache_pb.gif HTTP/1.0\" 200 2326 \"http://www.example.com/start.html\" \"Mozilla/4.08 [en] (Win98; I ;Nav)\"\n\nLOG_PATTERN = re.compile(\n    r'^(?P<ip>\\S+)\\s+\\S+\\s+\\S+\\s+\\[(?P<time>[^\\]]+)\\]\\s+'\n    r'\"(?P<request>[^\"]*)\"\\s+(?P<status>\\d{3})\\s+(?P<bytes>\\d+|-)\\s+'\n    r'\"(?P<referer>[^\"]*)\"\\s+\"(?P<agent>[^\"]*)\"'\n)\n\ndef parse_nginx_log(path):\n    \"\"\"\n    Parsuje plik logu nginx w formacie combined i zwraca top 10 adresów IP\n    według liczby żądań wraz z łącznym transferem w MB dla każdego z nich.\n\n    Format combined:\n        IP - user [dd/Mon/yyyy:HH:MM:SS +zzzz] \"METODA ścieżka HTTP/x.x\"\n        status bytes \"referer\" \"user-agent\"\n\n    Args:\n        path (str): Ścieżka do pliku logu nginx.\n\n    Returns:\n        list[tuple[str, int, float]]: Lista krotek (ip, liczba_żądań,\n        transfer_MB), posortowana malejąco po liczbie żądań, maksymalnie\n        10 elementów.\n\n    Example:\n        >>> parse_nginx_log('access.log')[0]\n        ('203.0.113.5', 421, 12.85)\n    \"\"\"\n    stats = defaultdict(lambda: [0, 0])  # ip -> [liczba żądań, suma bajtów]\n\n    with open(path, 'r', encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = LOG_PATTERN.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            bytes_str = m.group('bytes')\n            stats[ip][0] += 1\n            if bytes_str != '-':\n                stats[ip][1] += int(bytes_str)\n\n    top = sorted(stats.items(), key=lambda kv: kv[1][0], reverse=True)[:10]\n    return [(ip, count, total_bytes / (1024 * 1024)) for ip, (count, total_bytes) in top]\n```\n\nWait, should MB be 1024*1024 or 1_000_000? Typically MB in logs context is often 1024*1024 (MiB) but commonly people say MB. I'll use 1024*1024 and note it in docstring, or maybe just use it. Let me mention \"MB (1 MB = 1024*1024 bajtów)\" in the docstring\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 6.15,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify this. The sum of primes below 100 is indeed 1060. Let me double-check my addition:\n\nPrimes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nGroup them:\n2 + 3 + 5 + 7 = 17\n11 + 13 + 17 + 19 = 60\n23 + 29 = 52\n31 + 37 = 68\n41 + 43 + 47 = 131\n53 + 59 = 112\n61 + 67 = 128\n71 + 73 + 79 = 223\n83 + 89 = 172\n97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 440\n440 + 128 = 568\n568 + 223 = 791\n791 + 172 = 963\n963 + 97 = 1060\n\nYes, 1060 is correct.\n\nI should respond in Polish since the question was in Polish. I'll show the list of primes, then sum them step by step (perhaps in groups to keep it readable), and give the final answer of 1060.\n\nFormat: The response should be structured with the list of primes, then a step-by-step addition. Using groups of numbers makes it more readable. I'll use Polish language. Medium length - enough to show the work clearly but not overly verbose.\n<<<CONTENT>>>\n# Suma liczb pierwszych mniejszych od 100\n\n## Krok 1: Wypiszmy wszystkie liczby pierwsze < 100\n\n**2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97**\n\nRazem: **25 liczb pierwszych**\n\n## Krok 2: Sumujmy je grupami\n\n**Grupa 1:** 2 + 3 + 5 + 7 = **17**\n\n**Grupa 2:** 11 + 13 + 17 + 19 = **60**\n\n**Grupa 3:** 23 + 29 + 31 + 37 = **120**\n\n**Grupa 4:** 41 + 43 + 47 + 53 = **184**\n\n**Grupa 5:** 59 + 61 + 67 + 71 = **258**\n\n**Grupa 6:** 73 + 79 + 83 + 89 = **324**\n\n**Grupa 7:** 97 = **97**\n\n## Krok 3: Dodajemy sumy grup\n\n17 + 60 = 77\n77 + 120 = 197\n197 + 184 = 381\n381 + 258 = 639\n639 + 324 = 963\n963 + 97 = **1060**\n\n## Wynik\n\n$$\\text{Suma liczb pierwszych mniejszych od 100} = \\boxed{1060}$$",
+  "prompt_tokens": 42,
+  "completion_tokens": 1122,
+  "secs": 6.69,
+  "needle": [
+   "1060"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń (a Polish city) in approximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one of the oldest cities in Poland, located on the Vistula River in north-central Poland. Key historical facts:\n\n1. Founded in 1233 by the Teutonic Knights (Zakon Krzyżacki) - it received city rights from Hermann von Salza and the Grand Master. Actually, the city rights were granted in 1233 by the Teutonic Order.\n\n2. It was part of the Hanseatic League (Hanza) - became an important trade center in medieval Europe.\n\n3. In 1411, the First Peace of Toruń (Pokój toruński) was signed here, ending the war between Poland-Lithuania and the Teutonic Order (after Grunwald 1410).\n\n4. In 1466, the Second Peace of Toruń was signed, ending the Thirteen Years' War (wojna trzynastoletnia), which resulted in Royal Prussia (Prusy Królewskie) becoming part of Poland.\n\n5. Nicolaus Copernicus (Mikołaj Kopernik) was born in Toruń in 1473 - the famous astronomer.\n\n6. The city was part of Poland until the partitions - it went to Prussia in 1793 (Second Partition).\n\n7. In 1807-1813, it was part of the Duchy of Warsaw (Księstwo Warszawskie) under Napoleon.\n\n8. After Napoleon's defeat, it returned to Prussia (Congress of Vienna 1815).\n\n9. The Toruń fortress (Twierdza Toruń) was built by Prussians in the 19th century - one of the largest fortresses in Europe.\n\n10. In 1919-1920, after WWI, Toruń became part of reborn Poland (Treaty of Versailles). It became the capital of the Pomeranian Voivodeship (województwo\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.17,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system AI, który przewiduje i generuje tekst na podstawie wzorców wyuczonych z dużych ilości danych językowych. Modele językowe są podstawą wielu aplikacji AI, takich jak chatboty, tłumaczenia automatyczne i generowanie treści.\nPrzykład użycia: GPT-4, model językowy opracowany przez OpenAI, jest wykorzystywany do generowania tekstu, odpowiadania na pytania i wspomagania różnych zadań językowych.\nCzy wiesz, że? Modele językowe mogą być trenowane na wielu językach jednocześnie, co pozwala im na wielojęzyczne przetwarzanie i generowanie tekstu. Największe modele mają miliardy parametrów, co czyni je bardzo potężnymi narzędziami AI. Modele te są również wykorzystywane w badaniach naukowych, na przykład do analizy dużych zbiorów tekstów i odkrywania nowych wzorców językowych. Warto wiedzieć, że rozwój modeli językowych napędza postęp w dziedzinie AI, otwierając nowe możliwości w automatyzacji i analizie danych. Modele te są również wykorzystywane w edukacji, pomagając uczniom i studentom w nauce języków oraz w tworzeniu spersonalizowanych materiałów edukacyjnych. W przyszłości modele",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.41,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the weather in Kraków in Celsius. I should use the get_weather tool with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-8a2e417a160fa9a3\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 52,
+  "secs": 0.41,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55. 5436-ZETA; turkusowy; 13:55.",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 4.59,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " Nie uzywaj zadnych innych znakow. Nie dodawaj nic od siebie. Nie tlumacz sie. Nie dodawaj zadnych komentarzy. Nie dodawaj zadnych wyjasnien. Nie dodawaj zadnych znakow zapytania. Nie dodawaj zadnych znakow wykrzyknienia. Nie dodawaj zadnych innych znakow interpunkcyjnych. Nie dodawaj zadnych innych",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 18.38,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": false
+ }
+]

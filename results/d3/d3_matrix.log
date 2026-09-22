@@ -1,0 +1,13 @@
+[11:20:52] == static ()
+[11:24:02] static others=8 seed=16978 rc=0: dlugi prefill: 131792 tok, TTFT 47.7 s => 2763 tok/s (okno [2.0, 49.7] s); others=8 | old x8 W TRAKCIE prefillu: srednio 14.4 tok/s per strumien (min 13.8, max 14.9), lacznie 115 tok/s | new: TTFT 0.37 s ITL p50 179 ms W TRAKCIE prefillu: 5.4 chunk/s ~ 16.7 tok/s (241 chunkow)  
+[11:25:18] static others=16 seed=17047 rc=0: dlugi prefill: 130340 tok, TTFT 50.1 s => 2603 tok/s (okno [2.0, 52.1] s); others=16 | old x16 W TRAKCIE prefillu: srednio 13.4 tok/s per strumien (min 12.4, max 14.6), lacznie 214 tok/s | new: TTFT 0.55 s ITL p50 190 ms W TRAKCIE prefillu: 5.1 chunk/s ~ 15.6 tok/s (237 chunkow)  
+[11:25:23] static preemptions: 0
+[11:25:23] == dyn256 (VLLM_LONG_PREFILL_THRESHOLD_DYNAMIC=4:256)
+[11:28:38] dyn256 others=8 seed=17247 rc=0: dlugi prefill: 131462 tok, TTFT 68.7 s => 1913 tok/s (okno [2.0, 70.7] s); others=8 | old x8 W TRAKCIE prefillu: srednio 19.4 tok/s per strumien (min 18.7, max 20.1), lacznie 155 tok/s | new: TTFT 0.37 s ITL p50 132 ms W TRAKCIE prefillu: 7.4 chunk/s ~ 23.4 tok/s (316 chunkow)  
+[11:29:59] dyn256 others=16 seed=17323 rc=0: dlugi prefill: 132173 tok, TTFT 73.2 s => 1805 tok/s (okno [2.0, 75.2] s); others=16 | old x16 W TRAKCIE prefillu: srednio 18.3 tok/s per strumien (min 17.3, max 19.7), lacznie 293 tok/s | new: TTFT 0.32 s ITL p50 140 ms W TRAKCIE prefillu: 7.1 chunk/s ~ 21.7 tok/s (328 chunkow)  
+[11:30:04] dyn256 preemptions: 0
+[11:30:04] == dyn128 (VLLM_LONG_PREFILL_THRESHOLD_DYNAMIC=4:128)
+[11:33:10] dyn128 others=8 seed=17527 rc=0: dlugi prefill: 130712 tok, TTFT 60.9 s => 2145 tok/s (okno [2.0, 62.9] s); others=8 | old x8 W TRAKCIE prefillu: srednio 26.7 tok/s per strumien (min 25.6, max 28.2), lacznie 214 tok/s | new: TTFT 0.28 s ITL p50 97 ms W TRAKCIE prefillu: 10.3 chunk/s ~ 33.1 tok/s (311 chunkow)  
+[11:34:25] dyn128 others=16 seed=17595 rc=0: dlugi prefill: 130489 tok, TTFT 68.0 s => 1920 tok/s (okno [2.0, 70.0] s); others=16 | old x16 W TRAKCIE prefillu: srednio 23.4 tok/s per strumien (min 22.5, max 25.2), lacznie 374 tok/s | new: TTFT 0.26 s ITL p50 113 ms W TRAKCIE prefillu: 8.9 chunk/s ~ 26.7 tok/s (333 chunkow)  
+[11:34:30] dyn128 preemptions: 0
+[11:34:30] == restore plain C3 (no bind mount)

@@ -1,0 +1,5 @@
+[17:55:15] === e15b_qwen3_long: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[17:56:57] started: [17:56:57] READY po 105 s 
+[17:59:29] reproducer finished: [17:56:58] cold   : prompt=24109 TTFT=  0.30s total=   0.5s ( 81688 tok/s prefill) needle=NIE | store=2.57G load=0.00G p|[17:57:01] gpuhit0: prompt=24109 TTFT=  0.09s total=   0.3s identical_to_cold=True  (intra-run determinism control)|[17:59:26] warm   : prompt=24109 TTFT=  0.30s total=   0.5s needle=NIE identical_to_cold=True common_prefix=253/253 load|[17:59:26] gpuhit : prompt=24109 TTFT=  0.08s total=   0.3s identical_to_warm=True | store=1284.07G load=0.00G pc_hits/q|[17:59:26] VERDICT: FAIL  (cold TTFT 0.3 s -> warm-from-RAM 0.30 s -> GPU hit 0.08 s)|
+[17:59:30] xid lines before/after: 0/0; GPUs after: 0,0,0,0,0,0,0,0,0,
+[17:59:33] RESULT e15b_qwen3_long: PASS

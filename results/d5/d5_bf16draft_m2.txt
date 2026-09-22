@@ -1,0 +1,1 @@
+vllm:request_success_total=504 vllm:spec_decode_num_drafts_total=46057 vllm:spec_decode_num_accepted_tokens_total=112817 

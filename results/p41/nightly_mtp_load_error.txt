@@ -1,0 +1,41 @@
+(Worker pid=1596) WARNING 09-19 11:43:47 [symm_mem.py:67] SymmMemCommunicator: Device capability 12.0 not supported, communicator is not available.
+(Worker pid=1253) WARNING 09-19 11:43:47 [flashinfer_all_reduce.py:382] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1452) WARNING 09-19 11:43:47 [flashinfer_all_reduce.py:382] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1743) WARNING 09-19 11:43:47 [flashinfer_all_reduce.py:382] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1596) WARNING 09-19 11:43:47 [flashinfer_all_reduce.py:382] FlashInfer All Reduce is disabled because it is not supported for world_size=4.
+(Worker pid=1253) WARNING 09-19 11:43:47 [custom_all_reduce.py:237] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1452) WARNING 09-19 11:43:47 [custom_all_reduce.py:237] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1596) WARNING 09-19 11:43:47 [custom_all_reduce.py:237] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1253) INFO 09-19 11:43:47 [cuda_communicator.py:326] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'tp:0' out of potential backends: ['FLASHINFER_PCIE_IPC', 'FLASHINFER', 'NCCL_SYMM_MEM', 'QUICK_REDUCE', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=1743) WARNING 09-19 11:43:47 [custom_all_reduce.py:237] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=1253) INFO 09-19 11:43:48 [cuda_communicator.py:326] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'pp:0' out of potential backends: ['FLASHINFER_PCIE_IPC', 'FLASHINFER', 'NCCL_SYMM_MEM', 'QUICK_REDUCE', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=1253) INFO 09-19 11:43:48 [cuda_communicator.py:326] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'ep:0' out of potential backends: ['FLASHINFER_PCIE_IPC', 'FLASHINFER', 'NCCL_SYMM_MEM', 'QUICK_REDUCE', 'AITER_CUSTOM', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(Worker pid=1253) INFO 09-19 11:43:48 [parallel_state.py:2261] rank 0 in world size 8 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, ETP rank 0, EP rank 0, EPLB rank N/A
+(Worker pid=1253) INFO 09-19 11:43:48 [gpu_worker.py:445] Using V2 Model Runner
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [model_runner.py:387] Loading model from scratch...
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [cuda.py:536] Using FLASHINFER_MLA_SPARSE_SM120 attention backend out of potential backends: ['FLASHINFER_MLA_SPARSE_SM120'].
+(Worker_PP0_TP0 pid=1253) WARNING 09-19 11:43:49 [mla_attention.py:603] Sparse MLA layer has no dense-MHA prefill path; using the top-k MQA path only.
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [deep_gemm.py:197] deep_gemm not found in site-packages, trying vendored vllm.third_party.deep_gemm
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [deep_gemm.py:224] DeepGEMM PDL enabled on vllm.third_party.deep_gemm.
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [deep_gemm.py:136] DeepGEMM E8M0 enabled on current platform.
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:49 [nvfp4.py:302] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASHINFER_CUTEDSL', 'FLASHINFER_CUTEDSL_BATCHED', 'FLASHINFER_CUTLASS', 'VLLM_CUTLASS', 'MARLIN', 'HUMMING', 'EMULATION'].
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:50 [weight_utils.py:900] Filesystem type for checkpoints: EXT4. Checkpoint size: 432.90 GiB. Available RAM: 724.13 GiB.
+(Worker_PP0_TP0 pid=1253) INFO 09-19 11:43:50 [weight_utils.py:923] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   0% Completed | 0/87 [00:00<?, ?it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   1% Completed | 1/87 [00:00<00:25,  3.39it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   2% Completed | 2/87 [00:00<00:24,  3.47it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   3% Completed | 3/87 [00:00<00:23,  3.58it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   5% Completed | 4/87 [00:01<00:22,  3.76it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   6% Completed | 5/87 [00:01<00:21,  3.81it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   7% Completed | 6/87 [00:01<00:20,  3.86it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   8% Completed | 7/87 [00:01<00:20,  3.96it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:   9% Completed | 8/87 [00:02<00:19,  3.99it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  10% Completed | 9/87 [00:02<00:19,  3.94it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  11% Completed | 10/87 [00:02<00:19,  3.87it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  13% Completed | 11/87 [00:02<00:19,  3.81it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  14% Completed | 12/87 [00:03<00:19,  3.82it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  15% Completed | 13/87 [00:03<00:18,  3.93it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  16% Completed | 14/87 [00:03<00:18,  4.04it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  17% Completed | 15/87 [00:03<00:18,  3.98it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  18% Completed | 16/87 [00:04<00:18,  3.94it/s]
+(Worker_PP0_TP0 pid=1253) Loading safetensors checkpoint shards:  20% Completed | 17/87 [00:04<00:17,  3.95it/s]

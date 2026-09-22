@@ -1,0 +1,82 @@
+{
+ "len": 650000,
+ "seed": 1453,
+ "phases": {
+  "cold": {
+   "ttft": 186.5821665140029,
+   "total": 187.756344196001,
+   "prompt_tokens": 649508,
+   "completion_tokens": 175,
+   "needle": true,
+   "text": "The user is asking me to answer three questions based on the text:\n1. What is the access code to the server room?\n2. What is Marek Kowalski's favorite color?\n3. What time does the train to Gdynia depart?\n\nLooking through the text, I can find these pieces of information embedded within the noise:\n\n1. \"Kod dostepu do serwerowni to 10182-ZETA.\"\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1456.\"\n3. \"Pociag do Gdyni odjezdza o godzinie 7:49.\"\n\nLet me provide the answers in one line as requested.1) 10182-ZETA; 2) turkusowy (numer 1456); 3) 7:49.",
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 79786336256.0,
+    "vllm:kv_offload_store_time": 3.220672831796107,
+    "vllm:prefix_cache_queries": 649508.0,
+    "vllm:prefix_cache_hits": 0.0,
+    "vllm:external_prefix_cache_queries": 649508.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit0": {
+   "ttft": 1.0720030239972402,
+   "total": 2.398540399997728,
+   "identical": false,
+   "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 10182-ZETA.\" - The access code is 10182-ZETA.\n\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1456.\" - Marek Kowalski's favorite color is turquoise (turkusowy), number 1456.\n\n3. \"Pociag do Gdyni odjezdza o godzinie 7:49.\" - The train to Gdynia departs at 7:49.\n\nLet me provide a concise answer in one line as requested.Kod dostępu do serwerowni: 10182-ZETA; ulubiony kolor Marka Kowalskiego: turkusowy (numer 1456); pociąg do Gdyni odjeżdża o 7:49."
+  },
+  "churn": {
+   "tokens": 1648134,
+   "metrics": {
+    "vllm:kv_offload_store_bytes": 282239840256.0,
+    "vllm:kv_offload_store_time": 11.598010429061954,
+    "vllm:prefix_cache_queries": 2947150.0,
+    "vllm:prefix_cache_hits": 649408.0,
+    "vllm:external_prefix_cache_queries": 2297742.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "warm": {
+   "ttft": 1.3300892499973997,
+   "total": 2.573803469997074,
+   "prompt_tokens": 649508,
+   "completion_tokens": 219,
+   "needle": true,
+   "identical": false,
+   "common_prefix": 290,
+   "load_bytes": 59446638592.0,
+   "text": "The user is asking me to answer three questions based on the text:\n1. What is the access code to the server room?\n2. What is Marek Kowalski's favorite color?\n3. What time does the train to Gdynia depart?\n\nLooking through the text, I can find these pieces of information embedded within the random text:\n\n1. \"Kod dostepu do serwerowni to 10182-ZETA.\" - The access code is 10182-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 1456.\" - Marek Kowalski's favorite color is turquoise, number 1456\n3. \"Pociag do Gdyni odjezdza o godzinie 7:49.\" - The train to Gdynia departs at 7:49\n\nLet me provide the answers in one line as requested.(1) 10182-ZETA (2) turkusowy (nr 1456) (3) 7:49",
+   "metrics": {
+    "vllm:kv_offload_load_bytes": 59446638592.0,
+    "vllm:kv_offload_load_time": 2.044032653808594,
+    "vllm:kv_offload_store_bytes": 282239840256.0,
+    "vllm:kv_offload_store_time": 11.598010429061954,
+    "vllm:prefix_cache_queries": 3596658.0,
+    "vllm:prefix_cache_hits": 814912.0,
+    "vllm:external_prefix_cache_queries": 2781746.0,
+    "vllm:external_prefix_cache_hits": 483904.0,
+    "vllm:num_preemptions": 0.0
+   }
+  },
+  "gpuhit": {
+   "ttft": 1.0277802159980638,
+   "total": 2.367420634996961,
+   "prompt_tokens": 649508,
+   "identical": false,
+   "metrics": {
+    "vllm:kv_offload_load_bytes": 59446638592.0,
+    "vllm:kv_offload_load_time": 2.044032653808594,
+    "vllm:kv_offload_store_bytes": 282239840256.0,
+    "vllm:kv_offload_store_time": 11.598010429061954,
+    "vllm:prefix_cache_queries": 4246166.0,
+    "vllm:prefix_cache_hits": 1464320.0,
+    "vllm:external_prefix_cache_queries": 2781846.0,
+    "vllm:external_prefix_cache_hits": 483904.0,
+    "vllm:num_preemptions": 0.0
+   }
+  }
+ },
+ "verdict": "PASS",
+ "fail_reasons": []
+}

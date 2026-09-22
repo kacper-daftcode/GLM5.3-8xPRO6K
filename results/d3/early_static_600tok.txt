@@ -1,0 +1,14 @@
+=== static 512, others=1
+dlugi prefill: 131415 tok, TTFT 30.1 s => 4368 tok/s (okno [2.0, 32.1] s); others=1
+ old: TTFT 0.12 s (start 0.0 s), 600 tok / 223 chunkow (2.69 tok/chunk), ITL p50 158 ms p95 169 ms | W TRAKCIE prefillu: 6.4 chunk/s ~ 17.2 tok/s (130 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.43 s (start 5.0 s), 200 tok / 67 chunkow (2.99 tok/chunk), ITL p50 164 ms p95 168 ms | W TRAKCIE prefillu: 6.1 chunk/s ~ 18.2 tok/s (67 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== static 512, others=8
+dlugi prefill: 132092 tok, TTFT 42.0 s => 3145 tok/s (okno [2.0, 44.0] s); others=8
+old x8 W TRAKCIE prefillu: srednio 14.6 tok/s per strumien (min 13.0, max 15.7), lacznie 117 tok/s
+ old: TTFT 0.08 s (start 0.0 s), 600 tok / 262 chunkow (2.29 tok/chunk), ITL p50 176 ms p95 187 ms | W TRAKCIE prefillu: 5.7 chunk/s ~ 13.0 tok/s (218 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.37 s (start 5.0 s), 200 tok / 68 chunkow (2.94 tok/chunk), ITL p50 173 ms p95 177 ms | W TRAKCIE prefillu: 5.8 chunk/s ~ 17.0 tok/s (68 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== static 512, others=16
+dlugi prefill: 131065 tok, TTFT 43.8 s => 2992 tok/s (okno [2.0, 45.8] s); others=16
+old x16 W TRAKCIE prefillu: srednio 14.0 tok/s per strumien (min 12.9, max 15.0), lacznie 224 tok/s
+ old: TTFT 0.07 s (start 0.0 s), 600 tok / 224 chunkow (2.68 tok/chunk), ITL p50 186 ms p95 199 ms | W TRAKCIE prefillu: 5.4 chunk/s ~ 14.4 tok/s (189 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.49 s (start 5.0 s), 200 tok / 68 chunkow (2.94 tok/chunk), ITL p50 183 ms p95 187 ms | W TRAKCIE prefillu: 5.5 chunk/s ~ 16.1 tok/s (68 chunkow) | po prefillu: nan chunk/s ~ nan tok/s

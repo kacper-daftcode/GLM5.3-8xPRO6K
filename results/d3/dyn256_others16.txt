@@ -1,0 +1,4 @@
+dlugi prefill: 132173 tok, TTFT 73.2 s => 1805 tok/s (okno [2.0, 75.2] s); others=16
+old x16 W TRAKCIE prefillu: srednio 18.3 tok/s per strumien (min 17.3, max 19.7), lacznie 293 tok/s
+ old: TTFT 0.09 s (start 0.0 s), 1400 tok / 542 chunkow (2.58 tok/chunk), ITL p50 142 ms p95 147 ms | W TRAKCIE prefillu: 7.0 chunk/s ~ 18.1 tok/s (508 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.32 s (start 5.0 s), 1000 tok / 328 chunkow (3.05 tok/chunk), ITL p50 140 ms p95 145 ms | W TRAKCIE prefillu: 7.1 chunk/s ~ 21.7 tok/s (328 chunkow) | po prefillu: nan chunk/s ~ nan tok/s

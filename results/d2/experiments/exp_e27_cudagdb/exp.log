@@ -1,0 +1,8 @@
+[20:00:27] === e27_cudagdb: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=2
+[20:04:16] started: [20:04:16] READY po 230 s [20:04:16] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB 
+[20:06:18] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[20:06:33] cuda-gdb Worker_PP0_TP0: 8 lines, kernels: 
+[20:06:46] cuda-gdb Worker_PP1_TP0: 8 lines, kernels: 
+[20:07:00] cuda-gdb Worker_PP1_TP1: 8 lines, kernels: 
+[20:07:09] xid lines before/after: 0/0; GPUs after: 100,100,100,0,100,100,0,0,100,
+[20:07:09] RESULT e27_cudagdb: FAIL rc=2

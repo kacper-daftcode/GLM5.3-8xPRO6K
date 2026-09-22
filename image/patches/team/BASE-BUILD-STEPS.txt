@@ -1,0 +1,6 @@
+/bin/sh -c pip install --no-cache-dir flashinfer-python==0.6.14
+/bin/sh -c cd /usr/local/lib/python3.12/dist-packages && patch -p1 < /tmp/dcp_sm120.patch && python3 -c "import ast; ast.parse(open('vllm/v1/attention/backends/mla/flashinfer_mla_sparse_sm120.py').read()); print('SKLADNIA-OK')"
+/bin/sh -c python3 /patch/patch_flashinfer.py && python3 /patch/patch_vllm.py     && cp /patch/vllm_nvfp4_cache.py /usr/local/lib/python3.12/dist-packages/
+/bin/sh -c mkdir -p /opt/nvfp4ext && TORCH_EXTENSIONS_DIR=/opt/nvfp4ext python3 -c "from torch.utils.cpp_extension import load; load(name='nvfp4_cache_ext', sources=['/patch/nvfp4_cache_ext.cu'],      extra_cuda_cflags=['-O3','--generate-code=arch=compute_120a,code=sm_120a'],      verbose=True)"     && python3 -c "import vllm_nvfp4_cache; print('LOADER-OK')"
+/bin/sh -c python3 -c "from flashinfer.jit.mla import gen_sparse_mla_sm120_module; gen_sparse_mla_sm120_module().build(True); print('JIT-BAKED')"
+/bin/sh -c python3 /patch/patch_custom_ar_pcie.py

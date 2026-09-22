@@ -1,0 +1,26 @@
+[10:55:28] READY po 125 s
+=== dynamic 4:256, others=8
+dlugi prefill: 131176 tok, TTFT 38.5 s => 3411 tok/s (okno [2.0, 40.5] s); others=8
+old x8 W TRAKCIE prefillu: srednio 20.8 tok/s per strumien (min 19.1, max 23.0), lacznie 166 tok/s
+ new: TTFT 0.37 s (start 5.0 s), 200 tok / 69 chunkow (2.90 tok/chunk), ITL p50 128 ms p95 130 ms | W TRAKCIE prefillu: 7.8 chunk/s ~ 22.7 tok/s (69 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== dynamic 4:256, others=8
+dlugi prefill: 131265 tok, TTFT 36.7 s => 3576 tok/s (okno [2.0, 38.7] s); others=8
+old x8 W TRAKCIE prefillu: srednio 20.5 tok/s per strumien (min 19.6, max 22.0), lacznie 164 tok/s
+ new: TTFT 0.39 s (start 5.0 s), 200 tok / 65 chunkow (3.08 tok/chunk), ITL p50 128 ms p95 130 ms | W TRAKCIE prefillu: 7.7 chunk/s ~ 23.6 tok/s (65 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== dynamic 4:256, others=16
+dlugi prefill: 130655 tok, TTFT 40.3 s => 3238 tok/s (okno [2.0, 42.4] s); others=16
+old x16 W TRAKCIE prefillu: srednio 19.3 tok/s per strumien (min 17.7, max 20.5), lacznie 309 tok/s
+ new: TTFT 0.32 s (start 5.0 s), 200 tok / 68 chunkow (2.94 tok/chunk), ITL p50 137 ms p95 138 ms | W TRAKCIE prefillu: 7.3 chunk/s ~ 21.6 tok/s (68 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+[10:59:33] READY po 125 s
+=== dynamic 4:128, others=8
+dlugi prefill: 130302 tok, TTFT 35.5 s => 3669 tok/s (okno [2.0, 37.5] s); others=8
+old x8 W TRAKCIE prefillu: srednio 27.9 tok/s per strumien (min 24.1, max 31.2), lacznie 223 tok/s
+ new: TTFT 0.22 s (start 5.0 s), 200 tok / 66 chunkow (3.03 tok/chunk), ITL p50 96 ms p95 97 ms | W TRAKCIE prefillu: 10.5 chunk/s ~ 31.7 tok/s (66 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== dynamic 4:128, others=8
+dlugi prefill: 131580 tok, TTFT 33.4 s => 3943 tok/s (okno [2.0, 35.4] s); others=8
+old x8 W TRAKCIE prefillu: srednio 28.2 tok/s per strumien (min 26.3, max 31.1), lacznie 226 tok/s
+ new: TTFT 0.26 s (start 5.0 s), 200 tok / 63 chunkow (3.17 tok/chunk), ITL p50 96 ms p95 97 ms | W TRAKCIE prefillu: 10.4 chunk/s ~ 33.0 tok/s (63 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+=== dynamic 4:128, others=16
+dlugi prefill: 130748 tok, TTFT 37.1 s => 3525 tok/s (okno [2.0, 39.1] s); others=16
+old x16 W TRAKCIE prefillu: srednio 24.7 tok/s per strumien (min 22.9, max 27.0), lacznie 396 tok/s
+ new: TTFT 0.32 s (start 5.0 s), 200 tok / 64 chunkow (3.12 tok/chunk), ITL p50 109 ms p95 110 ms | W TRAKCIE prefillu: 9.2 chunk/s ~ 28.7 tok/s (64 chunkow) | po prefillu: nan chunk/s ~ nan tok/s

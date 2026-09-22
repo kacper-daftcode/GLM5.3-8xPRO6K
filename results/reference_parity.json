@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). Since they asked in Polish and requested one word, I should answer \"Warszawa\".\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 54,
+  "secs": 0.41,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses an nginx log in combined format and returns top 10 IPs by request count, plus total transfer in MB for each. They want only code with a docstring. The request is in Polish, so the docstring should probably be in Polish too.\n\nNginx combined format looks like:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nExample:\n```\n127.0.0.1 - - [10/Oct/2023:13:55:36 -0700] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com/\" \"Mozilla/5.0\"\n```\n\nNote: `$body_bytes_sent` can be `-` in some cases (though usually it's 0). Actually in nginx, body_bytes_sent is always a number, but in Apache logs it can be `-`. To be safe, handle `-` as 0.\n\nI need to write a regex to parse this. The tricky parts:\n- The request line can contain quotes? No, the request is quoted with `\"` and user agents can contain `\"` escaped as `\\\"`. A common approach is to use a regex that matches non-greedy or handles escaped quotes.\n\nA robust regex for combined format:\n\n```python\nLOG_PATTERN = re.compile(\n    r'(?P<ip>\\S+)\\s+-\\s+(?P<user>\\S+)\\s+\\[(?P<time>[^\\]]+)\\]\\s+'\n    r'\"(?P<request>[^\"]*)\"\\s+(?P<status>\\d{3})\\s+(?P<bytes>\\d+|-)\\s+'\n    r'\"(?P<referer>[^\"]*)\"\\s+\"(?P<agent>[^\"]*)\"'\n)\n```\n\nBut user agents with escaped quotes `\\\"` would break `[^\"]*`. A more robust pattern uses `(?:[^\"\\\\]|\\\\.)*` for quoted strings. Let me use that.\n\nActually, for simplicity and robustness:\n\n```python\n_QUOTED = r'\"(?:[^\"\\\\]|\\\\.)*\"'\n```\n\nLet me write the function:\n\n```python\nimport re\nfrom collections import Counter, defaultdict\n\ndef parse_nginx_log(path, top_n=10):\n    \"\"\"\n    Parsuje plik logu nginx (combined format) i zwraca statystyki per IP.\n\n    Combined format:\n        $remote_addr - $remote_user [$time_local] \"$request\"\n        $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n\n    Args:\n        path: Ścieżka do pliku logu.\n        top_n: Liczba topowych adresów IP do zwrócenia (domyślnie 10).\n\n    Returns:\n        Lista krotek (ip, liczba_zapytań, transfer_MB) posortowana malejąco\n        wg liczby żądań, ograniczona do top_n wpisów. Transfer podany jest\n        w megabajtach (1 MB = 1024**2 bajtów), zaokrąglony do 2 miejsc.\n\n    Raises:\n        FileNotFoundError: Gdy plik logu nie istnieje.\n    \"\"\"\n    pattern = re.compile(\n        r'^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<time>[^\\]]+)\\] '\n        r'\"(?P<request>(?:[^\"\\\\]|\\\\.)*)\" '\n        r'(?P<status>\\d{3}) (?P<bytes>\\d+|-) '\n        r'\"(?P<referer>(?:[^\"\\\\]|\\\\.)*)\" '\n        r'\"(?P<agent>(?:[^\"\\\\]|\\\\.)*)\"'\n    )\n    counts = Counter()\n    bytes_sent = defaultdict(int)\n\n    with open(path, encoding=\"utf-8\", errors=\"replace\") as f:\n        for line in f:\n            m = pattern.match(line)\n            if not m:\n                continue  # pomiń niepoprawne linie\n            counts[m[\"ip\"]] += 1\n            raw = m[\"bytes\"]\n            bytes_sent[m[\"ip\"]] += 0 if raw == \"-\" else int(raw)\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 6.1,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify this. The known sum of primes below 100 is indeed 1060.\n\nLet me double-check my addition:\n- Primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 (first 10)\n  2+3 = 5\n  5+5 = 10\n  10+7 = 17\n  17+11 = 28\n  28+13 = 41\n  41+17 = 58\n  58+19 = 77\n  77+23 = 100\n  100+29 = 129\n  Sum of first 10 primes = 129 ✓\n\n- Next 10: 31, 37, 41, 43, 47, 53, 59, 61, 67, 71\n  31+37 = 68\n  68+41 = 109\n  109+43 = 152\n  152+47 = 199\n  199+53 = 252\n  252+59 = 311\n  311+61 = 372\n  372+67 = 439\n  439+71 = 510\n  Sum = 510\n  Running total: 129 + 510 = 639 ✓\n\n- Last 5: 73, 79, 83, 89, 97\n  73+79 = 152\n  152+83 = 235\n  235+89 = 324\n  324+97 = 421\n  Sum = 421\n  Running total: 639 + 421 = 1060 ✓\n\nGreat, the answer is 1060.\n\nI should respond in Polish since the question is in Polish. I'll show the list of primes, then sum them step by step (perhaps in groups to keep it readable), and give the final answer.\n\nFormat: The response should be structured with the list of primes, then a step-by-step addition. Using groups of numbers would make it more readable. I could use a numbered or grouped approach. Markdown is appropriate here since it's a chat interface. I'll keep it clear and organized but not overly long.\n<<<CONTENT>>>\n# Suma liczb pierwszych mniejszych od 100\n\n## Krok 1: Wypiszmy wszystkie liczby pierwsze mniejsze od 100\n\nJest ich **25**:\n\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\n## Krok 2: Sumujemy po kolei\n\n| Dodawanie | Wynik |\n|-----------|-------|\n| 2 + 3 | 5 |\n| 5 + 5 | 10 |\n| 10 + 7 | 17 |\n| 17 + 11 | 28 |\n| 28 + 13 | 41 |\n| 41 + 17 | 58 |\n| 58 + 19 | 77 |\n| 77 + 23 | 100 |\n| 100 + 29 | 129 |\n| 129 + 31 | 160 |\n| 160 + 37 | 197 |\n| 197 + 41 | 238 |\n| 238 + 43 | 281 |\n| 281 + 47 | 328 |\n| 328 + 53 | 381 |\n| 381 + 59 | 440 |\n| 440 + 61 | 501 |\n| 501 + 67 | 568 |\n| 568 +",
+  "prompt_tokens": 42,
+  "completion_tokens": 1200,
+  "secs": 7.28,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń (a Polish city) in approximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one of Poland's oldest cities, located on the Vistula River. Key historical facts:\n\n1. Founded by the Teutonic Knights in 1233 (the city rights were granted by the Teutonic Order, specifically by Hermann von Salza's charter). Actually, the city was relocated around 1236 to its current position.\n\n2. It was part of the Hanseatic League - joined in the 13th century, becoming an important trade center.\n\n3. It was the birthplace of Nicolaus Copernicus (Mikołaj Kopernik), born February 19, 1473.\n\n4. The Peace of Toruń (1466) - ended the Thirteen Years' War between Poland and the Teutonic Order; Toruń became part of Royal Prussia under Polish rule.\n\n5. The city was famous for gingerbread (pierniki) - a tradition dating back to the Middle Ages.\n\n6. In 1793, after the Second Partition of Poland, Toruń came under Prussian rule.\n\n7. In 1807-1813, it was part of the Duchy of Warsaw (Napoleonic era), then returned to Prussia after the Congress of Vienna.\n\n8. The Prussians built extensive fortifications in the 19th century, making Toruń a fortress city.\n\n9. In 1920, Toruń returned to Poland (after the Treaty of Versailles) and became the capital of the Pomeranian Voivodeship.\n\n10. During WWII, the city was occupied by Nazi Germany; it escaped major destruction.\n\n11. After the war, in 1975, it became the capital of the Toruń Voivodeship. In 1997, the medieval old town was inscribed on the UNESCO World Heritage List.\n\n12. In 1999, it became the capital of the Kuyavian-Pomeranian Voivodeship (shared with Bydgoszcz\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.2,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system sztucznej inteligencji, który został wytrenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe, takie jak GPT-3.5, są w stanie analizować i interpretować tekst, odpowiadać na pytania, tłumaczyć języki, generować treści i wykonywać wiele innych zadań związanych z przetwarzaniem języka naturalnego. Są one oparte na architekturze sieci neuronowych i wykorzystują techniki uczenia maszynowego, aby nauczyć się wzorców i zależności w danych tekstowych. Modele językowe mają szerokie zastosowanie w dziedzinach takich jak przetwarzanie języka naturalnego, asystenci wirtualni, automatyczne tłumaczenia, generowanie treści i wiele innych.\n## Czym jest model językowy?\nModel językowy to system sztucznej inteligencji, który został wytrenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe, takie jak GPT-3.5, są w stanie analizować i interpretować tekst, odpowiadać na pytania, tłumaczyć języki, generować treści i wykonywać wiele innych zadań związanych z przetwarzaniem języka naturalnego.\n##",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.18,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the weather in Kraków in Celsius. I should use the get_weather tool with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-8f7364c01bf0876e\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 52,
+  "secs": 0.37,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "chat",
+  "text": "The user has provided a long text with various tokens and embedded within it are three pieces of information:\n1. \"Kod dostepu do serwerowni to 5436-ZETA.\" (The access code to the server room is 5436-ZETA)\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy Numer 778.\" (Marek Kowalski's favorite color is turquoise, number 778)\n3. \"Pociag do Gdyni odjezdza o godzinie 13:55.\" (The train to Gdyni departs at 13:55)\n\nThe user asks me to answer briefly in one line:\n(1) What is the access code to the server room?\n(2) What is Marek Kowalski's favorite color?\n(3) What time does the train to Gdyni depart?\n\nLet me answer:\n1. 5436-ZETA\n2. turkusowy (turquoise)\n3. 13:55\n<<<CONTENT>>>\n(1) 5436-ZETA (2) turkusowy (3) 13:55",
+  "prompt_tokens": 32880,
+  "completion_tokens": 240,
+  "secs": 5.59,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "chat",
+  "text": "The user has provided a long text with embedded facts and asks three questions in Polish:\n1. What is the access code to the server room? — \"Kod dostepu do serwerowni to 564-ZETA.\"\n2. What is Marek Kowalski's favorite color? — \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 82.\" (turquoise, number 82)\n3. What time does the train to Gdynia depart? — \"Pociag do Gdyni odjezdza o godzinie 13:07.\"\n\nAnswer in one line, briefly.\n<<<CONTENT>>>\n(1) 564-ZETA; (2) turkusowy (numer 82); (3) 13:07.",
+  "prompt_tokens": 131297,
+  "completion_tokens": 161,
+  "secs": 18.89,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ }
+]

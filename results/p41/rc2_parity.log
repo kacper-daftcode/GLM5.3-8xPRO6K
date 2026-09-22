@@ -1,0 +1,37 @@
+[11:49:12] needle 32768: 32880 tok, 5.51 s -> "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What tim"
+[11:49:31] needle 131072: 131297 tok, 18.94 s -> "The user is asking me to extract three pieces of information from the very long text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3"
+zapisano results/p41/rc2_parity.json; 8 testow w 44 s
+        qa_short: prompt=     28 compl=  52     0.3s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.2s finish=length needle=None
+            math: prompt=     42 compl=1200     7.1s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.3s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.4s finish=length needle=None
+       tool_call: prompt=    197 compl=  52     0.4s finish=tool_calls needle=True
+    needle_32768: prompt=  32880 compl= 237     5.5s finish=stop needle=True
+   needle_131072: prompt= 131297 compl= 213    18.9s finish=stop needle=True
+
+=== porownanie z <repo>/results/reference_parity.json ===
+        qa_short: ROZNE od znaku 127/228 (56% wspolne); needle ref=True new=True
+                ref: ...' answer is Warsaw (Warszawa in Polish). Since they asked in Polish and requested one word, I should '
+                new: ...' answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say "Warszawa."\n<<'
+         code_py: ROZNE od znaku 45/2967 (2% wspolne); needle ref=None new=None
+                ref: ...'ser wants a Python function that parses an nginx log in combined format and returns top 10 IPs by re'
+                new: ...'ser wants a Python function that parses nginx logs in combined format and returns top 10 IPs by requ'
+            math: ROZNE od znaku 270/2520 (11% wspolne); needle ref=True new=True
+                ref: ..."53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n\n2 +"
+                new: ...'53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: \n1. 2\n2. 3\n3. 5\n4. 7\n5. 11\n6. 13\n7. 17\n8.'
+         pl_text: ROZNE od znaku 129/1711 (8% wspolne); needle ref=None new=None
+                ref: ..."00 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one of Poland's"
+                new: ...'00 words, in Polish. Let me think about the key historical facts about Toruń:\n\n1. Toruń was founded '
+       compl_det: ROZNE od znaku 1/1092 (0% wspolne); needle ref=None new=None
+                ref: ...' system sztucznej inteligencji, który został wytrenowany na d'
+                new: ...' rodzaj sztucznej inteligencji, który jest trenowany na dużyc'
+       tool_call: ROZNE od znaku 274/313 (88% wspolne); needle ref=True new=True
+                ref: ...'": "get_weather"}, "id": "chatcmpl-tool-8f7364c01bf0876e", "type": "function"}]'
+                new: ...'": "get_weather"}, "id": "chatcmpl-tool-984e87c528ec0d18", "type": "function"}]'
+    needle_32768: ROZNE od znaku 9/714 (1% wspolne); needle ref=True new=True
+                ref: ...'The user has provided a long text with various tokens and embedded wi'
+                new: ...'The user is asking me to extract three pieces of information from the'
+   needle_131072: ROZNE od znaku 9/494 (2% wspolne); needle ref=True new=True
+                ref: ...'The user has provided a long text with embedded facts and asks three '
+                new: ...'The user is asking me to extract three pieces of information from the'

@@ -1,0 +1,2 @@
+[14:29:12] chat L= 650000 prompt=649751  756.9s (  858 tok/s) needle=OK  expect=['21382-ZETA', 'turkusowy', '11:29'] -> "The user wants me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite c"
+[14:41:56] chat L= 650000 prompt=649001  764.0s (  849 tok/s) needle=OK  expect=['22082-ZETA', 'turkusowy', '15:09'] -> 'The user is asking me to extract three pieces of information from the very long text:\n\n1. The access code to the server room\n2. Marek Kowals'

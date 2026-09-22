@@ -1,0 +1,42 @@
+Process 43204: VLLM::Worker_PP0_TP3
+Python v3.12.13 (/usr/bin/python3.12)
+
+Thread 1435 (active+gil): "MainThread"
+    wait (vllm/distributed/device_communicators/shm_broadcast.py:196)
+    acquire_read (vllm/distributed/device_communicators/shm_broadcast.py:704)
+    __enter__ (contextlib.py:137)
+    dequeue (vllm/distributed/device_communicators/shm_broadcast.py:779)
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:990)
+    worker_main (vllm/v1/executor/multiproc_executor.py:892)
+    run (multiprocessing/process.py:108)
+    _bootstrap (multiprocessing/process.py:314)
+    _main (multiprocessing/spawn.py:135)
+    spawn_main (multiprocessing/spawn.py:122)
+    <module> (<string>:1)
+Thread 1977 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 2004 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:355)
+    get (queue.py:171)
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:983)
+    run (threading.py:1012)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 2009 (active): "DeathPipeMonitor"
+    _recv (multiprocessing/connection.py:395)
+    _recv_bytes (multiprocessing/connection.py:430)
+    recv (multiprocessing/connection.py:250)
+    death_pipe_monitor (vllm/v1/executor/multiproc_executor.py:791)
+    run (threading.py:1012)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)
+Thread 2052 (idle): "tqdm_monitor"
+    wait (threading.py:359)
+    wait (threading.py:655)
+    run (tqdm/_monitor.py:69)
+    _bootstrap_inner (threading.py:1075)
+    _bootstrap (threading.py:1032)

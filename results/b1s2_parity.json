@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say \"Warszawa.\"\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 52,
+  "secs": 0.36,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count plus total transfer in MB for each. They want only code with a docstring. The request is in Polish, so the docstring should probably be in Polish too.\n\nNginx combined log format:\n```\nIP - - [timestamp] \"METHOD path HTTP/1.1\" status bytes \"referer\" \"user-agent\"\n```\n\nExample:\n```\n192.168.1.1 - - [10/Oct/2023:13:55:36 -0700] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com\" \"Mozilla/5.0\"\n```\n\nI need to:\n1. Parse each line with a regex\n2. Count requests per IP\n3. Sum bytes transferred per IP\n4. Return top 10 by request count, with total transfer in MB\n\nThe user said \"Tylko kod z docstringiem\" - only code with docstring. So I should provide just the code, no extra explanation. The docstring should be comprehensive.\n\nLet me write the function:\n\n```python\nimport re\nfrom collections import defaultdict\nfrom pathlib import Path\n\nNGINX_COMBINED_RE = re.compile(\n    r'^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<time>[^\\]]+)\\] '\n    r'\"(?P<request>[^\"]*)\" (?P<status>\\d{3}) (?P<bytes>\\d+|-) '\n    r'\"(?P<referer>[^\"]*)\" \"(?P<agent>[^\"]*)\"'\n)\n\ndef parse_nginx_log(path):\n    \"\"\"\n    Parsuje log nginx w formacie combined i zwraca statystyki per IP.\n\n    ...\n    \"\"\"\n    stats = defaultdict(lambda: {'requests': 0, 'bytes': 0})\n    with open(path, 'r', encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = NGINX_COMBINED_RE.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            stats[ip]['requests'] += 1\n            b = m.group('bytes')\n            if b != '-':\n                stats[ip]['bytes'] += int(b)\n    \n    top = sorted(stats.items(), key=lambda kv: kv[1]['requests'], reverse=True)[:10]\n    return [\n        {'ip': ip, 'requests': s['requests'], 'transfer_mb': round(s['bytes'] / (1024 * 1024), 2)}\n        for ip, s in top\n    ]\n```\n\nShould I handle the case where bytes is \"-\"? Yes, nginx logs use \"-\" for zero bytes sometimes. Actually in combined format, $body_bytes_sent is always a number, but $bytes_sent could vary. The \"-\" appears for some fields. Let me handle both.\n\nAlso should handle gzip? No, keep it simple.\n\nThe docstring should be in Polish since the user wrote in Polish. Let me write a good docstring with Args, Returns, Examples.\n\nFormat of return: maybe a list of tuples (ip, requests, transfer_mb) or list of dicts. Dicts are clearer. Or maybe return a list of tuples. Let me use a list of dicts or namedtuples. I'll go with a list of tuples or dicts — dicts are self-documenting.\n\nActually, let me think about what's cleanest. A list of dicts:\n```python\n[{'ip': '1.2.3.4', 'requests': 100, 'transfer_mb': 12.34}, ...]\n```\n\nThat's clear. Or tuples: `[(ip, count, mb), ...]`. Both fine. I'll use dicts.\n\nShould the function accept a file path or an iterable of lines? Path is more practical. Maybe accept both — if it's a string, treat as path; if iterable, iterate. Keep it simple: accept path (str or Path).\n\nLet me also consider: should I use `re` with named groups — yes.\n\nEdge cases:\n- Malformed lines → skip (maybe count them)\n- bytes \"-\" → treat as 0\n\nThe user said \"Tylko kod z docstringiem\" — only code with doc\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 6.49,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: there are 25 primes less than 100.\n\nNow let me sum them step by step:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify this with a different grouping:\nGroup 1: 2 + 3 + 5 + 7 = 17\nGroup 2: 11 + 13 + 17 + 19 = 60\nGroup 3: 23 + 29 = 52\nGroup 4: 31 + 37 = 68\nGroup 5: 41 + 43 + 47 = 131\nGroup 6: 53 + 59 = 112\nGroup 7: 61 + 67 = 128\nGroup 8: 71 + 73 + 79 = 223\nGroup 9: 83 + 89 = 172\nGroup 10: 97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 440\n440 + 128 = 568\n568 + 223 = 791\n791 + 172 = 963\n963 + 97 = 1060\n\nGreat, the sum is 1060. This is a well-known result.\n\nI should respond in Polish since the question was asked in Polish. I'll show the step-by-step calculation.\n\nLet me structure the answer:\n1. List all primes less than 100\n2. Sum them step by step (maybe in groups to keep it readable)\n3. Give the final answer: 1060\n\nI'll use a running sum approach or group approach. Group\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 4.08,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń in approximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is a city in northern Poland, located on the Vistula River. Key historical facts:\n\n1. Founded in 1233 by the Teutonic Knights (Zakon Krzyżacki) - it received city rights from Hermann von Salza or rather from the Grand Master. Actually, the city charter was granted in 1233 by Hermann von Salza, the Grand Master of the Teutonic Order.\n\n2. It was part of the Teutonic Order state initially, but in 1454 the city rebelled against the Teutonic Knights and was incorporated into the Kingdom of Poland (Prussian Confederation cities swore allegiance to Casimir IV Jagiellon). This led to the Thirteen Years' War (1454-1466).\n\n3. The Second Peace of Toruń (1466) confirmed that Toruń (and Royal Prussia) belonged to Poland.\n\n4. Famous as the birthplace of Nicolaus Copernicus (Mikołaj Kopernik), born in 1473.\n\n5. It was an important Hanseatic city - member of the Hanseatic League, wealthy from trade (grain trade, crafts).\n\n6. Religious history: Reformation came early, city became Protestant. There were tensions between Catholics and Protestants - the \"Toruń tumult\" of 1724, when Protestants destroyed a Jesuit college, leading to executions of city officials (mayor and others) - this was called the \"Toruń tragedy\" or \"męczarnia toruńska\" and was used by Prussian propaganda later.\n\n7. After the First Partition of Poland in 1772, Toruń came under Prussian rule (though the city itself was annexed in 1793 after the Second Partition - actually, Toruń was on the border; the left bank part went to Prussia in 1772, the city itself in 1793).\n\n8. 19th century: Prussian rule,\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.58,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system sztucznej inteligencji, który jest trenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe, takie jak GPT-3.5, są w stanie analizować i interpretować tekst, odpowiadać na pytania, tłumaczyć języki, generować treści i wykonywać wiele innych zadań związanych z językiem naturalnym. Są one oparte na architekturze sieci neuronowych i wykorzystują techniki uczenia maszynowego, aby przewidywać i generować spójne i sensowne odpowiedzi na podstawie dostarczonych danych treningowych.\n## Jak działa model językowy?\nModel językowy to narzędzie, które odgrywa kluczową rolę w dziedzinie przetwarzania języka naturalnego. Jest to algorytm, który uczy się przewidywać kolejne słowa w zdaniu na podstawie kontekstu. W rezultacie model językowy jest w stanie generować spójne i logiczne teksty, które przypominają ludzki sposób wypowiedzi.\n## Podstawy działania modelu językowego\nModel językowy opiera się na analizie dużych ilości danych tekstowych. Przez proces uczenia maszynowego, model jest w stanie wychwycić wzorce i zależności między słow",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.89,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the weather in Kraków in Celsius. I should use the get_weather tool with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-bcc7eb7035cc8adb\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 52,
+  "secs": 0.39,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA; turkusowy numer 778; 13:55. 5436-ZETA; turkusowy numer 778; 13:55. 5436-ZETA; turkusowy numer 778; 13:55. 5436-ZETA; turkusowy numer 778; 13:55. 5436-ZETA; turkusowy numer 778; ",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 4.68,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. ",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 18.43,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ }
+]

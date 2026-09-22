@@ -1,0 +1,378 @@
+[New LWP 1567]
+[New LWP 1599]
+[New LWP 1600]
+[New LWP 1601]
+[New LWP 1602]
+[New LWP 1604]
+[New LWP 1606]
+[New LWP 1615]
+[New LWP 1616]
+[New LWP 1617]
+[New LWP 1618]
+[New LWP 1619]
+[New LWP 1620]
+[New LWP 1621]
+[New LWP 1622]
+[New LWP 1710]
+[New LWP 1712]
+[New LWP 1718]
+[New LWP 1729]
+[New LWP 1735]
+[New LWP 1749]
+[New LWP 1751]
+[New LWP 1761]
+[New LWP 1764]
+[New LWP 1767]
+[New LWP 1782]
+[New LWP 1785]
+[New LWP 1786]
+[New LWP 1790]
+[New LWP 1793]
+[New LWP 1806]
+[New LWP 1808]
+[New LWP 1814]
+[New LWP 1815]
+[New LWP 1818]
+[New LWP 1828]
+[New LWP 1831]
+[New LWP 1834]
+[New LWP 1838]
+[New LWP 1842]
+[New LWP 1908]
+[New LWP 1910]
+[New LWP 1940]
+[New LWP 1942]
+[New LWP 1962]
+[New LWP 1964]
+[New LWP 1966]
+[New LWP 1969]
+[New LWP 1970]
+[New LWP 1974]
+[New LWP 1975]
+[New LWP 1976]
+[New LWP 2013]
+[New LWP 2014]
+[New LWP 2030]
+[New LWP 2034]
+[New LWP 2066]
+[New LWP 2119]
+[New LWP 2120]
+[New LWP 2121]
+[New LWP 2122]
+[New LWP 2123]
+[New LWP 2124]
+[New LWP 2138]
+[New LWP 2178]
+[New LWP 2182]
+[New LWP 2261]
+[New LWP 2263]
+[New LWP 2273]
+[New LWP 2274]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x766b4c3b8280 (LWP 3993)]
+[Thread 0x766b4c3b8280 (LWP 3993) exited]
+[New Thread 0x766b4c3b8280 (LWP 3994)]
+[Thread 0x766b4c3b8280 (LWP 3994) exited]
+[New Thread 0x766b4c3b8280 (LWP 3995)]
+[Thread 0x766b4c3b8280 (LWP 3995) exited]
+[New Thread 0x766b4c3b8280 (LWP 3996)]
+[Thread 0x766b4c3b8280 (LWP 3996) exited]
+[New Thread 0x766b4c3b8280 (LWP 3997)]
+[Thread 0x766b4c3b8280 (LWP 3997) exited]
+[New Thread 0x766b4c3b8280 (LWP 3998)]
+[Thread 0x766b4c3b8280 (LWP 3998) exited]
+[New Thread 0x766b4c3b8280 (LWP 3999)]
+[Thread 0x766b4c3b8280 (LWP 3999) exited]
+[New Thread 0x766b4c3b8280 (LWP 4000)]
+[Thread 0x766b4c3b8280 (LWP 4000) exited]
+[New Thread 0x766b4c3b8280 (LWP 4001)]
+[Thread 0x766b4c3b8280 (LWP 4001) exited]
+[New Thread 0x766b4c3b8280 (LWP 4002)]
+[Thread 0x766b4c3b8280 (LWP 4002) exited]
+[New Thread 0x766b4c3b8280 (LWP 4003)]
+[Thread 0x766b4c3b8280 (LWP 4003) exited]
+[New Thread 0x766b4c3b8280 (LWP 4004)]
+[Thread 0x766b4c3b8280 (LWP 4004) exited]
+[New Thread 0x766b4c3b8280 (LWP 4005)]
+[Thread 0x766b4c3b8280 (LWP 4005) exited]
+[New Thread 0x766b4c3b8280 (LWP 4006)]
+[Thread 0x766b4c3b8280 (LWP 4006) exited]
+[New Thread 0x766b4c3b8280 (LWP 4007)]
+[Thread 0x766b4c3b8280 (LWP 4007) exited]
+[New Thread 0x766b4c3b8280 (LWP 4008)]
+[Thread 0x766b4c3b8280 (LWP 4008) exited]
+[New Thread 0x766b4c3b8280 (LWP 4009)]
+[Thread 0x766b4c3b8280 (LWP 4009) exited]
+[New Thread 0x766b4c3b8280 (LWP 4010)]
+[Thread 0x766b4c3b8280 (LWP 4010) exited]
+[New Thread 0x766b4c3b8280 (LWP 4011)]
+[Thread 0x766b4c3b8280 (LWP 4011) exited]
+[New Thread 0x766b4c3b8280 (LWP 4012)]
+[Thread 0x766b4c3b8280 (LWP 4012) exited]
+[New Thread 0x766b4c3b8280 (LWP 4013)]
+[Thread 0x766b4c3b8280 (LWP 4013) exited]
+[New Thread 0x766b4c3b8280 (LWP 4014)]
+[Thread 0x766b4c3b8280 (LWP 4014) exited]
+[New Thread 0x766b4c3b8280 (LWP 4015)]
+[Thread 0x766b4c3b8280 (LWP 4015) exited]
+[New Thread 0x766b4c3b8280 (LWP 4016)]
+[Thread 0x766b4c3b8280 (LWP 4016) exited]
+[New Thread 0x766b4c3b8280 (LWP 4017)]
+[Thread 0x766b4c3b8280 (LWP 4017) exited]
+[New Thread 0x766b4c3b8280 (LWP 4018)]
+[Thread 0x766b4c3b8280 (LWP 4018) exited]
+[New Thread 0x766b4c3b8280 (LWP 4019)]
+[Thread 0x766b4c3b8280 (LWP 4019) exited]
+[New Thread 0x766b4c3b8280 (LWP 4020)]
+[Thread 0x766b4c3b8280 (LWP 4020) exited]
+[New Thread 0x766b4c3b8280 (LWP 4021)]
+[Thread 0x766b4c3b8280 (LWP 4021) exited]
+[New Thread 0x766b4c3b8280 (LWP 4022)]
+[Thread 0x766b4c3b8280 (LWP 4022) exited]
+[New Thread 0x766b4c3b8280 (LWP 4023)]
+[Thread 0x766b4c3b8280 (LWP 4023) exited]
+[New Thread 0x766b4c3b8280 (LWP 4024)]
+[Thread 0x766b4c3b8280 (LWP 4024) exited]
+[New Thread 0x766b4c3b8280 (LWP 4025)]
+[Thread 0x766b4c3b8280 (LWP 4025) exited]
+[New Thread 0x766b4c3b8280 (LWP 4026)]
+[Thread 0x766b4c3b8280 (LWP 4026) exited]
+[New Thread 0x766b4c3b8280 (LWP 4027)]
+[Thread 0x766b4c3b8280 (LWP 4027) exited]
+[New Thread 0x766b4c3b8280 (LWP 4028)]
+[Thread 0x766b4c3b8280 (LWP 4028) exited]
+[New Thread 0x766b4c3b8280 (LWP 4029)]
+[Thread 0x766b4c3b8280 (LWP 4029) exited]
+[New Thread 0x766b4c3b8280 (LWP 4030)]
+[Thread 0x766b4c3b8280 (LWP 4030) exited]
+[New Thread 0x766b4c3b8280 (LWP 4031)]
+[Thread 0x766b4c3b8280 (LWP 4031) exited]
+[New Thread 0x766b4c3b8280 (LWP 4032)]
+[Thread 0x766b4c3b8280 (LWP 4032) exited]
+[New Thread 0x766b4c3b8280 (LWP 4033)]
+[Thread 0x766b4c3b8280 (LWP 4033) exited]
+[New Thread 0x766b4c3b8280 (LWP 4034)]
+[Thread 0x766b4c3b8280 (LWP 4034) exited]
+[New Thread 0x766b4c3b8280 (LWP 4035)]
+[Thread 0x766b4c3b8280 (LWP 4035) exited]
+[New Thread 0x766b4c3b8280 (LWP 4036)]
+[Thread 0x766b4c3b8280 (LWP 4036) exited]
+[New Thread 0x766b4c3b8280 (LWP 4037)]
+[Thread 0x766b4c3b8280 (LWP 4037) exited]
+[New Thread 0x766b4c3b8280 (LWP 4038)]
+[Thread 0x766b4c3b8280 (LWP 4038) exited]
+[New Thread 0x766b4c3b8280 (LWP 4039)]
+[Thread 0x766b4c3b8280 (LWP 4039) exited]
+[New Thread 0x766b4c3b8280 (LWP 4040)]
+[Thread 0x766b4c3b8280 (LWP 4040) exited]
+[New Thread 0x766b4c3b8280 (LWP 4041)]
+[Thread 0x766b4c3b8280 (LWP 4041) exited]
+[New Thread 0x766b4c3b8280 (LWP 4042)]
+[Thread 0x766b4c3b8280 (LWP 4042) exited]
+Attaching not possible. Please verify that software preemption is disabled and that nvidia-cuda-mps-server is not running.
+No CUDA devices.
+No CUDA kernels.
+No CUDA blocks.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x0000766b735e9d0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x0000766b46b5e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x0000766b46b5ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x0000766b45caeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x0000766b46b3408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x0000766b46b4b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x0000766b459ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x0000766b459ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x0000766b45a027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x0000766b45bd8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x0000766b45bc922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x0000766b7281376d in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#12 0x0000766b728745b8 in cudaLaunchKernel () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#13 0x0000766aa83ebb04 in top_k_per_row_prefill(torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long) () from /usr/local/lib/python3.12/dist-packages/vllm/_C_stable_libtorch.abi3.so
+#14 0x0000766aa82f0cb3 in torch::stable::detail::boxer<void (torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long), &(top_k_per_row_prefill(torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long))>::boxed_fn(unsigned long*, unsigned long, unsigned long) () from /usr/local/lib/python3.12/dist-packages/vllm/_C_stable_libtorch.abi3.so
+#15 0x0000766adacfadb1 in c10::BoxedKernel::makeFromFunctor<StableIValueBoxedKernel>(std::unique_ptr<StableIValueBoxedKernel, std::default_delete<StableIValueBoxedKernel> >)::{lambda(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)#1}::_FUN(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#16 0x0000766adad1cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#17 0x0000766aea7d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#18 0x0000766aea7d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#19 0x0000766aea7d5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#20 0x0000766aea6b947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#21 0x0000766aea0c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x000000000056cc2d in ?? ()
+#23 0x0000000000580f33 in _PyObject_Call ()
+#24 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#25 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#26 0x000000000057e34e in _PyObject_Call_Prepend ()
+#27 0x00000000006690fd in ?? ()
+#28 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#29 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#30 0x0000766aea70ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#31 0x0000766aeaa82f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#32 0x0000766adad1cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#33 0x0000766aea7d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#34 0x0000766aea7d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#35 0x0000766aea7d5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#36 0x0000766aea6b947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#37 0x0000766aea0c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#38 0x000000000056cc2d in ?? ()
+#39 0x0000000000580f33 in _PyObject_Call ()
+#40 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#41 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#42 0x000000000057e34e in _PyObject_Call_Prepend ()
+#43 0x00000000006690fd in ?? ()
+#44 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#45 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#46 0x0000000000580f8d in _PyObject_Call ()
+#47 0x000000000066dd43 in ?? ()
+#48 0x0000000000580f33 in _PyObject_Call ()
+#49 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#50 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#51 0x000000000057e34e in _PyObject_Call_Prepend ()
+#52 0x00000000006690fd in ?? ()
+#53 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#54 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#55 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#56 0x000000000057e34e in _PyObject_Call_Prepend ()
+#57 0x00000000006690fd in ?? ()
+#58 0x0000000000580f33 in _PyObject_Call ()
+#59 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#60 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#61 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#62 0x00000000006690fd in ?? ()
+#63 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#64 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#65 0x000000000059961d in ?? ()
+#66 0x00000000005991ae in ?? ()
+#67 0x0000000000580f8d in _PyObject_Call ()
+#68 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#69 0x000000000059961d in ?? ()
+#70 0x00000000005991ae in ?? ()
+#71 0x0000000000580f8d in _PyObject_Call ()
+#72 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#73 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#74 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#75 0x00000000006690fd in ?? ()
+#76 0x0000000000580f33 in _PyObject_Call ()
+#77 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#78 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#79 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#80 0x00000000006690fd in ?? ()
+#81 0x0000000000580f33 in _PyObject_Call ()
+#82 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#83 0x000000000059961d in ?? ()
+#84 0x00000000005991ae in ?? ()
+#85 0x0000000000580f8d in _PyObject_Call ()
+#86 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#87 0x000000000059915f in ?? ()
+#88 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#89 0x000000000061f469 in PyEval_EvalCode ()
+#90 0x000000000065b0eb in ?? ()
+#91 0x0000000000656186 in ?? ()
+#92 0x00000000006520b3 in PyRun_StringFlags ()
+#93 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#94 0x000000000064f3c2 in Py_RunMain ()
+#95 0x00000000006082cd in Py_BytesMain ()
+#96 0x0000766b7350ad90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#97 0x0000766b7350ae40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#98 0x0000000000608145 in _start ()
+No CUDA Warps.
+Invalid coordinates requested. CUDA focus unchanged.
+#0  0x0000766b735e9d0b in sched_yield () from /lib/x86_64-linux-gnu/libc.so.6
+#1  0x0000766b46b5e828 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#2  0x0000766b46b5ee28 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#3  0x0000766b45caeb09 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#4  0x0000766b46b3408f in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#5  0x0000766b46b4b48a in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#6  0x0000766b459ff369 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#7  0x0000766b459ffcb0 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#8  0x0000766b45a027f9 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#9  0x0000766b45bd8600 in ?? () from /lib/x86_64-linux-gnu/libcuda.so.1
+#10 0x0000766b45bc922b in cuLaunchKernel () from /lib/x86_64-linux-gnu/libcuda.so.1
+#11 0x0000766b7281376d in ?? () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#12 0x0000766b728745b8 in cudaLaunchKernel () from /usr/local/lib/python3.12/dist-packages/torch/lib/../../nvidia/cu13/lib/libcudart.so.13
+#13 0x0000766aa83ebb04 in top_k_per_row_prefill(torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long) () from /usr/local/lib/python3.12/dist-packages/vllm/_C_stable_libtorch.abi3.so
+#14 0x0000766aa82f0cb3 in torch::stable::detail::boxer<void (torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long), &(top_k_per_row_prefill(torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor const&, torch::stable::Tensor&, long, long, long, long))>::boxed_fn(unsigned long*, unsigned long, unsigned long) () from /usr/local/lib/python3.12/dist-packages/vllm/_C_stable_libtorch.abi3.so
+#15 0x0000766adacfadb1 in c10::BoxedKernel::makeFromFunctor<StableIValueBoxedKernel>(std::unique_ptr<StableIValueBoxedKernel, std::default_delete<StableIValueBoxedKernel> >)::{lambda(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*)#1}::_FUN(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#16 0x0000766adad1cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#17 0x0000766aea7d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#18 0x0000766aea7d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#19 0x0000766aea7d5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#20 0x0000766aea6b947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#21 0x0000766aea0c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#22 0x000000000056cc2d in ?? ()
+#23 0x0000000000580f33 in _PyObject_Call ()
+#24 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#25 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#26 0x000000000057e34e in _PyObject_Call_Prepend ()
+#27 0x00000000006690fd in ?? ()
+#28 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#29 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#30 0x0000766aea70ba96 in pybind11::object pybind11::detail::object_api<pybind11::handle>::operator()<(pybind11::return_value_policy)1, pybind11::detail::args_proxy, pybind11::detail::kwargs_proxy>(pybind11::detail::args_proxy&&, pybind11::detail::kwargs_proxy&&) const () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#31 0x0000766aeaa82f45 in torch::impl::dispatch::PythonKernelHolder::operator()(c10::OperatorHandle const&, c10::DispatchKeySet, std::vector<c10::IValue, std::allocator<c10::IValue> >*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#32 0x0000766adad1cc8c in c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const [clone .isra.0] () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so
+#33 0x0000766aea7d5344 in torch::jit::invokeOperatorFromPython(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, pybind11::args const&, pybind11::kwargs const&, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#34 0x0000766aea7d5848 in torch::jit::_get_operation_for_overload_or_packet(c10::ArrayRef<std::shared_ptr<torch::jit::Operator> >, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#35 0x0000766aea7d5b58 in torch::jit::_get_operation_for_overload_or_packet(std::vector<std::shared_ptr<torch::jit::Operator>, std::allocator<std::shared_ptr<torch::jit::Operator> > > const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::optional<c10::DispatchKey>) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#36 0x0000766aea6b947d in pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}, pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)#2}::operator()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const::{lambda(pybind11::args const&, pybind11::kwargs const&)#1}&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#37 0x0000766aea0c5060 in pybind11::cpp_function::dispatcher(_object*, _object*, _object*) () from /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so
+#38 0x000000000056cc2d in ?? ()
+#39 0x0000000000580f33 in _PyObject_Call ()
+#40 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#41 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#42 0x000000000057e34e in _PyObject_Call_Prepend ()
+#43 0x00000000006690fd in ?? ()
+#44 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#45 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#46 0x0000000000580f8d in _PyObject_Call ()
+#47 0x000000000066dd43 in ?? ()
+#48 0x0000000000580f33 in _PyObject_Call ()
+#49 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#50 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#51 0x000000000057e34e in _PyObject_Call_Prepend ()
+#52 0x00000000006690fd in ?? ()
+#53 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#54 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#55 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#56 0x000000000057e34e in _PyObject_Call_Prepend ()
+#57 0x00000000006690fd in ?? ()
+#58 0x0000000000580f33 in _PyObject_Call ()
+#59 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#60 0x0000000000541b48 in _PyObject_FastCallDictTstate ()
+#61 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#62 0x00000000006690fd in ?? ()
+#63 0x000000000053f2ab in _PyObject_MakeTpCall ()
+#64 0x0000000000549fe0 in _PyEval_EvalFrameDefault ()
+#65 0x000000000059961d in ?? ()
+#66 0x00000000005991ae in ?? ()
+#67 0x0000000000580f8d in _PyObject_Call ()
+#68 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#69 0x000000000059961d in ?? ()
+#70 0x00000000005991ae in ?? ()
+#71 0x0000000000580f8d in _PyObject_Call ()
+#72 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#73 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#74 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#75 0x00000000006690fd in ?? ()
+#76 0x0000000000580f33 in _PyObject_Call ()
+#77 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#78 0x0000000000541bc6 in _PyObject_FastCallDictTstate ()
+#79 0x000000000057e2e9 in _PyObject_Call_Prepend ()
+#80 0x00000000006690fd in ?? ()
+#81 0x0000000000580f33 in _PyObject_Call ()
+#82 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#83 0x000000000059961d in ?? ()
+#84 0x00000000005991ae in ?? ()
+#85 0x0000000000580f8d in _PyObject_Call ()
+#86 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#87 0x000000000059915f in ?? ()
+#88 0x000000000054e8b7 in _PyEval_EvalFrameDefault ()
+#89 0x000000000061f469 in PyEval_EvalCode ()
+#90 0x000000000065b0eb in ?? ()
+#91 0x0000000000656186 in ?? ()
+#92 0x00000000006520b3 in PyRun_StringFlags ()
+#93 0x0000000000651dbe in PyRun_SimpleStringFlags ()
+#94 0x000000000064f3c2 in Py_RunMain ()
+#95 0x00000000006082cd in Py_BytesMain ()
+#96 0x0000766b7350ad90 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#97 0x0000766b7350ae40 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+#98 0x0000000000608145 in _start ()
+[Inferior 1 (process 1562) detached]

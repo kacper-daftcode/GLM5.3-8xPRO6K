@@ -1,0 +1,17 @@
+[07:24:56] waiting for gsm8k pid 1628011 (C3 full)
+[07:35:56] C3 full done: {'model': 'glm-5.3', 'n': 1319, 'accuracy': 0.9719, 'errors': 0, 'truncated': 12, 'completion_tokens': 418495, 'wall_s': 866.3, 'tok_s': 483.1, 'conc': 8, 'max_tokens': 2048, 'seed': 0}
+[07:35:56] == nolmhead: FP8=fused_qkv_a_proj,q_b_proj,o_proj,shared_experts,indexer.wq_b,eh_proj
+[07:39:15] nolmhead: ready after 197 s; KV: 1,813,657 tokens
+[07:39:24] nolmhead decode: conc=  1 gen=256 r1:   136.2 tok/s lacznie |   21.9 ms/krok | akceptacja 3.00 tok/krok | 1.9 s conc=  1 gen=256 r2:   134.2 tok/s lacznie |   21.7 ms/krok | akceptacja 2.90 tok/krok | 1.9 s 
+[07:54:19] nolmhead gsm8k: {"model": "glm-5.3", "n": 1319, "accuracy": 0.975, "errors": 0, "truncated": 16, "completion_tokens": 422581, "wall_s": 895.0, "tok_s": 472.2, "conc": 8, "max_tokens": 2048, "seed": 0}
+[07:54:19] == nolmhead-nooproj: FP8=fused_qkv_a_proj,q_b_proj,shared_experts,indexer.wq_b,eh_proj
+[07:57:33] nolmhead-nooproj: ready after 192 s; KV: 1,766,554 tokens
+[07:57:43] nolmhead-nooproj decode: conc=  1 gen=256 r1:   129.5 tok/s lacznie |   23.0 ms/krok | akceptacja 2.98 tok/krok | 2.0 s conc=  1 gen=256 r2:   122.1 tok/s lacznie |   22.8 ms/krok | akceptacja 2.77 tok/krok | 2.1 s 
+[08:12:49] nolmhead-nooproj gsm8k: {"model": "glm-5.3", "n": 1319, "accuracy": 0.9719, "errors": 0, "truncated": 14, "completion_tokens": 419928, "wall_s": 906.3, "tok_s": 463.4, "conc": 8, "max_tokens": 2048, "seed": 0}
+[08:12:49] == noquant: FP8= NVFP4_MOE= CACHE=$CACHE_ROOT/vllm-fi618-pp41,37-noq
+[08:15:23] noquant: ready after 152 s; KV: 1,481,952 tokens
+[08:15:33] noquant decode: conc=  1 gen=256 r1:   116.4 tok/s lacznie |   25.9 ms/krok | akceptacja 3.00 tok/krok | 2.2 s conc=  1 gen=256 r2:   112.5 tok/s lacznie |   25.9 ms/krok | akceptacja 2.92 tok/krok | 2.3 s 
+[08:31:58] noquant gsm8k: {"model": "glm-5.3", "n": 1319, "accuracy": 0.975, "errors": 0, "truncated": 14, "completion_tokens": 420710, "wall_s": 985.5, "tok_s": 426.9, "conc": 8, "max_tokens": 2048, "seed": 0}
+[08:31:58] == restore candidate (C3)
+[08:33:56] restored C3: KV: 1,813,657 tokens
+[08:33:56] D10 ablation chain finished

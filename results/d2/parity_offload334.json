@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say \"Warszawa.\"\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 52,
+  "secs": 0.36,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses an nginx log in combined format and returns top 10 IPs by request count, plus total transfer in MB for each. They want only code with a docstring. The request is in Polish, so the docstring should probably be in Polish too.\n\nNginx combined log format:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nExample:\n```\n192.168.1.1 - - [10/Oct/2023:13:55:36 +0000] \"GET /index.html HTTP/1.1\" 200 512 \"http://example.com\" \"Mozilla/5.0...\"\n```\n\nI need to:\n1. Parse each line with a regex\n2. Extract IP, bytes sent\n3. Count requests per IP\n4. Sum bytes per IP\n5. Return top 10 by request count, with total transfer in MB\n\nThe user said \"Tylko kod z docstringiem\" - only code with a docstring. So I should just provide the code, no extra explanation. The docstring should be comprehensive.\n\nLet me write the function:\n\n```python\nimport re\nfrom collections import defaultdict\n\nLOG_PATTERN = re.compile(\n    r'^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<time>[^\\]]+)\\] '\n    r'\"(?P<request>[^\"]*)\" (?P<status>\\d{3}) (?P<bytes>\\d+|-) '\n    r'\"(?P<referer>[^\"]*)\" \"(?P<agent>[^\"]*)\"'\n)\n\ndef parse_nginx_log(path):\n    \"\"\"\n    Parsuje plik logu nginx w formacie combined i zwraca top 10 adresów IP\n    według liczby żądań wraz z łącznym transferem w MB dla każdego z nich.\n\n    Format combined:\n        IP - user [czas] \"żądanie\" status bajty \"referer\" \"user-agent\"\n\n    Args:\n        path (str): Ścieżka do pliku logu nginx.\n\n    Returns:\n        list[tuple[str, int, float]]: Lista do 10 krotek\n            (adres_ip, liczba_żądań, transfer_MB),\n            posortowana malejąco według liczby żądań.\n\n    Raises:\n        FileNotFoundError: Gdy plik podany w `path` nie istnieje.\n    \"\"\"\n    stats = defaultdict(lambda: [0, 0])  # ip -> [liczba żądań, suma bajtów]\n\n    with open(path, 'r', encoding='utf-8', errors='replace') as f:\n        for line in f:\n            m = LOG_PATTERN.match(line)\n            if not m:\n                continue\n            ip = m.group('ip')\n            raw_bytes = m.group('bytes')\n            nbytes = int(raw_bytes) if raw_bytes != '-' else 0\n            stats[ip][0] += 1\n            stats[ip][1] += nbytes\n\n    top = sorted(stats.items(), key=lambda kv: kv[1][0], reverse=True)[:10]\n    return [\n        (ip, count, round(total_bytes / (1024 * 1024), 2))\n        for ip, (count, total_bytes) in top\n    ]\n```\n\nWait, MB - should it be 1024*1024 or 1_000_000? Typically MB in logs context is 1024*1024 (MiB technically). I'll use 1024*1024 but could mention. Actually, let me keep it simple with 1024*1024.\n\nThe user said \"Tylko kod z docstringiem\" - only code with docstring. So I should output just the code block, no additional commentary. Maybe a very brief intro is fine, but the instruction is explicit: only code with docstring. I'll provide just the code.\n\nShould the regex handle edge cases? The combined format is fairly standard. Some lines might have \"-\" for bytes. I handle that.\n\nLet me also consider: should the function accept a file path or file-like object? Path is simplest. Maybe support both. Keep it simple - path.\n\nAlso, gzip\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 5.97,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me verify each:\n- 2: prime ✓\n- 3: prime ✓\n- 5: prime ✓\n- 7: prime ✓\n- 11: prime ✓\n- 13: prime ✓\n- 17: prime ✓\n- 19: prime ✓\n- 23: prime ✓\n- 29: prime ✓\n- 31: prime ✓\n- 37: prime ✓\n- 41: prime ✓\n- 43: prime ✓\n- 47: prime ✓\n- 53: prime ✓\n- 59: prime ✓\n- 61: prime ✓\n- 67: prime ✓\n- 71: prime ✓\n- 73: prime ✓\n- 79: prime ✓\n- 83: prime ✓\n- 89: prime ✓\n- 97: prime ✓\n\nNow let me sum them step by step:\n\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me double-check this with a different grouping method:\n\nGroup 1: 2 + 3 + 5 + 7 = 17\nGroup 2: 11 + 13 + 17 + 19 = 60\nGroup 3: 23 + 29 = 52\nGroup 4: 31 + 37 = 68\nGroup 5: 41 + 43 + 47 = 131\nGroup 6: 53 + 59 = 112\nGroup 7: 61 + 67 = 128\nGroup 8: 71 + 73 + 79 = 223\nGroup 9: 83 + 89 = 172\nGroup 10: 97 = 97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 440\n440 + 128 = 568\n568 + 223 = 791\n791 + 172 = 963\n963 + 97 = 1060\n\nGreat, both methods give 1060.\n\nThe known answer for the sum of primes below 100 is indeed 1060. This is a well-known result.\n\nNow I need to respond in Polish since the question was asked in Polish. I should show the step-by-step calculation.\n\nLet me structure the response:\n1. List the prime numbers less than 100\n2. Sum them step by step (or in groups to make it manageable)\n3. Give the final answer: 1060\n\nI'll use a clear format with the list of primes, then a running sum. Since showing all 25 additions might be tedious, I could show it in a table or grouped fashion, but the user asked for step-by-step, so I'll show the running sum clearly.\n\nFormat considerations: The response should be in Polish, use markdown formatting appropriately (headers might be overkill, but a list and clear calculation steps would work well). Medium length - enough to show the work but not overly verbose.\n<<<CONTENT>>>\n# Suma liczb pierwszych mniejszych od 100\n\n## Krok 1: Wypiszmy liczby pierwsze mniejsze od 100\n\nJest ich łącznie **25**:\n\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\n## Krok 2: Sumujmy kolejno\n\n| Dodawanie | Wynik |\n|-----------|-------|\n| 2 + 3 | 5 |\n| 5 + 5 | 10 |\n| 10 + 7 | 17 |\n| 17 + 11 | 28 |\n| 28 + 13 | 41 |\n| 41 + 17 | 58 |\n| 58 + 19 | 77",
+  "prompt_tokens": 42,
+  "completion_tokens": 1200,
+  "secs": 7.36,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń (a Polish city) in approximately 200 words, in Polish. Let me recall what I know about Toruń's history.\n\nToruń is one of the oldest cities in Poland, located on the Vistula River in the Kuyavian-Pomeranian Voivodeship. Key historical facts:\n\n1. Founded in 1233 by the Teutonic Knights (Krzyżacy) - it received city rights from the Grand Master Hermann von Salza. Actually, the city charter was granted in 1233 by the Teutonic Order.\n\n2. In 1280 it joined the Hanseatic League (or around that time - it was a major Hanseatic city).\n\n3. 1411 - First Peace of Toruń was signed there, ending the Polish-Lithuanian-Teutonic War (after the Battle of Grunwald in 1410).\n\n4. 1454 - The city rebelled against the Teutonic Order and was incorporated into the Kingdom of Poland (as part of the Thirteen Years' War). The Second Peace of Toruń in 1466 ended the Thirteen Years' War, and Royal Prussia (including Toruń) became part of Poland.\n\n5. Nicolaus Copernicus (Mikołaj Kopernik) was born in Toruń in 1473 - the famous astronomer.\n\n6. 16th-17th centuries - golden age, prosperous trade city, one of the largest cities in Poland.\n\n7. 1724 - the \"Tumult of Toruń\" (Toruński tumult) - religious conflict between Catholics and Protestants, resulting in the execution of the Protestant mayor and other officials.\n\n8. 1793 - After the Second Partition of Poland, Toruń came under Prussian rule.\n\n9. 1807-1813 - briefly part of the Duchy of Warsaw (Napoleonic era), then returned to Prussia after the Congress of Vienna (1815).\n\n10. 19th century - Prussians built massive fortifications around Toruń (it became a fortress city -\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 3.15,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system sztucznej inteligencji, który został wytrenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe mogą być wykorzystywane do różnych zadań, takich jak tłumaczenie, streszczanie, odpowiadanie na pytania i generowanie tekstu.\nCo to jest Model Językowy?\nModel językowy to system sztucznej inteligencji, który został wytrenowany na dużych ilościach tekstu w celu zrozumienia i generowania ludzkiego języka. Modele językowe mogą być wykorzystywane do różnych zadań, takich jak tłumaczenie, streszczanie, odpowiadanie na pytania i generowanie tekstu.\nJak działa Model Językowy?\nModel językowy działa poprzez analizę wzorców w danych tekstowych, na których został wytrenowany. Uczy się on przewidywać, jakie słowo lub fraza powinna pojawić się następnie w danym kontekście. Dzięki temu może generować spójne i logiczne teksty, odpowiadać na pytania i wykonywać inne zadania związane z językiem.\nZastosowania Modeli Językowych\nModele językowe mają szerokie zastosowanie w różnych dziedzinach:\n- Tłumaczenie maszynowe: Modele językowe",
+  "prompt_tokens": 8,
+  "completion_tokens": 300,
+  "secs": 2.21,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the current weather in Kraków in Celsius degrees. They explicitly asked me to use the tool. I should call the get_weather function with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-a77ad9ed1b3bf3c3\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 63,
+  "secs": 0.44,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "chat",
+  "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdynia departs\n\nLooking through the text, I can find:\n1. \"Kod dostepu do serwerowni to 5436-ZETA.\" - The access code is 5436-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy Numer 778.\" - The favorite color is turquoise (turkusowy), number 778\n3. \"Pociag do Gdyni odjezdza o godzinie 13:55.\" - The train departs at 13:55\n\nThe user wants the answer in one line.\n<<<CONTENT>>>\nKod dostępu do serwerowni to 5436-ZETA, ulubiony kolor Marka Kowalskiego to turkusowy (778), a pociąg do Gdyni odjeżdża o godzinie 13:55.",
+  "prompt_tokens": 32880,
+  "completion_tokens": 230,
+  "secs": 1.57,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "chat",
+  "text": "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What time the train to Gdyni departs\n\nLet me search through the text for these specific pieces of information.\n\n1. \"Kod dostepu do serwerowni to 564-ZETA.\" - The access code is 564-ZETA\n2. \"Ulubiony kolor Marka Kowalskiego to turkusowy numer 82.\" - Marek Kowalski's favorite color is turquoise, number 82\n3. \"Pociag do Gdyni odjezdza o godzinie 13:07.\" - The train to Gdyni departs at 13:07\n\nThe user wants me to answer in one line.\n<<<CONTENT>>>\nKod dostępu do serwerowni to 564-ZETA, ulubiony kolor Marka Kowalskiego to turkusowy (numer 82), a pociąg do Gdyni odjeżdża o godzinie 13:07.",
+  "prompt_tokens": 131297,
+  "completion_tokens": 237,
+  "secs": 1.71,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ }
+]

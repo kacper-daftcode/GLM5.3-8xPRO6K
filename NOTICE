@@ -1,0 +1,8 @@
+glm53-stack
+Copyright 2026 the glm53-stack authors.
+
+This product bundles patches applied on top of:
+  - vLLM (https://github.com/vllm-project/vllm), Apache License 2.0
+  - FlashInfer (https://github.com/flashinfer-ai/flashinfer), Apache License 2.0
+image/patches/team/ contains the SM120 NVFP4 KV-cache and DCP enablement by the platform team of the same organisation.
+The GLM-5.3 model weights are not part of this repository (see the model card of zai-org/GLM-5.3 and incoai/GLM-5.3-NVFP4 for their licenses).

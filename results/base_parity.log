@@ -1,0 +1,11 @@
+[16:39:09] needle 32768: 32868 tok, 10.02 s -> ' 5436-ZETA, turkusowy 778, 13:55. 5436-ZETA, turkusowy 778, 13:55. 5436-ZETA, turkusowy 778, 13:55. 5436-ZETA, turkusowy 778, 13:55. 5436-ZETA, turkusowy 778, 1'
+[16:39:50] needle 131072: 131285 tok, 40.27 s -> ' 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564'
+zapisano results/base_car0.json; 8 testow w 75 s
+        qa_short: prompt=     28 compl=  54     0.7s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     9.1s finish=length needle=None
+            math: prompt=     42 compl= 700     5.3s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     5.1s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     4.1s finish=length needle=None
+       tool_call: prompt=    197 compl=  63     0.6s finish=tool_calls needle=True
+    needle_32768: prompt=  32868 compl=  96    10.0s finish=length needle=True
+   needle_131072: prompt= 131285 compl=  96    40.3s finish=length needle=True

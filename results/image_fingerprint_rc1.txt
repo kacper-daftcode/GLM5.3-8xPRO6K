@@ -1,0 +1,60 @@
+## packages
+apache-tvm-ffi                           0.1.11
+nvidia-cutlass-dsl                       4.7.1
+quack-kernels                            0.6.5
+torch                                    2.11.0+cu130
+transformers                             5.13.0
+triton                                   3.6.0
+vllm                                     0.23.1rc1.dev925+g2afa3f7e9
+## patched vllm files
+432e5f1c80390835  vllm/config/speculative.py
+0c5a4c3570fc6945  vllm/config/vllm.py
+f09e1b4a4686a01b  vllm/distributed/device_communicators/custom_all_reduce.py
+2ddc384e34c5f324  vllm/model_executor/layers/attention/mla_attention.py
+f251e962ca74f341  vllm/model_executor/layers/quantization/modelopt.py
+4b6238e70682be7f  vllm/model_executor/models/deepseek_mtp.py
+63e9d11d69b73713  vllm/model_executor/layers/fused_moe/experts/flashinfer_b12x_moe.py
+198d56b2ba4dbb10  vllm/model_executor/layers/fused_moe/oracle/unquantized.py
+14179b272032d42b  vllm/v1/core/sched/scheduler.py
+5a48e41f16e9921a  vllm/v1/kv_cache_interface.py
+435f4375b7b698be  vllm/v1/attention/backends/mla/flashinfer_mla_sparse.py
+e7a243d2a1e9ccf3  vllm/v1/attention/backends/mla/flashinfer_mla_sparse_sm120.py
+324f9d0f84a58089  vllm/v1/attention/backends/mla/indexer.py
+7590ed0ac96013e4  vllm/v1/spec_decode/llm_base_proposer.py
+29b2b29889cce276  vllm/v1/worker/gpu_model_runner.py
+32aef0e3baeee57d  vllm/v1/worker/gpu_worker.py
+## patched flashinfer files
+8d348d48a30dafd7  flashinfer/data/csrc/sparse_mla_sm120.cu
+536e4ffbf8863b88  flashinfer/data/csrc/sparse_mla_sm120_decode_dsv3_2.cu
+24e01c243f2bc905  flashinfer/data/csrc/sparse_mla_sm120_decode_dsv4.cu
+9dc0c3c4afe25837  flashinfer/data/csrc/sparse_mla_sm120_jit_binding.cu
+4738826fb2e6b848  flashinfer/data/csrc/sparse_mla_sm120_prefill.cu
+015f9507382fd2a6  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/arch/barrier.cuh
+bdd9f13c1d6a89cf  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/arch/common.cuh
+ec2e59216add7516  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/arch/cp_async.cuh
+4081b48f37695947  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/arch/ldmatrix_sm120.cuh
+ab0e9962c610845f  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/arch/mma_sm120.cuh
+bcb8dec92916bc80  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/d2_load_b.cuh
+c4c503f6139d8e80  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/fp8_quant.cuh
+5cec2151057955bb  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/kv_cache_io.cuh
+57b6cec5c226450c  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/nvfp4_expand.cuh
+4b7110122e9576d7  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/online_softmax.cuh
+2e7ae39326360522  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/q_rope.cuh
+cbeaa1c19d1f2aae  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/scale_mma.cuh
+87b3b212dea1d6e1  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/smem_layout.cuh
+4107bc481f98c3dc  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/common/xv_rope_mma.cuh
+5c118c63f9abb3c8  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/decode_dsv3_2_kernel.cuh
+014c668d9bc9b30a  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/decode_dsv4_kernel.cuh
+f10e2c214640b288  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/model/kv_cache_traits.cuh
+252fcea16d83bc91  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/model/model_type.h
+d431d62d1c400f74  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/model/scale_convert.cuh
+56d83560fd83fcf8  flashinfer/data/include/flashinfer/attention/sparse_mla_sm120/prefill_kernel.cuh
+6d240b919069e7ec  flashinfer/mla/_core.py
+17989d522a19379d  flashinfer/mla/_sparse_mla_sm120.py
+## extras
+vllm_nvfp4_cache.py
+nvfp4_cache_ext.so
+sparse_mla_sm120.so
+sparse_mla_sm120.so
+jit_cache modules: 905, sparse_mla_sm120 AOT present: no
+ENV VLLM_CUSTOM_AR_PCIE_MAX_SIZE=0

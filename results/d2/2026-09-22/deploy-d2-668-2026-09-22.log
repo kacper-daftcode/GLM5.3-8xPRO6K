@@ -1,0 +1,10 @@
+[13:01:29] waiting for a lull (num_requests_running == 0), max 180 s
+[13:02:15] lull after 48 s (running=0) -> deploying
+[13:02:15] MemAvailable before: 1425 GB, Shmem 0 GB
+[13:02:15] stop glm53-nvfp4-prod
+[13:03:16] VRAM max used na dużych GPU: 2 MiB
+[13:03:16] start glm53-nvfp4-prod z <host-A>/models/GLM-5.3-NVFP4 (image=glm53-stack:2026.09.19-rc2, NCCL=p2p_sys, TP=4 PP=2 DCP=1 partition=41,37, max-num-seqs=32, MTP=3, batched=2048, long-prefill=512 dyn=4:128, fp8=fused_qkv_a_proj,q_b_proj,o_proj,shared_experts,indexer.wq_b,lm_head,eh_proj ch=1, nvfp4-moe=layers.78.mlp.experts, kv-offload=668G, cache=/root/.cache/vllm-fi618-cand-mtp3, PROFILE=0)
+b6fa4a06c4ef3d5c366b2e37bf90ae90b8b7989e909a68ac68960560cb845abb
+[13:06:17] READY po 190 s
+[13:06:17] RAM hosta po starcie: pinned(shmem)=720 GB MemAvailable=696 GB (ponizej 100 GB = obnizyc KV_OFFLOAD_GB)
+[13:06:17] deploy script rc=0; health 200

@@ -1,0 +1,105 @@
+[
+ {
+  "name": "qa_short",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"Answer in one word: what is the capital of Poland?\"\n\nThe answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say \"Warszawa.\"\n<<<CONTENT>>>\nWarszawa",
+  "prompt_tokens": 28,
+  "completion_tokens": 52,
+  "secs": 1.72,
+  "needle": [
+   "Warszawa"
+  ],
+  "finish": "stop",
+  "needle_ok": true
+ },
+ {
+  "name": "code_py",
+  "kind": "chat",
+  "text": "The user wants a Python function that parses nginx logs in combined format and returns top 10 IPs by request count, plus total transfer in MB for each. They want only code with a docstring. The request is in Polish, so the docstring should probably be in Polish too.\n\nNginx combined log format:\n```\nIP - user [time] \"request\" status bytes \"referer\" \"user-agent\"\n```\n\nExample:\n```\n192.168.1.1 - - [10/Oct/2023:13:55:36 +0000] \"GET /index.html HTTP/1.1\" 200 2326 \"http://example.com\" \"Mozilla/5.0...\"\n```\n\nRegex for combined format:\n```python\nr'^(\\S+) (\\S+) (\\S+) \\[([^\\]]+)\\] \"([^\"]*)\" (\\d{3}) (\\d+|-) \"([^\"]*)\" \"([^\"]*)\"'\n```\n\nThe bytes field can be \"-\" which means 0.\n\nThe function should:\n1. Parse the log file\n2. Count requests per IP\n3. Sum bytes transferred per IP\n4. Return top 10 IPs by request count with total transfer in MB\n\nLet me write this:\n\n```python\nimport re\nfrom collections import defaultdict\n\nLOG_PATTERN = re.compile(\n    r'^(?P<ip>\\S+) \\S+ \\S+ \\[[^\\]]+\\] \"[^\"]*\" \\d{3} (?P<bytes>\\d+|-) \"[^\"]*\" \"[^\"]*\"'\n)\n\ndef parse_nginx_log(path):\n    \"\"\"\n    Parsuje plik logu nginx (combined format) i zwraca top 10 adresów IP\n    według liczby żądań wraz z łącznym transferem w MB dla każdego z nich.\n\n    Format combined:\n        IP - użytkownik [czas] \"żądanie\" status bajty \"referer\" \"user-agent\"\n\n    Args:\n        path (str): Ścieżka do pliku logu nginx.\n\n    Returns:\n        list[tuple[str, int, float]]: Lista do 10 krotek (ip, liczba_zadan, transfer_mb),\n        posortowana malejąco według liczby żądań.\n\n    Raises:\n        FileNotFoundError: Gdy plik logu nie istnieje.\n    \"\"\"\n    stats = defaultdict(lambda: [0, 0])  # ip -> [liczba żądań, suma bajtów]\n\n    with open(path, encoding=\"utf-8\", errors=\"replace\") as f:\n        for line in f:\n            m = LOG_PATTERN.match(line)\n            if not m:\n                continue\n            ip = m.group(\"ip\")\n            raw = m.group(\"bytes\")\n            transferred = int(raw) if raw != \"-\" else 0\n            stats[ip][0] += 1\n            stats[ip][1] += transferred\n\n    top = sorted(stats.items(), key=lambda kv: kv[1][0], reverse=True)[:10]\n    return [\n        (ip, count, total_bytes / (1024 * 1024))\n        for ip, (count, total_bytes) in top\n    ]\n```\n\nThe user said \"Tylko kod z docstringiem\" — only code with a docstring. So I should provide just the code, no extra explanation. The docstring is the documentation.\n\nShould I use MB as 1024*1024 or 1_000_000? MB is ambiguous; MiB is 1024². I'll use 1024*1024 and note it in the docstring, or just say MB. Let me mention it's MiB (1024²) in the docstring to be precise. Actually, I'll say \"MB (1 MB = 1024² bajtów)\" to be clear.\n\nLet me refine the regex. Combined format:\n```\n$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"\n```\n\nThe request part can contain escaped quotes in theory, but a simple `[^\"]*` works for most cases. A more robust pattern could handle escaped quotes but that's rare. Keep it simple.\n\nAlso handle the case where the log might be gzipped? No, keep\n<<<CONTENT>>>\n",
+  "prompt_tokens": 62,
+  "completion_tokens": 900,
+  "secs": 8.84,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "math",
+  "kind": "chat",
+  "text": "The user is asking in Polish: \"What is the sum of all prime numbers less than 100? Calculate step by step and give the result.\"\n\nLet me list all prime numbers less than 100:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: \n2, 3, 5, 7 (4 primes)\n11, 13, 17, 19 (4 primes, total 8)\n23, 29 (2 primes, total 10)\n31, 37 (2 primes, total 12)\n41, 43, 47 (3 primes, total 15)\n53, 59 (2 primes, total 17)\n61, 67 (2 primes, total 19)\n71, 73, 79 (3 primes, total 22)\n83, 89 (2 primes, total 24)\n97 (1 prime, total 25)\n\nSo there are 25 primes less than 100.\n\nNow let me sum them step by step:\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 + 11 = 28\n28 + 13 = 41\n41 + 17 = 58\n58 + 19 = 77\n77 + 23 = 100\n100 + 29 = 129\n129 + 31 = 160\n160 + 37 = 197\n197 + 41 = 238\n238 + 43 = 281\n281 + 47 = 328\n328 + 53 = 381\n381 + 59 = 440\n440 + 61 = 501\n501 + 67 = 568\n568 + 71 = 639\n639 + 73 = 712\n712 + 79 = 791\n791 + 83 = 874\n874 + 89 = 963\n963 + 97 = 1060\n\nSo the sum is 1060.\n\nLet me verify this with a different grouping:\nGroup 1: 2 + 3 + 5 + 7 = 17\nGroup 2: 11 + 13 + 17 + 19 = 60\nGroup 3: 23 + 29 = 52\nGroup 4: 31 + 37 = 68\nGroup 5: 41 + 43 + 47 = 131\nGroup 6: 53 + 59 = 112\nGroup 7: 61 + 67 = 128\nGroup 8: 71 + 73 + 79 = 223\nGroup 9: 83 + 89 = 172\nGroup 10: 97 = 97\n\nSum: 17 + 60 = 77\n77 + 52 = 129\n129 + 68 = 197\n197 + 131 = 328\n328 + 112 = 4\n<<<CONTENT>>>\n",
+  "prompt_tokens": 42,
+  "completion_tokens": 700,
+  "secs": 5.44,
+  "needle": [
+   "1060"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "pl_text",
+  "kind": "chat",
+  "text": "The user is asking me to describe the history of Toruń (a Polish city) in approximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one of the oldest cities in Poland, located in northern Poland on the Vistula River. Key historical facts:\n\n1. Founded in 1233 by the Teutonic Knights (Zakon Krzyżacki) - the city charter was granted by Hermann von Salza's order, actually by the Grand Master Hermann von Salza and the local commander. The founding document was issued in 1233.\n\n2. It was part of the Teutonic Order's state, became a member of the Hanseatic League (Hanza) in the 13th century - it was an important trade city.\n\n3. The First Peace of Toruń (1411) - after the Battle of Grunwald, a peace treaty was signed in Toruń.\n\n4. In 1454, the city rebelled against the Teutonic Order and was incorporated into the Kingdom of Poland (Prussian Confederation's act of incorporation). This started the Thirteen Years' War.\n\n5. Second Peace of Toruń (1466) - ended the Thirteen Years' War, Toruń became part of Royal Prussia under Polish rule.\n\n6. Nicolaus Copernicus (Mikołaj Kopernik) was born in Toruń in 1473 - the famous astronomer.\n\n7. The city prospered during the Renaissance period as part of Poland.\n\n8. After the partitions of Poland (1793), Toruń came under Prussian rule.\n\n9. In 1807-1813, it was part of the Duchy of Warsaw (briefly).\n\n10. Returned to Prussia after the Congress of Vienna (1815). The Prussians built massive fortifications (Festung Thorn) in the 19th century.\n\n11. Returned to Poland in 1920 after WWI and the Treaty of Versailles.\n\n12. During WWII, the city was occupied by Nazi Germany; the local population suffered.\n\n13. After WWII,\n<<<CONTENT>>>\n",
+  "prompt_tokens": 26,
+  "completion_tokens": 450,
+  "secs": 4.86,
+  "needle": null,
+  "finish": "length",
+  "needle_ok": null
+ },
+ {
+  "name": "compl_det",
+  "kind": "completion",
+  "text": " system statystyczny, który przewiduje następne słowo w sekwencji na podstawie kontekstu. Jest to podstawowy element w przetwarzaniu języka naturalnego (NLP) i sztucznej inteligencji.\nKontekst: Modele językowe są używane w tłumaczeniu maszynowym, generowaniu tekstu, asystentach głosowych i wielu innych aplikacjach NLP. Nowoczesne modele, takie jak GPT, wykorzystują architektury transformerów do przetwarzania dużych ilości danych tekstowych.\nPrzykład: GPT-4, opracowany przez OpenAI, jest jednym z najbardziej zaawansowanych modeli językowych, zdolnym do generowania spójnych i kontekstowo odpowiednich tekstów.\nZastosowanie: Modele językowe są kluczowe w tworzeniu chatbotów, systemów rekomendacji, analizie sentymentu i automatycznym streszczaniu tekstów. Ich rozwój napędza postęp w dziedzinie sztucznej inteligencji.",
+  "prompt_tokens": 8,
+  "completion_tokens": 237,
+  "secs": 3.07,
+  "needle": null,
+  "finish": "stop",
+  "needle_ok": null
+ },
+ {
+  "name": "tool_call",
+  "kind": "chat",
+  "text": "The user is asking about the weather in Kraków in Celsius degrees. They explicitly asked me to use the tool. I should call the get_weather function with city \"Kraków\" and unit \"C\".\n<<<CONTENT>>>\n\n<<<TOOLS>>>\n[{\"function\": {\"arguments\": \"{\\\"city\\\": \\\"Krak\\u00f3w\\\", \\\"unit\\\": \\\"C\\\"}\", \"name\": \"get_weather\"}, \"id\": \"chatcmpl-tool-85b549f7a94bf723\", \"type\": \"function\"}]",
+  "prompt_tokens": 197,
+  "completion_tokens": 62,
+  "secs": 0.66,
+  "needle": [
+   "get_weather",
+   "Krak"
+  ],
+  "finish": "tool_calls",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_32768",
+  "kind": "completion",
+  "text": " 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55.",
+  "prompt_tokens": 32868,
+  "completion_tokens": 96,
+  "secs": 10.83,
+  "needle": [
+   "5436-ZETA",
+   "turkusowy",
+   "13:55"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ },
+ {
+  "name": "needle_131072",
+  "kind": "completion",
+  "text": " 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. ",
+  "prompt_tokens": 131285,
+  "completion_tokens": 96,
+  "secs": 42.36,
+  "needle": [
+   "564-ZETA",
+   "turkusowy",
+   "13:07"
+  ],
+  "finish": "length",
+  "needle_ok": true
+ }
+]

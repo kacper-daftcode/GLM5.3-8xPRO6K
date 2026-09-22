@@ -1,0 +1,1 @@
+vllm:request_success_total=0 vllm:spec_decode_num_drafts_total=0 vllm:spec_decode_num_accepted_tokens_total=0 

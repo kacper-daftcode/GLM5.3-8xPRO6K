@@ -1,0 +1,37 @@
+[12:22:36] needle 32768: 32880 tok, 1.57 s -> "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What tim"
+[12:22:38] needle 131072: 131297 tok, 1.71 s -> "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What tim"
+zapisano <host-B>/a2/results/d2/parity_offload334.json; 8 testow w 23 s
+        qa_short: prompt=     28 compl=  52     0.4s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.0s finish=length needle=None
+            math: prompt=     42 compl=1200     7.4s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.1s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.2s finish=length needle=None
+       tool_call: prompt=    197 compl=  63     0.4s finish=tool_calls needle=True
+    needle_32768: prompt=  32880 compl= 230     1.6s finish=stop needle=True
+   needle_131072: prompt= 131297 compl= 237     1.7s finish=stop needle=True
+
+=== porownanie z ../results/reference_parity.json ===
+        qa_short: ROZNE od znaku 127/228 (56% wspolne); needle ref=True new=True
+                ref: ...' answer is Warsaw (Warszawa in Polish). Since they asked in Polish and requested one word, I should '
+                new: ...' answer is Warsaw (Warszawa in Polish). They asked for one word, so I should just say "Warszawa."\n<<'
+         code_py: ROZNE od znaku 285/2967 (10% wspolne); needle ref=None new=None
+                ref: ...'bably be in Polish too.\n\nNginx combined format looks like:\n```\n$remote_addr - $remote_user [$time_lo'
+                new: ...'bably be in Polish too.\n\nNginx combined log format:\n```\n$remote_addr - $remote_user [$time_local] "$'
+            math: ROZNE od znaku 303/2520 (12% wspolne); needle ref=True new=True
+                ref: ..."9, 97\n\nThat's 25 prime numbers.\n\nLet me sum them step by step:\n\n2 + 3 = 5\n5 + 5 = 10\n10 + 7 = 17\n17 "
+                new: ..."9, 97\n\nThat's 25 prime numbers.\n\nLet me verify each:\n- 2: prime ✓\n- 3: prime ✓\n- 5: prime ✓\n- 7: pri"
+         pl_text: ROZNE od znaku 117/1711 (7% wspolne); needle ref=None new=None
+                ref: ..."roximately 200 words, in Polish. Let me think about what I know about Toruń's history.\n\nToruń is one"
+                new: ..."roximately 200 words, in Polish. Let me recall what I know about Toruń's history.\n\nToruń is one of t"
+       compl_det: ROZNE od znaku 150/1092 (14% wspolne); needle ref=None new=None
+                ref: ...'owania ludzkiego języka. Modele językowe, takie jak GPT-3.5, są w stanie analizować i interpretować '
+                new: ...'owania ludzkiego języka. Modele językowe mogą być wykorzystywane do różnych zadań, takich jak tłumac'
+       tool_call: ROZNE od znaku 29/313 (9% wspolne); needle ref=True new=True
+                ref: ...'The user is asking about the weather in Kraków in Celsius. I should use the get_weather t'
+                new: ...'The user is asking about the current weather in Kraków in Celsius degrees. They explicitl'
+    needle_32768: ROZNE od znaku 9/714 (1% wspolne); needle ref=True new=True
+                ref: ...'The user has provided a long text with various tokens and embedded wi'
+                new: ...'The user is asking me to extract three pieces of information from the'
+   needle_131072: ROZNE od znaku 9/494 (2% wspolne); needle ref=True new=True
+                ref: ...'The user has provided a long text with embedded facts and asks three '
+                new: ...'The user is asking me to extract three pieces of information from the'

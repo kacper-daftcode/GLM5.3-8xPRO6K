@@ -1,0 +1,46 @@
+kerneli GPU: 114806
+okno sladu: 2057.3 ms | GPU zajete: 2030.8 ms (99%) | GPU idle (luki): 26.6 ms, luk >20us: 18
+
+== czas per kategoria (suma po kernelach; overlap streamow moze dac >100% zajetosci) ==
+  nccl           1226.8 ms   59.0%
+  gemm            684.2 ms   32.9%
+  attn_mla         52.8 ms    2.5%
+  norm_act_ew      39.5 ms    1.9%
+  moe_fp4          31.6 ms    1.5%
+  indexer          17.7 ms    0.9%
+  other            11.5 ms    0.6%
+  moe_other         6.6 ms    0.3%
+  memcpy            5.8 ms    0.3%
+  kv_nvfp4          3.9 ms    0.2%
+
+== top 30 kerneli ==
+    1145.1 ms  n=67     avg=17091.0 us  [nccl] ncclDevKernel_Broadcast_RING_LL(ncclDevKernelArgsStorage<4096ul>)
+     200.6 ms  n=2574   avg=   77.9 us  [gemm] _ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalINS1_17GroupProblemShapeIN4cute5tupleIJlllEEEEENS1_10
+     160.1 ms  n=9108   avg=   17.6 us  [gemm] void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(cutlass_80_wmma_te
+     105.3 ms  n=2574   avg=   40.9 us  [gemm] _ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalINS1_17GroupProblemShapeIN4cute5tupleIJlllEEEEENS1_10
+      81.0 ms  n=5695   avg=   14.2 us  [nccl] ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<4096ul>)
+      61.3 ms  n=2772   avg=   22.1 us  [gemm] void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_32x32_64x1_tn_align8>(cutlass_80_wmma_tensorop
+      46.3 ms  n=2814   avg=   16.5 us  [attn_mla] void flashinfer::sparse_mla_sm120::sparse_mla_decode_dsv3_2_kernel<(ModelType)3, 16, 2048, 64>(__nv_bfloat16 c
+      44.7 ms  n=2574   avg=   17.4 us  [gemm] void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_tn_align1>(cutlass_80_simt_sgemm_128x32_8x5_tn_align1::
+      32.8 ms  n=2574   avg=   12.7 us  [gemm] void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8>(cutlass_80_wmma_ten
+      15.9 ms  n=3564   avg=    4.5 us  [gemm] void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_tn_align8>(cutlass_80_wmma_te
+      11.6 ms  n=2613   avg=    4.5 us  [indexer] void vllm::moe::grouped_topk_fused_small_expert_count_kernel<float, float, int, (vllm::moe::ScoringFunc)1, 384
+      11.5 ms  n=2772   avg=    4.2 us  [gemm] void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x1_nn_align8>(cutlass_80_wmma_ten
+      10.5 ms  n=201    avg=   52.4 us  [gemm] void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8>(cutlass_80_tensorop
+       9.9 ms  n=39     avg=  255.0 us  [gemm] _ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalINS1_17GroupProblemShapeIN4cute5tupleIJlllEEEEENS1_10
+       9.8 ms  n=3702   avg=    2.7 us  [gemm] void cublasLt::splitKreduce_kernel<32, 16, int, __nv_bfloat16, __nv_bfloat16, float, __nv_bfloat16, false, __n
+       9.3 ms  n=2613   avg=    3.5 us  [moe_fp4] void tensorrt_llm::kernels::cutlass_kernels::expandInputRowsKernel<__nv_fp4_e2m1, __nv_fp4_e2m1, (tensorrt_llm
+       8.5 ms  n=2613   avg=    3.3 us  [moe_fp4] void tensorrt_llm::kernels::cutlass_kernels::doActivationKernel<__nv_fp4_e2m1, __nv_bfloat16, __nv_bfloat16, t
+       8.3 ms  n=2574   avg=    3.2 us  [moe_fp4] void tensorrt_llm::kernels::cutlass_kernels::fusedBuildExpertMapsSortFirstTokenKernel<32, 8, 9>(int const*, in
+       6.9 ms  n=2747   avg=    2.5 us  [norm_act_ew] triton_red_fused_fused_add_rms_norm_2
+       6.6 ms  n=2613   avg=    2.5 us  [gemm] void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, false, float, float, float, true, 
+       6.6 ms  n=2613   avg=    2.5 us  [moe_other] triton_red_fused_fused_add_rms_norm_moe_forward_shared_0
+       6.5 ms  n=2814   avg=    2.3 us  [attn_mla] void flashinfer::sparse_mla_sm120::sparse_mla_decode_dsv4_merge_kernel<16, 512, 64, 8>(__nv_bfloat16 const*, f
+       5.4 ms  n=2613   avg=    2.1 us  [moe_fp4] void tensorrt_llm::kernels::cutlass_kernels::computeStridesTmaWarpSpecializedKernel<__nv_fp4_e2m1, __nv_fp4_e2
+       5.4 ms  n=2613   avg=    2.1 us  [norm_act_ew] void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{la
+       5.2 ms  n=39     avg=  134.1 us  [gemm] _ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalINS1_17GroupProblemShapeIN4cute5tupleIJlllEEEEENS1_10
+       4.8 ms  n=2814   avg=    1.7 us  [norm_act_ew] _convert_req_index_to_global_index_kernel
+       4.5 ms  n=2747   avg=    1.6 us  [norm_act_ew] triton_poi_fused_add_copy_index_select_mul_slice_split_stack_sub_unsqueeze_view_5
+       4.4 ms  n=2814   avg=    1.6 us  [norm_act_ew] void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespace)::OpaqueType<2u>,
+       4.4 ms  n=6433   avg=    0.7 us  [norm_act_ew] void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<int>, std::array<char*, 1ul> >(int, 
+       4.1 ms  n=2784   avg=    1.5 us  [gemm] void cublasLt::splitKreduce_kernel<32, 16, int, float, __nv_bfloat16, float, __nv_bfloat16, false, __nv_bfloat

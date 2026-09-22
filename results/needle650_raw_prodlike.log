@@ -1,0 +1,2 @@
+[14:05:27]  raw L= 650000 prompt=649614  440.0s ( 1476 tok/s) needle=OK  expect=['15082-ZETA', 'turkusowy', '11:29'] -> ' 4 }} .11:29. 5 }1.15082-ZETA\n 6 }\n1 2156 turkusowy\n 7 }\n1\n1 15082-ZETA\n 8 }\n1\n1 15082-ZETA\n 9 }\n1\n1 15082 ZETA\n 10 }\n1\n1 15082 ZETA\n 11 }\n1'
+[14:11:55]  raw L= 650000 prompt=649074  388.2s ( 1672 tok/s) needle=OK  expect=['14382-ZETA', 'turkusowy', '7:49'] -> ' <4 >7:49. 4 >14382-ZETA 5 > turkusowy numer 2056 6 >14382-ZETA 7 >49 7 >49 7 >49 7>49 7>49 7>49 7>49 7>49 7>49 7>49 7>49 7>49 7>49 7>49 7>4'

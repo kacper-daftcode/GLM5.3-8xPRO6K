@@ -1,0 +1,3 @@
+ctx=  32743 tok: TTFT     4.2 s =>     7816 tok/s prefill
+ctx= 130955 tok: TTFT    18.3 s =>     7169 tok/s prefill
+ctx= 261800 tok: TTFT    42.5 s =>     6158 tok/s prefill

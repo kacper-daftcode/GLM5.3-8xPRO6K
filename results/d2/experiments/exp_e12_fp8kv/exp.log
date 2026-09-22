@@ -1,0 +1,5 @@
+[17:23:58] === e12_fp8kv: KV_OFFLOAD_GB=64 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[17:29:08] started: [17:29:08] READY po 310 s [17:29:08] host RAM after start: pinned(shmem)=84 GB MemAvailable=623 GB 
+[17:31:10] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[17:31:23] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,0,100,
+[17:31:23] RESULT e12_fp8kv: FAIL rc=2

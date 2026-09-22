@@ -1,0 +1,14 @@
+[22:22:15] start L=200000 churn=4x550000 | store=0.00G load=0.00G pc_hits/q=0/0 ext_hits/q=0/0 preempt=0 alloc_fail=0
+[22:22:58] cold   : prompt=199752 TTFT= 41.50s total=  43.0s (  4813 tok/s prefill) needle=OK | store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0
+[22:23:01]          after 3 s: store=22.85G load=0.00G pc_hits/q=0/199752 ext_hits/q=0/199752 preempt=0 alloc_fail=0  (store delta 22.85 GiB = 120.0 KiB/token)
+[22:23:03] gpuhit0: prompt=199752 TTFT=  0.40s total=   1.9s identical_to_cold=False  (intra-run determinism control)
+[22:25:44] churn 1/4: prompt=549016  160.5s (  3420 tok/s) cum=549016
+[22:28:28] churn 2/4: prompt=549614  164.2s (  3348 tok/s) cum=1098630
+[22:31:13] churn 3/4: prompt=549741  165.2s (  3328 tok/s) cum=1648371
+[22:33:58] churn 4/4: prompt=549705  165.4s (  3323 tok/s) cum=2198076
+[22:33:58] after churn (2198076 tokens): store=274.32G load=0.00G pc_hits/q=199680/2597580 ext_hits/q=0/2397900 preempt=0 alloc_fail=0
+[22:34:44] warm   : prompt=199752 TTFT= 44.09s total=  45.1s needle=OK identical_to_cold=False common_prefix=25/637 loaded=0.00 GiB (0.0 KiB/token) | store=297.18G load=0.00G pc_hits/q=199680/2797332 ext_hits/q=0/2597652 preempt=0 alloc_fail=0
+[22:34:44]   DIVERGENCE at char 25: cold='The user is asking me to extract three pieces of information from the text:\n1. The ac'
+                        warm='The user is asking me to find three pieces of information from the long text:\n1. The '
+[22:34:46] gpuhit : prompt=199752 TTFT=  0.38s total=   1.9s identical_to_warm=False | store=297.18G load=0.00G pc_hits/q=399360/2997084 ext_hits/q=0/2597724 preempt=0 alloc_fail=0
+[22:34:46] VERDICT: FAIL (decode nondeterministic within run: identity not required)  (cold TTFT 41.5 s -> warm-from-RAM 44.09 s -> GPU hit 0.38 s)

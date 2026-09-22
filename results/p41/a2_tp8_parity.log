@@ -1,0 +1,9 @@
+[12:31:29] needle 32768: 32880 tok, 9.05 s -> "The user is asking me to extract three pieces of information from the text:\n1. The access code to the server room\n2. Marek Kowalski's favorite color\n3. What tim"
+zapisano results/p41/a2_tp8_parity.json; 7 testow w 32 s
+        qa_short: prompt=     28 compl=  54     0.4s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     7.3s finish=length needle=None
+            math: prompt=     42 compl=1200     8.4s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     4.0s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.6s finish=length needle=None
+       tool_call: prompt=    197 compl=  52     0.6s finish=tool_calls needle=True
+    needle_32768: prompt=  32880 compl= 197     9.1s finish=stop needle=True

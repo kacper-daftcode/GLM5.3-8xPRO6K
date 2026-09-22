@@ -1,0 +1,5 @@
+[17:09:50] === e9_tp8_pp1: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[17:16:30] started: [17:16:30] READY po 400 s [17:16:30] host RAM after start: pinned(shmem)=45 GB MemAvailable=653 GB 
+[17:19:02] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[17:19:14] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,100,100,
+[17:19:14] RESULT e9_tp8_pp1: FAIL rc=2

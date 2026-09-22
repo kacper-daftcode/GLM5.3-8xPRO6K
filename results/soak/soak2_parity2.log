@@ -1,0 +1,33 @@
+[17:20:26] needle 32768: 32868 tok, 5.84 s -> ' 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, tur'
+[17:20:50] needle 131072: 131285 tok, 24.49 s -> ' 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564-ZETA; turkusowy (numer 82); 13:07. 564'
+zapisano results/soak2_parity2.json; 8 testow w 48 s
+        qa_short: prompt=     28 compl=  52     0.3s finish=stop needle=True
+         code_py: prompt=     62 compl= 900     6.7s finish=length needle=None
+            math: prompt=     42 compl= 700     4.2s finish=length needle=True
+         pl_text: prompt=     26 compl= 450     3.5s finish=length needle=None
+       compl_det: prompt=      8 compl= 300     2.4s finish=length needle=None
+       tool_call: prompt=    197 compl=  68     0.5s finish=tool_calls needle=True
+    needle_32768: prompt=  32868 compl=  96     5.8s finish=length needle=True
+   needle_131072: prompt= 131285 compl=  96    24.5s finish=length needle=True
+
+=== porownanie z results/b1s2_parity.json ===
+        qa_short: IDENTYCZNE (207 zn.)
+         code_py: ROZNE od znaku 45/3247 (1% wspolne); needle ref=None new=None
+                ref: ...'ser wants a Python function that parses nginx logs in combined format and returns top 10 IPs by requ'
+                new: ...'ser wants a Python function that parses an nginx log in combined format and returns top 10 IPs by re'
+            math: ROZNE od znaku 270/1544 (17% wspolne); needle ref=True new=True
+                ref: ...'53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nLet me count them: there are 25 primes less than 100.\n\nNow l'
+                new: ..."53, 59, 61, 67, 71, 73, 79, 83, 89, 97\n\nThat's 25 prime numbers.\n\nLet me add them up step by step:\n2"
+         pl_text: ROZNE od znaku 55/1743 (3% wspolne); needle ref=None new=None
+                ref: ...'ing me to describe the history of Toruń in approximately 200 words, in Polish. Let me think about wh'
+                new: ...'ing me to describe the history of Toruń (a Polish city) in approximately 200 words, in Polish. Let m'
+       compl_det: ROZNE od znaku 1/1090 (0% wspolne); needle ref=None new=None
+                ref: ...' system sztucznej inteligencji, który jest trenowany na dużyc'
+                new: ...' model statystyczny, który przypisuje prawdopodobieństwa sekw'
+       tool_call: ROZNE od znaku 29/313 (9% wspolne); needle ref=True new=True
+                ref: ...'The user is asking about the weather in Kraków in Celsius. I should use the get_weather t'
+                new: ...'The user is asking about the current weather in Kraków (Krakow) in Celsius degrees. They '
+    needle_32768: ROZNE od znaku 10/189 (5% wspolne); needle ref=True new=True
+                ref: ...' 5436-ZETA; turkusowy numer 778; 13:55. 5436-ZETA; turkusowy numer 778'
+                new: ...' 5436-ZETA, turkusowy, 13:55. 5436-ZETA, turkusowy, 13:55. 5436-ZETA, '
+   needle_131072: IDENTYCZNE (196 zn.)

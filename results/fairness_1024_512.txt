@@ -1,0 +1,16 @@
+===== long-prefill-token-threshold 1024
+[08:15:00] READY po 155 s
+(APIServer pid=1) INFO 09-17 08:12:35 [api_utils.py:273] non-default args: {'model_tag': '/model', 'enable_auto_tool_choice': True, 'tool_call_parser': 'glm47', 'host': '0.0.0.0', 'model': '/model', '
+ctx=  32761 tok: TTFT    11.0 s =>     2984 tok/s prefill
+ctx= 130791 tok: TTFT    44.7 s =>     2929 tok/s prefill
+dlugi prefill: 130915 tok, TTFT 44.5 s => 2944 tok/s (okno [2.0, 46.5] s)
+ old: TTFT 0.10 s (start 0.0 s), 600 tok / 205 chunkow (2.93 tok/chunk), ITL p50 332 ms p95 366 ms | W TRAKCIE prefillu: 2.9 chunk/s ~ 8.6 tok/s (131 chunkow) | po prefillu: 27.9 chunk/s ~ 81.7 tok/s
+ new: TTFT 0.90 s (start 5.0 s), 200 tok / 54 chunkow (3.70 tok/chunk), ITL p50 335 ms p95 343 ms | W TRAKCIE prefillu: 3.0 chunk/s ~ 11.1 tok/s (54 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+===== long-prefill-token-threshold 512
+[08:19:14] READY po 150 s
+(APIServer pid=1) INFO 09-17 08:16:54 [api_utils.py:273] non-default args: {'model_tag': '/model', 'enable_auto_tool_choice': True, 'tool_call_parser': 'glm47', 'host': '0.0.0.0', 'model': '/model', '
+ctx=  32822 tok: TTFT    13.3 s =>     2474 tok/s prefill
+ctx= 130829 tok: TTFT    52.9 s =>     2472 tok/s prefill
+dlugi prefill: 131037 tok, TTFT 51.0 s => 2567 tok/s (okno [2.0, 53.0] s)
+ old: TTFT 0.10 s (start 0.0 s), 600 tok / 211 chunkow (2.84 tok/chunk), ITL p50 194 ms p95 201 ms | W TRAKCIE prefillu: 5.2 chunk/s ~ 14.8 tok/s (159 chunkow) | po prefillu: nan chunk/s ~ nan tok/s
+ new: TTFT 0.46 s (start 5.0 s), 200 tok / 57 chunkow (3.51 tok/chunk), ITL p50 194 ms p95 196 ms | W TRAKCIE prefillu: 5.2 chunk/s ~ 18.1 tok/s (57 chunkow) | po prefillu: nan chunk/s ~ nan tok/s

@@ -1,0 +1,12 @@
+[09:52:15] chain 1 finished; baseline running: full-glm Up 2 minutes
+[09:52:15] step 1: fairness + smoke on baseline
+[09:53:13] fairness baseline rc=0
+[09:53:37] smoke baseline rc=0
+[09:53:44] step 2: start with offload 334
+[09:55:55] step 3: fairness + smoke with offload
+[09:56:54] fairness offload rc=0
+[09:57:12] smoke offload rc=0
+[09:57:12] metrics after: vllm:kv_offload_store_bytes_total{engine="0",model_name="glm-5.3"} 1.6180555776e+010 vllm:kv_offload_store_bytes_created{engine="0",model_name="glm-5.3"} 1.7900709582547646e+09 vllm:num_preemptions_total{engine="0",model_name="glm-5.3"} 0.0 vllm:num_preemptions_created{engine="0",model_name="glm-5.3
+[09:57:32] step 4: restore baseline
+[09:59:58] baseline rc=0 full-glm Up 2 minutes
+[09:59:58] chain 2 done

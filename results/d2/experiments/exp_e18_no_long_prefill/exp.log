@@ -1,0 +1,5 @@
+[18:17:42] === e18_no_long_prefill: KV_OFFLOAD_GB=32 NCCL_MODE=p2p_sys EXTRA_ENV='' KV_OFFLOAD_OPTS='' CHURN=1
+[18:21:32] started: [18:21:32] READY po 230 s [18:21:32] host RAM after start: pinned(shmem)=45 GB MemAvailable=670 GB 
+[18:23:33] HANG detected (no engine status for >=60 s, last Running=?); collecting evidence
+[18:23:44] xid lines before/after: 0/0; GPUs after: 0,100,100,100,100,100,0,0,100,
+[18:23:44] RESULT e18_no_long_prefill: FAIL rc=2
