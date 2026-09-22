@@ -12,8 +12,9 @@ Measured on that hardware (details and methodology in [docs/RESULTS.md](docs/RES
 | 4 / 16 / 32 concurrent streams | 222 / 530–590 / – tok/s | **300 / 660 / 1 050 tok/s** |
 | cold prefill 32k / 131k / 262k / 650k | 3.5k / 3.3k / 3.0k / – tok/s | **7.9k / 7.3k / 6.3k / 3.4k tok/s** |
 | KV cache pool @ `max-model-len 750k` | 1.43M tokens | **1.81M tokens** (NVFP4 KV, 352 B/token/layer) |
-| new request TTFT while a 131k prefill runs | 39.5 s (starved) | **0.4–0.5 s**; other users keep 17–19 tok/s |
-| restart | ~4.5 min | **2 min 20 s** (stop ≤6 s, start 140 s with warm compile cache) |
+| new request TTFT while a 131k prefill runs | 39.5 s (starved) | **0.4–0.5 s**; other users keep 17–19 tok/s (chunk 128 above 4 active requests: +75–85 % for them) |
+| repeated 200k / 650k context after eviction from the GPU pool | full recompute: 36–40 s / 187 s | **0.46 s / 1.33 s** — host-RAM KV tier (vLLM `OffloadingConnector`, 668 GiB = 5.6M tokens on the production host), no prefill/decode cost while storing |
+| restart | ~4.5 min | **2 min 20 s** without the RAM tier (stop ≤6 s, start 140 s with warm compile cache); **~4 min** with it (pinning 720 GiB) |
 | quality | GSM8K (1319) 97.50% (same stack, online quant off) | **GSM8K (1319) 97.19%** (±0.45 pp SE; paired McNemar p = 0.45 — no measurable cost), teacher-forced CE ±0.01, needle 32k–650k OK, tool-call OK |
 
 ## What is in the image
@@ -25,9 +26,11 @@ Measured on that hardware (details and methodology in [docs/RESULTS.md](docs/RES
 2. **Team layer** (SM120 enablement, not in upstream): NVFP4 KV cache for sparse-MLA (FlashInfer + vLLM patches + `nvfp4_cache_ext.cu`),
    decode-context-parallel (DCP) for the SM120 sparse-MLA backend, baked JIT kernels.
 3. **This repo**: FlashInfer 0.6.14 → 0.6.18.post1; MTP speculative decoding under pipeline parallelism with async scheduling
-   (`patch_pp_mtp.py`); long-prefill chunking only when the GPU is shared (`patch_sched_fair.py`); online FP8 W8A8 (per-channel) for the
-   BF16 layers the checkpoint leaves unquantized and online NVFP4 for the BF16 MTP draft experts (`patch_fp8_excluded.py`, `patch_b1s2.py`);
-   B12X/CUTLASS MoE hybrid (present, disabled — negative result with MTP).
+   (`patch_pp_mtp.py`); long-prefill chunking only when the GPU is shared, with a dynamic chunk (512 tokens, 128 when more than 4 requests are
+   active — `patch_sched_fair.py`, `VLLM_LONG_PREFILL_THRESHOLD_DYNAMIC`); online FP8 W8A8 (per-channel) for the BF16 layers the checkpoint
+   leaves unquantized and online NVFP4 for the BF16 MTP draft experts (`patch_fp8_excluded.py`, `patch_b1s2.py`); B12X/CUTLASS MoE hybrid
+   (present, disabled — negative result with MTP). The host-RAM KV tier needs no patch: it is vLLM's native `OffloadingConnector`, wired
+   through the deployment knob `KV_OFFLOAD_GB` (layout-checked against the NVFP4 KV cache, gate results in RESULTS §12d).
 
 All patches are anchored text patches applied to the installed packages at build time; every anchor is asserted, so a base change
 fails the build instead of silently drifting.
@@ -37,21 +40,24 @@ fails the build instead of silently drifting.
 ```bash
 docker build -t glm53-stack:$(date +%Y.%m.%d) image/          # needs the pinned base image locally (see docs/RUNBOOK.md)
 cp deploy/env.example deploy/env && $EDITOR deploy/env         # model path, GPU selection, port
-CAND=1 deploy/serve-glm53-prod.sh                              # TP4×PP2 DCP1 MTP3, partition 41/37, online FP8+NVFP4, prefill threshold 512
+CAND=1 deploy/serve-glm53-prod.sh                              # TP4×PP2 DCP1 MTP3, partition 41/37, online FP8+NVFP4, dynamic prefill chunk (512 / 128 above 4 requests),
+                                                               # host-RAM KV tier KV_OFFLOAD_GB=668 -> 720 GiB pinned: the script refuses to start with < ~935 GB free RAM
+KV_OFFLOAD_GB=0 CAND=1 deploy/serve-glm53-prod.sh              # same without the RAM tier (hosts with less RAM); KV_OFFLOAD_GB=334 (360 GiB pinned) needs ~520 GB free
 deploy/verify-prod.sh                                          # health, startup log checks, smoke, parity (needle/math/tool), metrics
 ```
 
-Rollback to the plain TP8/DCP2 configuration: `NCCL_MODE=p2p_sys MTP=5 DCP=2 IMAGE=<previous image> deploy/serve-glm53-prod.sh`.
+Rollback to the plain TP8/DCP2 configuration: `NCCL_MODE=p2p_sys MTP=5 DCP=2 IMAGE=<previous image> deploy/serve-glm53-prod.sh`. Stop the
+container with `docker stop -t 60`, never `docker kill` while it is busy (see limitations).
 
 ## Repository layout
 
 | path | content |
 |---|---|
 | `image/` | `Dockerfile`, `patches/team/` (SM120 KV-NVFP4 + DCP), `patches/ours/` (PP+MTP, fairness, online FP8/NVFP4, B12X hybrid), `tools/` (anchor checks, image fingerprint) |
-| `deploy/` | `serve-glm53-prod.sh` (all knobs, `CAND=1` preset, `DRY=1`), `common.sh` (GPU selection by UUID), `verify-prod.sh`, `experimental/` |
-| `bench/` | `run_cand.sh`/`serve_full.sh` (testbed launcher), `bench_decode.py`, `bench_prefill.py`, `bench_fairness.py`, `parity.py`, `lp_probe.py`, `needle_len.py`, `smoke.py`, `soak.py`+`soak.sh`, profiling helpers |
+| `deploy/` | `serve-glm53-prod.sh` (all knobs, `CAND=1` preset, `DRY=1`), `common.sh` (GPU selection by UUID), `verify-prod.sh`, `alert-prod.sh` (cron alerting from `/metrics` and the engine log) + `acceptance_by_hour.py`, `experimental/` |
+| `bench/` | `run_cand.sh`/`serve_full.sh` (testbed launcher, same knobs as production), `run_all.sh` (full benchmark pass), `bench_decode.py`, `bench_prefill.py`, `bench_fairness.py`, `parity.py`, `gsm8k_eval.py`+`gsm8k_compare.py` (paired test), `kv_offload_reload.py` (RAM-tier gate: cold → evict → reload), `lp_probe.py`, `needle_len.py`, `smoke.py`, `soak.py`+`soak.sh`, `serve_upstream.sh` (unpatched nightly for comparison), `d2_rootcause/` (hang watchdog with a hardware criterion, 1 Hz GPU power trace + stall classifier, Nsight timeline tools), profiling helpers |
 | `tools/` | micro-benchmarks and unit tests used during development (MoE, skinny GEMM, FP8 linear, NVFP4 quantizer round-trip, NCCL all-reduce) |
-| `docs/` | `RUNBOOK.md`, `ARCHITECTURE.md`, `RESULTS.md`, `FAIRNESS.md` |
+| `docs/` | `RUNBOOK.md`, `ARCHITECTURE.md`, `RESULTS.md`, `FAIRNESS.md`, `upstream/` (issue and PR texts for vLLM), `rtx6kpro/` (model page draft) |
 | `results/` | raw benchmark outputs (JSON/logs) behind every number quoted here |
 
 ## Known limitations
@@ -61,6 +67,13 @@ Rollback to the plain TP8/DCP2 configuration: `NCCL_MODE=p2p_sys MTP=5 DCP=2 IMA
 - Fairness is a policy knob (`--long-prefill-token-threshold`): 512 gives others 17–19 tok/s during a long prefill; smaller chunks trade prefill speed for responsiveness — see `docs/FAIRNESS.md`.
 - Raw `/v1/completions` prompts above ~600k tokens degrade (model/format property, same on the baseline); chat format is fine up to the tested 650k.
 - Custom all-reduce over PCIe (team patch) is disabled: wrong results for >2 GPUs without NVLink.
+- The RAM KV tier pins one host tensor per layer, each rounded **up to a power of two**: a 334 GiB request pins 360 GiB, 668 pins 720 GiB, and anything
+  between 668 and 1336 pins ~1440 GiB. Use only the measured points; the deploy script refuses to start below 1.25 × request + 100 GB free RAM. The
+  memory is not released while the container runs.
+- The engine's status log (`Engine 000: …`) prints nothing during a single long chunked prefill (550k tokens ≈ 150 s at 300 W). This is not a hang —
+  judge progress by GPU power (at the cap = computing). Misreading this cost a day of debugging (RESULTS §12c).
+- Never `docker kill` a busy container (driver 610.43.02): GPUs stay at 100 % utilisation with no process until a host power cycle; `docker stop -t 60`
+  is clean. Driver 595.x had a GPU fault incident on this hardware; both hosts run 610.43.02.
 
 ## License
 
